@@ -2,8 +2,7 @@
 title: "iRobot Stock Analysis"
 date: 2018-10-04
 tags: [data science, data visualizations, machine learning]
-header:
-   image: 
+
 excerpt: "Data Science, Data Visualizations, Machine Learning"
 mathjax: "True"
 ---
