@@ -25,7 +25,7 @@ Bulleted lists:
 + Second item
 - Third item
 
-Here's a numbred list:
+Here's a numbered list:
 1. First
 2. Second
 3. Third
