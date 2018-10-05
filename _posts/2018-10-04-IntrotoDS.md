@@ -8,7 +8,7 @@ excerpt: "Machine Learning, Data Science, Data Visualizations"
 mathjax: "True"
 ---
 
-#H1 Heading
+# H1 Heading
 
 ## H2 Heading
 
