@@ -51,7 +51,7 @@ Here's some inline code 'x+y'
 
 Here's an image using HTML:
 
-<img src=""{{ site.url }}{{ site.baseurl }}/images/IMG_0880.jpg" alt="Apollo">
+<img src="{{ site.url }}{{ site.baseurl }}/images/IMG_0880.jpg" alt="Apollo">
 
 Here's an image using Kramdown:
 ![alt]({{ site.url }}{{ site.baseurl }}/images/IMG_0880.jpg)
