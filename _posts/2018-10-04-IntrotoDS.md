@@ -4,7 +4,7 @@ date: 2018-01-28
 tags: [machine learning, data science, data visualizations]
 header:
    image: "/images/IMG_0880.jpg"
-excerpt: "Machine Learning, Perceptron, Data Science"
+excerpt: "Machine Learning, Data Science, Data Visualizations"
 mathjax: "True"
 ---
 
