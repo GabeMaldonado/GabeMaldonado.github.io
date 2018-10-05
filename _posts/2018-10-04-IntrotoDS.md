@@ -1,10 +1,10 @@
 ---
 title: "Introduction to Data Science"
 date: 2018-01-28
-tags: [machine learning, data science, data visualizations]
+tags: [data science, data visualizations]
 header:
    image: "/images/IMG_0880.jpg"
-excerpt: "Machine Learning, Data Science, Data Visualizations"
+excerpt: "Data Science, Data Visualizations"
 mathjax: "True"
 ---
 
