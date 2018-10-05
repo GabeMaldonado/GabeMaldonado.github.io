@@ -4,9 +4,11 @@ permalink: /data-visualizations/
 title: "Data Visualizations"
 author_profile: true
 header:
-   image: "/images/IMG_0852.jpg"
+   image: "/images/bokeh_plot.png"
 ---
 
+
+## Data Visualizations will be added to this page. 
 
 {% include group-by-array collection=site.posts field="tags" %}
 
