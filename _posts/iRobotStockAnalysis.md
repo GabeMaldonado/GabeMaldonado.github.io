@@ -1,10 +1,10 @@
 ---
 title: "iRobot Stock Analysis"
 date: 2018-10-04
+header:
+   image: "/images/IMG_0880.jpg"
 tags: [data science, data visualizations, machine learning]
-
 excerpt: "Data Science, Data Visualizations, Machine Learning"
-mathjax: "True"
 ---
 
 # In this Jupyter Notebook I have done some exploratory data analysis of iRobot stock.
