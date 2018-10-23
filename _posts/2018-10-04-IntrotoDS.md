@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Data Science"
-date: 2018-10-04
+date: 2018-10-
 tags: [data science, data visualizations]
 header:
    image: "/images/IMG_0880.jpg"

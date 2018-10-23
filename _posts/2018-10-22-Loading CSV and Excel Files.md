@@ -24,7 +24,7 @@ mathjax: "True"
 
 ## Loading .csv files containing date-time-series data such as stock data
 
-'''python
+```python
 	
 	# We are handling missing values by passing na_values='NAN'
 
@@ -40,5 +40,4 @@ To load excel files data we can use the pd.read_excel
 	
 	df = pd.read_excel('excel-file.xlsx', sheetname='active-sheet-name', na_values='n/a')
 	
-
 ```
