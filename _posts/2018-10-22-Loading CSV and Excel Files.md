@@ -32,12 +32,32 @@ mathjax: "True"
 
 ```  
 
-## Loading Excel files
+# Loading Excel files
 
-To load excel files data we can use the pd.read_excel 
+To load data in excel files we can use the pd.read_excel and pass the sheet 
+name, if known, to 'sheetname' otherwise 'sheetname=0' 
 
 ```python
 	
 	df = pd.read_excel('excel-file.xlsx', sheetname='active-sheet-name', na_values='n/a')
 	
+```
+
+## Loading data form two excel sheets
+
+```python
+
+	# First create an ExcelFile object
+
+	xls_data = pd.ExcelFile('file-name.xlsx')
+
+	# Retrieve sheet names
+
+	names = xls.sheet_names
+
+	# Create a dictionary with all the sheet names
+
+	name_of_sheets = pd.read_excel(xls, sheetname=names, na_values='n/a')
+
+
 ```
