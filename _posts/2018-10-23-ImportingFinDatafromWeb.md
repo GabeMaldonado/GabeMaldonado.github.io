@@ -234,8 +234,7 @@ stock_data['Adj Close'].plot(legend=True, figsize=(10,4))
 
 
 
-
-<img src="ImportingFinDatafromWeb_files/ImportingFinDatafromWeb_5_1.png", width="800">
+![alt]({{ site.url }}{{ site.baseurl }}/mportingFinDatafromWeb_files/ImportingFinDatafromWeb_5_1.png)
 
 
 
