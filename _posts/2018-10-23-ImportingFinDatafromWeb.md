@@ -233,11 +233,5 @@ stock_data['Adj Close'].plot(legend=True, figsize=(10,4))
     <matplotlib.axes._subplots.AxesSubplot at 0x11f3f0160>
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/datareader_aapl.png" alt="AAPL>
 
-![alt]({{ site.url }}{{ site.baseurl }}/mportingFinDatafromWeb_files/ImportingFinDatafromWeb_5_1.png)
-
-
-
-```python
-
-```
