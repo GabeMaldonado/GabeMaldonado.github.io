@@ -8,8 +8,8 @@ mathjax: "True"
 # Using pandas_datareader to import financial data from the web to a dataframe
 
 
-It is convinient to use pandas_datareader to import fiancial data directly into a dataaframe. 
-The process is very straight-forward, there is minimal code required to to do and the data si available from different sources such as Google Finance, Yahoo!, the Federal Reserve, the World Bank, etc.
+It is convinient to use pandas_datareader to import fiancial data directly into a dataframe. 
+The process is very straight-forward, there is minimal code required and the data is available from different sources such as Google Finance, Yahoo!, the Federal Reserve, the World Bank, etc.
 
 
 ```python
