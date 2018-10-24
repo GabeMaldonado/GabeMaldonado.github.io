@@ -59,5 +59,43 @@ name, if known, to 'sheetname' otherwise 'sheetname=0'
 
 	name_of_sheets = pd.read_excel(xls, sheetname=names, na_values='n/a')
 
+```
 
+## To combine two or more dataframes we can use 'pd.concat' which will concatenate or "stack" the dataframes vertically.
+
+```python
+	pd.concat([df1, df2, df3])
+```
+
+## We can also use  **broadcasting** to add new columns to our data frames.
+
+```python
+	df1['New Column Name'] = 'Value'
+
+```
+
+## To automatically read and concatename three excel spread sheets
+
+```python
+	# Create the pd.ExcelFile() object
+	xls = pd.ExcelFile('file-name.xlsx')
+
+	# Extract the sheet names from xls
+	sheetnames = xls.sheet_names
+
+	# create an empty list: listings
+	data = []
+
+	# Import the data
+	for names in sheetnames:
+    	df = pd.read_excel(xls, sheetname=shetnames, na_values='n/a')
+    	df['New Colum Name'] = names
+    	data.append(df)
+
+	# Concatenate the listings: df1
+	df1 = pd.concat(df)
+
+	# Inspect the results
+	df1.info()
+	print(df1.head())
 ```
