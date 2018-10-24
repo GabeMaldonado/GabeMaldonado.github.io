@@ -235,7 +235,7 @@ stock_data['Adj Close'].plot(legend=True, figsize=(10,4))
 
 
 
-![png](ImportingFinDatafromWeb_files/ImportingFinDatafromWeb_5_1.png)
+<img src="ImportingFinDatafromWeb_files/ImportingFinDatafromWeb_5_1.png", width="800">
 
 
 
