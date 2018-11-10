@@ -11,7 +11,7 @@ header:
 
 ## Data Visualizations will be added to this page. 
 
-<img src="/images/jointplot.png" width="60%">
+<img src="/images/jointplot.png" width="60%" class="center">
 
 
 
