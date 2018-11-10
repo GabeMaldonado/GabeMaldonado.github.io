@@ -4,9 +4,10 @@ permalink: /data-visualizations/
 title: "Data Visualizations"
 author_profile: true
 header:
-   image: "/images/jointplot.png"
+  
 ---
 
+<img src="/images/jointplot.png" width="40%">
 
 ## Data Visualizations will be added to this page. 
 
