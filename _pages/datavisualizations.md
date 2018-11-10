@@ -7,11 +7,18 @@ header:
   
 ---
 
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
 
 
 ## Data Visualizations will be added to this page. 
 
-<img src="/images/jointplot.png" width="60%" class="center">
+<img src="/images/jointplot.png" style="width:40%">
 
 
 

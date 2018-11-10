@@ -12,7 +12,7 @@ img {
 }
 </style>
 
-<img src="/images/IMG_0378.jpg" style="width:40%">
+<img src="/images/IMG_0378.jpg" style="width:30%">
 
 
 	Aspiring Data Scientist commited to expanding Data Science, Data visualization, 
