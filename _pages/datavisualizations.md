@@ -19,7 +19,6 @@ img {
 ## Jointplots Hex
 
 ```python
-	
 	sns.jointplot(data1,data2,kind='hex')
 
 ```
@@ -29,7 +28,6 @@ img {
 ## KDE Plots
 
 ```python
-
 	sns.kdeplot(dframe.X,dframe.Y,shade=True)
 ```
 
@@ -50,7 +48,6 @@ img {
 ## Distribution Plots
 
 ```python
-	
 	sns.distplot(ser1,bins=25)
 ```
 <img src="/images/distplot.png" style="width:70%">
