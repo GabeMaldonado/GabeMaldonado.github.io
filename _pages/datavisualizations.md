@@ -4,7 +4,7 @@ permalink: /data-visualizations/
 title: "Data Visualizations"
 author_profile: true
 header:
-   image: "/images/jointplot.png" width="100"
+   image: "/images/jointplot.png"
 ---
 
 
