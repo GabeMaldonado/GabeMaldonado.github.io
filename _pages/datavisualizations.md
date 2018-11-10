@@ -35,7 +35,7 @@ img {
 
 <img src="/images/kdeplot.png" style="width:70%">
 
-## KDE & Historgram Plot
+## KDE & Histogram Plot
 
 ```python
 	
@@ -45,7 +45,7 @@ img {
 
 ```
 
-<img src="/images/kdehistplot.png" style="width:70%">
+<img src="/images/kdehist.png" style="width:70%">
 
 ## Distribution Plots
 
