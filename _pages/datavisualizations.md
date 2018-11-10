@@ -18,7 +18,7 @@ img {
 
 ## Data Visualizations will be added to this page. 
 
-<img src="/images/jointplot.png" style="width:40%">
+<img src="/images/jointplot.png" style="width:70%">
 
 
 
