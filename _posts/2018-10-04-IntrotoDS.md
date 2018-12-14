@@ -7,7 +7,6 @@ header:
 excerpt: "Data Science, Data Visualizations"
 mathjax: "True"
 ---
-{ % include adsense.html % }
 
 # H1 Heading
 

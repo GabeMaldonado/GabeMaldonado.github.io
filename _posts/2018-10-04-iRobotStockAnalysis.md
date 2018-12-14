@@ -6,7 +6,7 @@ header:
 tags: [data science, data visualizations, machine learning]
 excerpt: "Data Science, Data Visualizations, Machine Learning"
 ---
-{ % include adsense.html % }
+
 
 # In this Jupyter Notebook I have done some exploratory data analysis of iRobot stock.
 
