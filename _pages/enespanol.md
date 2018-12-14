@@ -2,9 +2,7 @@
 layout: archive
 permalink: /enespanol/
 title: "En Español"
-author_profile: true
-header:
-  
+ 
 ---
 
 <style>
