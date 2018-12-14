@@ -4,6 +4,7 @@ date: 2018-10-22
 tags: [data science, data visualizations]
 mathjax: "True"
 ---
+{ % include adsense.html % }
 
 # Loading .csv files
 

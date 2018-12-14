@@ -4,6 +4,7 @@ date: 2018-10-23
 tags: [data science, data visualizations, fintech]
 mathjax: "True"
 ---
+{ % include adsense.html % }
 
 # Using pandas_datareader to import financial data from the web to a dataframe
 
