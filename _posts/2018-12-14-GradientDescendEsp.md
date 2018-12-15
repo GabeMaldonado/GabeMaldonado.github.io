@@ -1,16 +1,16 @@
 ---
-title: "Gradient Descend en Español - Python"
+title: "Gradient Descent en Español - Python"
 date: 2018-12-14
 tags: [En Español]
-excerpt: "Implementación del Algoritmo Gradient Descend en Python"
+excerpt: "Implementación del Algoritmo Gradient Descent en Python"
 mathjax: "True"
 ---
 
 
 
-# Implementación del Algoritmo de Gradient Descend
+# Implementación del Algoritmo de Gradient Descent
 
-En este notebook, implementaremos las funciones básicas del algortimo de Gradient Descend para encontrar el límite
+En este notebook, implementaremos las funciones básicas del algortimo de Gradient Descent para encontrar el límite
 de un pequeño dataset. Primero, empezaremos con unas funciones que nos ayudarán a visualizar mejor los datos.
 
 
@@ -116,7 +116,7 @@ def actualizar_pesos(x, y, pesos, prejuicios, velocidadaprendizaje):
 ```
 
 ## Entrenar la función
-Esta función nos ayudara a iterar el algoritmo Gradient Descend a travez de todos los datos por un cierto numero de epochs. Tambien trazará los datos y algúnos de las líneas de límites las cuales se obtienen mientras se ejecuta el algoritmo.
+Esta función nos ayudara a iterar el algoritmo Gradient Descent a travez de todos los datos por un cierto numero de epochs. Tambien trazará los datos y algúnos de las líneas de límites las cuales se obtienen mientras se ejecuta el algoritmo.
 
 
 ```python
