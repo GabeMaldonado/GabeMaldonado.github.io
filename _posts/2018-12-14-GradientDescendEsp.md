@@ -59,7 +59,7 @@ plt.show()
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/scatter_plot.png)
-
+```
 
 ## TODO: Implementing the basic functions
 
@@ -249,7 +249,3 @@ entrenar(X, y, epochs, velocidadaprendizaje, True)
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/trained_model_img.png)
 
 
-
-```python
-
-```
