@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Data Science"
 date: 2018-10-04
-tags: [data science, data visualizations]
+tags: [En Español]
 header:
    
 excerpt: "Data Science, Data Visualizations"

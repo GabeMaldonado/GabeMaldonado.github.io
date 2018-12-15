@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /enespanol/
-title: "Publicaiones en Español"
+title: "Publicaciones en Español"
 author_profile: true
 header:
 ---
