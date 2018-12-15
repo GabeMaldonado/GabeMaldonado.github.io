@@ -59,7 +59,7 @@ plt.show()
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/scatter_plot.png)
-```
+
 
 
 ## Para hacer: Implementar funciones básicas
