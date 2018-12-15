@@ -1,9 +1,11 @@
 ---
 layout: home_esp
-author_profile: true
+permalink: /enespanol/
 title: "En Español"
+author_profile: true
 header:
 ---
+ 
 
 
 
