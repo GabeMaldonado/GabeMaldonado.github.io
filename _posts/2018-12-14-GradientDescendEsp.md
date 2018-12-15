@@ -2,7 +2,7 @@
 title: "Gradient Descend en Español - Python"
 date: 2018-12-14
 tags: [En Español]
-excerpt: "Implementación del Algorithmo Gradient Descend en Python"
+excerpt: "Implementación del Algoritmo Gradient Descend en Python"
 mathjax: "True"
 ---
 
@@ -11,12 +11,12 @@ mathjax: "True"
 # Implementación del Algoritmo de Gradient Descend
 
 En este notebook, implementaremos las funciones básicas del algortimo de Gradient Descend para encontrar el límite
-de un pequeño dataset. Primero, empezaremos con unas fnciones que nos ayudaran a hacer un gráfico para visualizar mejor los datos.
+de un pequeño dataset. Primero, empezaremos con unas funciones que nos ayudarán a visualizar mejor los datos.
 
 
 
 ```python
-#Importar las modulos necesarios
+#Importar las módulos necesarios
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -61,30 +61,25 @@ plt.show()
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/scatter_plot.png)
 ```
 
-## TODO: Implementing the basic functions
 
 ## Para hacer: Implementar funciones básicas
 
-Implement the following formulas, as explained in the text.
 Implementar las siguientes formulas:
 
-- Sigmoid activation function
 - Función de activación Sigmoid
 
 $$\sigma(x) = \frac{1}{1+e^{-x}}$$
 
-- salida (prediction) formula
 - Fórmula de Salida (predicción)
 
 $$\hat{y} = \sigma(w_1 x_1 + w_2 x_2 + b)$$
 
-- Error function
-- Fórmula de Error
+- Fórmula de Función de Error
 
 $$Error(y, \hat{y}) = - y \log(\hat{y}) - (1-y) \log(1-\hat{y})$$
 
-- The function that updates the weights
-- Fórmula que actualiza los pesos
+
+- Fórmula de la función que actualiza los pesos
 
 $$ w_i \longrightarrow w_i + \alpha (y - \hat{y}) x_i$$
 
@@ -92,28 +87,24 @@ $$ b \longrightarrow b + \alpha (y - \hat{y})$$
 
 
 ```python
-# Implement the following functions
+
 # Implementar las siguientes funciones
 
-# Activation (sigmoid) function
 # Función de axctivación Sigmoid
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-# salida (prediction) formula
 #Fórmula de Salida (predicción)
 
 def formula_salida(caracteristicas, pesos, prejuicios):
     return sigmoid (np.dot(caracteristicas, pesos) + prejuicios)
 
-# Error (log-perdida) formula
 # Fórmula de error (log-perdida)
 
 def formula_error(y, salida):
     return -y*np.log(salida)-(1-y)* np.log(1 - salida)
 
-# Gradient descent step
 # Paso Gradient Descent
 
 def actualizar_pesos(x, y, pesos, prejuicios, velocidadaprendizaje):
@@ -125,7 +116,7 @@ def actualizar_pesos(x, y, pesos, prejuicios, velocidadaprendizaje):
 ```
 
 ## Entrenar la función
-Esta función nos ayudara a iterar el algoritmo gradient descent a travez de todos los datos por un cierto numero de epochs. Tambien trazara los datos y algúnos de las líneas de límites las cuales se obtienen mientra se ejecuta el algoritmo.
+Esta función nos ayudara a iterar el algoritmo Gradient Descend a travez de todos los datos por un cierto numero de epochs. Tambien trazará los datos y algúnos de las líneas de límites las cuales se obtienen mientras se ejecuta el algoritmo.
 
 
 ```python
@@ -148,7 +139,6 @@ def entrenar(caracteristicas, targets, epochs, velocidadaprendizaje, graph_lines
             error = formula_error(y, salida)
             pesos, prejuicios = actualizar_pesos(x, y, pesos, prejuicios, velocidadaprendizaje)
         
-        # Printing out the log-perdida error on the training set
         # Imprimir el error log-perdida del grupo de entrenamiento
         
         salida = formula_salida(caracteristicas, pesos, prejuicios)
@@ -157,7 +147,7 @@ def entrenar(caracteristicas, targets, epochs, velocidadaprendizaje, graph_lines
         if e % (epochs / 10) == 0:
             print("\n========== Epoch", e,"==========")
             if last_perdida and last_perdida < perdida:
-                print("Pérdida en Entrenamiento: ", perdida, "  WARNING - Pérdida Incrementando")
+                print("Pérdida en Entrenamiento: ", perdida, "  ADVERTENCIA - Pérdida Incrementando")
             else:
                 print("Pérdida en Entrenamiento: ", perdida)
             last_perdida = perdida
@@ -168,16 +158,16 @@ def entrenar(caracteristicas, targets, epochs, velocidadaprendizaje, graph_lines
             mostrar(-pesos[0]/pesos[1], -prejuicios/pesos[1])
             
 
-    # Plotting the solution boundary
+    # Gráfico del límite de la solución
     plt.title("Límites de Solución")
     mostrar(-pesos[0]/pesos[1], -prejuicios/pesos[1], 'black')
 
-    # Plotting the data
+    # Gráfico de los datos
     trazar_puntos(caracteristicas, targets)
     plt.show()
 
-    # Plotting the error
-    plt.title("Error Plot")
+    # Gráfico del error
+    plt.title("Gráfico de Error")
     plt.xlabel('Número de epochs')
     plt.ylabel('Error')
     plt.plot(errores)
