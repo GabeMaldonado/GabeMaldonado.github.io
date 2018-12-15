@@ -41,7 +41,7 @@ def mostrar(m, b, color='g--'):
 
 
 ```python
-data = pd.read_csv('/Users/EGM/Desktop/Data Science/DeepLearning/data.csv', header=None)
+data = pd.read_csv('/data.csv', header=None)
 print(data.head())
 X = np.array(data[[0,1]])
 y = np.array(data[2])
