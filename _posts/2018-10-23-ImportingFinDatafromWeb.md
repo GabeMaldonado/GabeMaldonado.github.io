@@ -1,7 +1,8 @@
 ---
 title: "Importing Financial Data form the Web"
 date: 2018-10-23
-tags: [data science, data visualizations, fintech]
+tags: [data science, fintech]
+excerpt: "Importing Fin Data from the Web"
 mathjax: "True"
 ---
 

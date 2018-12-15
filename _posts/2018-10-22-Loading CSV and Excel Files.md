@@ -2,6 +2,7 @@
 title: "Loading .csv and Excel files"
 date: 2018-10-22
 tags: [data science, data visualizations]
+excerpt: "Loading .csv files"
 mathjax: "True"
 ---
 
