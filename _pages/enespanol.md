@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /en-espanol/
+permalink: /enespanol/
 title: "Publicaiones en Español"
 author_profile: true
 header:
