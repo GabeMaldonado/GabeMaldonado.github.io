@@ -5,7 +5,7 @@ tags: [En Español]
 excerpt: "Implementación del Algoritmo Gradient Descent en Python"
 mathjax: "True"
 ---
-
+{% include adsense.html %}
 
 
 # Implementación del Algoritmo de Gradient Descent
