@@ -6,7 +6,7 @@ excerpt: "Importando Datos de la Bolsa de Valores"
 mathjax: "True"
 ---
 
-## En este ejercicio usaremos el 'pandas_datareader' para importar datos financieros del stock de la companía Apple (AAPL) directamente a un 'Data Frame' y también trazaremos un gráfico linear para poder observar la tendencia en el precio del stock.
+### En este ejercicio usaremos el 'pandas_datareader' para importar datos financieros del stock de la companía Apple (AAPL) directamente a un 'Data Frame' y también trazaremos un gráfico linear para poder observar la tendencia en el precio del stock.
 
 El uso de 'pandas_datareader' es muy conveniente cuando queremos crear un 'Data Frame' que contiene la información financiera de algun 'stock'.
 
