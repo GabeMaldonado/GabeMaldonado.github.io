@@ -6,7 +6,7 @@ author_profile: true
 header:
 ---
 
-
+{% include adsense.html %}
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
