@@ -44,7 +44,7 @@ print (fecha_inicial)
 
 ```python
 """
-Usar pandas_datareader para importar la datos y crear un nuevo Data Frame llamado 'datos_stock'
+Usar pandas_datareader para importar datos y crear un nuevo Data Frame llamado 'datos_stock'
 pandas_datareader requiere cuatro parámetros:
    1 - el 'tick' o código del stock, en este caso 'AAPL' por Apple
    2 - la fuente de donde vienen los datos, en este caso 'yahoo'
@@ -57,7 +57,7 @@ datos_stock = pdr.DataReader('AAPL', 'yahoo', start, end)
 
 # Imprimir la información básica de nuestro Data Frame usando el método .info()
 
-stock_data.info()
+datos_stock.info()
 ```
 
     <class 'pandas.core.frame.DataFrame'>
@@ -158,7 +158,7 @@ datos_stock.head()
 
 ```python
 # Imprimir las últimas 5 filas del Data Frame (la 'cola') usando el método .tail() 
-stock_data.tail()
+datos_stock.tail()
 ```
 
 
