@@ -95,7 +95,7 @@ plt.imshow(imagen_1_gris, cmap = 'gray')
 
 
 ```python
-# Cambiar imagen a blaco y negro (gris) para después aplicar filtros
+# Cambiar imagen a blanco y negro (gris) para después aplicar filtros
 # Hacemos lo mismo que anteriormente para esta segunda imagen
 
 imagen_2_gris = cv2.cvtColor(imagen_2, cv2.COLOR_RGB2GRAY)
@@ -178,7 +178,6 @@ plt.imshow(imagen_filtrada_2, cmap='gray')
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_9_1_sobel.png)
-![png](output_9_1.png)
 
 
 
