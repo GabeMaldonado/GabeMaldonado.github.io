@@ -1,7 +1,15 @@
+---
+title: "Intro a OpenCV"
+date: 2019-01-03
+tags: [En Español]
+excerpt: "Cargar imagenes y aplicar filtros"
+mathjax: "True"
+---
 
-## Aplicando filtros a imagenes
 
-En ste notebook, usaremos la líbreria CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudaran a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
+## Cargando imagenes, aplicando filtros usando OpenCv
+
+En este notebook, usaremos la líbreria CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudaran a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
 
 ### Un  poco de información sobre OpenCv
 OpenCV (Open Source Computer Vision) es una librería de Visión Computarizada y Apredizaje Automático (Machine Learning.)
