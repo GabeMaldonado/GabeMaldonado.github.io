@@ -9,7 +9,7 @@ mathjax: "True"
 
 ## Cargando imagenes, aplicando filtros usando OpenCv
 
-En este notebook, usaremos la librería CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudaran a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
+En este notebook, usaremos la librería CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudarán a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
 
 ### Un  poco de información sobre OpenCv
 OpenCV (Open Source Computer Vision) es una librería de Visión Computarizada y Apredizaje Automático (Machine Learning.)
@@ -17,7 +17,9 @@ De acuerdo a su pagina web, esta librería tiene más de 2500 algoritmos optimiz
 Para más información visita: https://opencv.org/
 
 Si no tienes OpenCv y tienes instalado 'pip' en tu entorno de python, corre el siguiente comando en al consola/cmd:
+```python
 pip install opencv-python
+```
 
 
 
@@ -53,7 +55,7 @@ plt.imshow(imagen)
 
 
 ```python
-# Cargar una seguando imagen
+# Cargar una segunda imagen
 imagen_2 = mpimg.imread('Jupyter Notebooks/data/nazare.jpg')
 
 plt.imshow(imagen_2)
@@ -117,7 +119,7 @@ plt.imshow(imagen_2_gris, cmap = 'gray')
 
 Aquí veremos un tipo de Kernel Costumizado que se usa como filtro de detección de bordes: el filtro Sobel.
 
-Este filtro de Sobel es comúnmente utilizado en detección de bordes ya que encuentra patrones de intensidad de la imagen. Cuando aplicamos un filtro de Sobel, básicamento lo que hacemos es tomar una approximación del derivado de la imagen con respecto a la dirección en x or y, separadamente. 
+Este filtro de Sobel es comúnmente utilizado en detección de bordes ya que encuentra patrones de intensidad en la imagen. Cuando aplicamos un filtro de Sobel, básicamento lo que hacemos es tomar una approximación del derivado de la imagen con respecto a la dirección en x or y, separadamente. 
 
 Puedes jugar a modificar los valores en el array del filtro para ver sus distintos efectos. 
 
@@ -130,7 +132,7 @@ sobel_y = np.array([[ -1, -2, -1],
                    [ -1, 1, 1], 
                    [ 1, 2, 1]])
 
-#Create and apply a Sobel x operator
+# Sobel x
 sobel_x = np.array([[-1, 0, 1],
                    [-2, 0, 1],
                    [-1, 0, 1]])
@@ -159,12 +161,12 @@ sobel_y = np.array([[ -1, -2, -1],
                    [ -1, 1, 1], 
                    [ 1, 2, 1]])
 
-#Create and apply a Sobel x operator
+# Sobel x 
 sobel_x = np.array([[-1, 0, 1],
                    [-2, 0, 1],
                    [-1, 0, 1]])
 
-# Applcar el filtro a la imagen con los argumentos: imagen_en_gris, profundidad, kernel/filtro_sobel
+# Aplicar el filtro a la imagen con los argumentos: imagen_en_gris, profundidad, kernel/filtro_sobel
 imagen_filtrada_2 = cv2.filter2D(imagen_2_gris, -1, sobel_y)
 
 plt.imshow(imagen_filtrada_2, cmap='gray')
