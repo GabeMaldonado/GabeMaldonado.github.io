@@ -9,7 +9,7 @@ mathjax: "True"
 
 ## Cargando imagenes, aplicando filtros usando OpenCv
 
-En este notebook, usaremos la líbreria CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudaran a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
+En este notebook, usaremos la librería CV2 de OpenCV con la interface en python para cargar y manipular imagenes. Cambiaremos las imágenes de color a blanco y negro y aplicaremos filtros que nos ayudaran a detectar bordes. Esto es muy importante cuando trabajamos en detección y clasificación de objectos.
 
 ### Un  poco de información sobre OpenCv
 OpenCV (Open Source Computer Vision) es una librería de Visión Computarizada y Apredizaje Automático (Machine Learning.)
@@ -34,7 +34,7 @@ import numpy as np
 %matplotlib inline
 
 # Cargar la imagen -- pasa la dirección donde se encuentra tu imagen como argumento a .imread()
-imagen = mpimg.imread('/Users/EGM/Jupyter Notebooks/data/tech_tower.jpg')
+imagen = mpimg.imread('Jupyter Notebooks/data/tech_tower.jpg')
 
 plt.imshow(imagen)
 ```
@@ -47,14 +47,14 @@ plt.imshow(imagen)
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_1_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_1_1.png)
 
 
 
 
 ```python
 # Cargar una seguando imagen
-imagen_2 = mpimg.imread('/Users/EGM/Jupyter Notebooks/data/nazare.jpg')
+imagen_2 = mpimg.imread('Jupyter Notebooks/data/nazare.jpg')
 
 plt.imshow(imagen_2)
 ```
@@ -67,7 +67,7 @@ plt.imshow(imagen_2)
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_2_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_2_1.png)
 
 
 ## Convertir las imagenes de color a blanco y negro
@@ -91,7 +91,7 @@ plt.imshow(imagen_1_gris, cmap = 'gray')
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_4_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_4_1.png)
 
 
 ```python
@@ -110,7 +110,7 @@ plt.imshow(imagen_2_gris, cmap = 'gray')
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_5_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_5_1.png)
 
 
 ## Crear un Kernel Costumizado
@@ -148,7 +148,7 @@ plt.imshow(imagen_filtrada, cmap='gray')
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_8_1.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_8_1.png)
 
 
 
@@ -177,7 +177,7 @@ plt.imshow(imagen_filtrada_2, cmap='gray')
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/output_9_1_sobel.png)
+![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_9_1_sobel.png)
 ![png](output_9_1.png)
 
 
