@@ -406,4 +406,4 @@ ax2.imshow(im_convert(objetivo))
 ![alt]({{ site.url }}{{ site.baseurl }}/images/DeepLearning/output_images.png)
 
 
--- Contenido basado en el curso Deep Learning with PyTorch de Udacity -- 
+#### Contenido basado en el curso Deep Learning with PyTorch de Udacity
