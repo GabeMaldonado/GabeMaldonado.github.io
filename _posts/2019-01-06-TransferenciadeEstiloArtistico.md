@@ -1,16 +1,23 @@
+---
+title: "Transferencia de Estilo Artístico en PyTorch"
+date: 2019-01-06
+tags: [En Español]
+excerpt: "Transferir el estilo artístico de una obra de arte a una imagen cualquiera"
+mathjax: "True"
+---
 
 ## Transferencia de Estilo Artístico en PyTorch
 
 En este notebook, usaremos PyTorch para aplicar la técnica de transferencia de estilo artístico. 
-Usaremos una imagen del pinto ecuatoriano Eduardo Kingman para determinar el estilo el cual será aplicado a una segunda imagen. También usaremos la red VGG19 la cual esta pre-entrenada y consituye de 19-capas formadas por series de capas convolucionales y maxpooling y también algunas capas completamente conectadas.
+Usaremos una imagen del pintor ecuatoriano Eduardo Kingman para determinar el estilo el cual será aplicado a una segunda imagen. También usaremos la red VGG19 la cual esta pre-entrenada y consituye de 19-capas formadas por series de capas convolucionales y maxpooling y también algunas capas completamente conectadas.
 
 
 
 
 ```python
-# importar librerías requeridas
+# Importar librerías requeridas
 
-# comando mágico que permite mostrar las imagenes en las celdas del notebook
+# Comando 'mágico' que permite mostrar las imagenes en las celdas del notebook
 %matplotlib inline
 
 
@@ -403,3 +410,5 @@ ax2.imshow(im_convert(objetivo))
 ```python
 
 ```
+
+-- Contenido basado en el curso Deep Learning with PyTorch de Udacity -- 
