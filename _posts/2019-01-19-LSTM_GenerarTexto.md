@@ -6,9 +6,7 @@ excerpt: "Usando un LSTM para generar texto"
 mathjax: "True"
 ---
 
-# LSTM a Nivel de Cáracteres en PyTorch
-
-### Generación Automática de Texto
+### Generación Automática de Texto en PyTorch
 
 En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenamiento y  procesará este texto cáracter por cáracter, aprederá de él y como resultado generará texto de la misma manera. Para esto usaremos el Premio Nobel de la Literatura *Cien años de Soledad* del gran **Gabriel García Márquez** para entrenar nuestra red. Para ejecutar este notebook, usé Google Colab -- que es básicamente un Jupyter notebook que puede ser ejecutado en el navegador (Chrome). Colab requiere un poco más de trabajo inicial (set-up) pero ofrece el uso gratuito de un GPU. Algo que realmente vale la pena y recomiendo ser usado.
 
