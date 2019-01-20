@@ -10,7 +10,7 @@ mathjax: "True"
 
 ### Generación Automática de Texto
 
-En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenar y  aprender cáracter por cáracter y como resultado generará texto caáracter por cáracter. Para esto usaremos el libro *Cien años de Soledad* de Gabriel García Márquez para entrenar nuestra red. 
+En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenar y  aprender cáracter por cáracter y como resultado generará texto de la misma. Para esto usaremos el libro *Cien años de Soledad* de Gabriel García Márquez para entrenar nuestra red. 
 
 
 
