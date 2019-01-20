@@ -10,9 +10,7 @@ mathjax: "True"
 
 ### Generación Automática de Texto
 
-En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenar y  aprender cáracter por cáracter y como resultado generará texto de la misma. Para esto usaremos el libro *Cien años de Soledad* de Gabriel García Márquez para entrenar nuestra red. 
-
-
+En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenamiento y  procesará este texto cáracter por cáracter, aprederá de él y como resultado generará texto de la misma manera. Para esto usaremos el Premio Nobel de la Literatura *Cien años de Soledad* del gran **Gabriel García Márquez** para entrenar nuestra red. Para ejecutar este notebook, usé Google Colab -- que es básicamente un Jupyter notebook que puede ser ejecutado en el navegador (Chrome). Colab requiere un poco más de trabajo inicial (set-up) pero ofrece el uso gratuito de un GPU. Algo que realmente vale la pena y recomiendo ser usado.
 
 
 
@@ -208,7 +206,7 @@ class CharRNN(nn.Module):
         super().__init__()
         
         """
-          Definir la architectura de nuestra red.
+          Definir la arquitectura de nuestra red.
           
           Argumentos:
           n_hidden: Número de capas escondidas
@@ -277,15 +275,14 @@ class CharRNN(nn.Module):
 
 ## Hora de Entrenar!
 
-La función '*entrenar*' nos da la opción de definir el número de epochs, la velocidad de apnetizaje, y otros parámetros.
+La función '*train*' (entrenar) nos da la opción de definir el número de epochs, la velocidad de aprendizaje, y otros parámetros.
 
 Utlizaremos el Adam Optimizer y Cross Entropy Loss. Calcularemos la perdida y haremos retro-propagación.
 
 Algunos detalles a considerar:
 
-*   En el loop del lote, separaremos el estado escondido de su historia y lo modificaremos para que su valor sea igual a una variable tu un nuevo tuple por que el LSTM tiene un estado escondido que es un tuple con los valores de los estados de escondido en cells.
+*   En el loop del lote, separaremos el estado escondido de su historia y lo modificaremos para que su valor sea igual a una variable en un nuevo *tuple* por que el LSTM tiene un estado escondido que es un tuple con los valores de los estados de escondido en cells.
 *   Usaremos `clip_grad_norm` para prevenir que los gradients 'exploten'. 
-
 
 
 
@@ -438,77 +435,9 @@ train(net, codificado, epochs=n_epochs, batch_size=batch_size, seq_length=seq_le
     Epoch: 5/20... Step: 260... Loss: 2.1125... Val Loss: 2.0618
     Epoch: 5/20... Step: 270... Loss: 2.0837... Val Loss: 2.0487
     Epoch: 5/20... Step: 280... Loss: 2.0884... Val Loss: 2.0260
-    Epoch: 6/20... Step: 290... Loss: 2.0572... Val Loss: 2.0113
-    Epoch: 6/20... Step: 300... Loss: 2.0445... Val Loss: 1.9936
-    Epoch: 6/20... Step: 310... Loss: 2.0362... Val Loss: 1.9781
-    Epoch: 6/20... Step: 320... Loss: 2.0232... Val Loss: 1.9632
-    Epoch: 6/20... Step: 330... Loss: 2.0016... Val Loss: 1.9479
-    Epoch: 6/20... Step: 340... Loss: 1.9708... Val Loss: 1.9366
-    Epoch: 7/20... Step: 350... Loss: 1.9701... Val Loss: 1.9203
-    Epoch: 7/20... Step: 360... Loss: 1.9855... Val Loss: 1.9069
-    Epoch: 7/20... Step: 370... Loss: 1.9557... Val Loss: 1.8940
-    Epoch: 7/20... Step: 380... Loss: 1.9335... Val Loss: 1.8823
-    Epoch: 7/20... Step: 390... Loss: 1.9085... Val Loss: 1.8727
-    Epoch: 8/20... Step: 400... Loss: 1.9384... Val Loss: 1.8600
-    Epoch: 8/20... Step: 410... Loss: 1.9183... Val Loss: 1.8495
-    Epoch: 8/20... Step: 420... Loss: 1.8920... Val Loss: 1.8346
-    Epoch: 8/20... Step: 430... Loss: 1.8747... Val Loss: 1.8253
-    Epoch: 8/20... Step: 440... Loss: 1.8717... Val Loss: 1.8117
-    Epoch: 8/20... Step: 450... Loss: 1.8595... Val Loss: 1.8009
-    Epoch: 9/20... Step: 460... Loss: 1.8488... Val Loss: 1.7940
-    Epoch: 9/20... Step: 470... Loss: 1.8680... Val Loss: 1.7808
-    Epoch: 9/20... Step: 480... Loss: 1.8109... Val Loss: 1.7724
-    Epoch: 9/20... Step: 490... Loss: 1.8005... Val Loss: 1.7649
-    Epoch: 9/20... Step: 500... Loss: 1.8213... Val Loss: 1.7523
-    Epoch: 9/20... Step: 510... Loss: 1.7826... Val Loss: 1.7461
-    Epoch: 10/20... Step: 520... Loss: 1.7596... Val Loss: 1.7358
-    Epoch: 10/20... Step: 530... Loss: 1.7519... Val Loss: 1.7314
-    Epoch: 10/20... Step: 540... Loss: 1.7570... Val Loss: 1.7211
-    Epoch: 10/20... Step: 550... Loss: 1.7593... Val Loss: 1.7122
-    Epoch: 10/20... Step: 560... Loss: 1.7583... Val Loss: 1.7041
-    Epoch: 10/20... Step: 570... Loss: 1.7354... Val Loss: 1.6936
-    Epoch: 11/20... Step: 580... Loss: 1.7133... Val Loss: 1.6879
-    Epoch: 11/20... Step: 590... Loss: 1.7331... Val Loss: 1.6836
-    Epoch: 11/20... Step: 600... Loss: 1.7419... Val Loss: 1.6763
-    Epoch: 11/20... Step: 610... Loss: 1.7123... Val Loss: 1.6687
-    Epoch: 11/20... Step: 620... Loss: 1.7211... Val Loss: 1.6605
-    Epoch: 12/20... Step: 630... Loss: 1.6875... Val Loss: 1.6531
-    Epoch: 12/20... Step: 640... Loss: 1.7104... Val Loss: 1.6435
-    Epoch: 12/20... Step: 650... Loss: 1.6554... Val Loss: 1.6431
-    Epoch: 12/20... Step: 660... Loss: 1.6814... Val Loss: 1.6324
-    Epoch: 12/20... Step: 670... Loss: 1.6513... Val Loss: 1.6280
-    Epoch: 12/20... Step: 680... Loss: 1.6717... Val Loss: 1.6242
-    Epoch: 13/20... Step: 690... Loss: 1.6806... Val Loss: 1.6163
-    Epoch: 13/20... Step: 700... Loss: 1.6778... Val Loss: 1.6104
-    Epoch: 13/20... Step: 710... Loss: 1.6458... Val Loss: 1.6045
-    Epoch: 13/20... Step: 720... Loss: 1.6673... Val Loss: 1.6007
-    Epoch: 13/20... Step: 730... Loss: 1.6334... Val Loss: 1.5949
-    Epoch: 13/20... Step: 740... Loss: 1.6179... Val Loss: 1.5899
-    Epoch: 14/20... Step: 750... Loss: 1.6096... Val Loss: 1.5840
-    Epoch: 14/20... Step: 760... Loss: 1.6193... Val Loss: 1.5795
-    Epoch: 14/20... Step: 770... Loss: 1.6177... Val Loss: 1.5736
-    Epoch: 14/20... Step: 780... Loss: 1.6102... Val Loss: 1.5698
-    Epoch: 14/20... Step: 790... Loss: 1.5912... Val Loss: 1.5637
-    Epoch: 15/20... Step: 800... Loss: 1.5906... Val Loss: 1.5585
-    Epoch: 15/20... Step: 810... Loss: 1.6117... Val Loss: 1.5546
-    Epoch: 15/20... Step: 820... Loss: 1.5801... Val Loss: 1.5517
-    Epoch: 15/20... Step: 830... Loss: 1.5656... Val Loss: 1.5482
-    Epoch: 15/20... Step: 840... Loss: 1.5712... Val Loss: 1.5423
-    Epoch: 15/20... Step: 850... Loss: 1.5403... Val Loss: 1.5406
-    Epoch: 16/20... Step: 860... Loss: 1.5494... Val Loss: 1.5346
-    Epoch: 16/20... Step: 870... Loss: 1.5475... Val Loss: 1.5299
-    Epoch: 16/20... Step: 880... Loss: 1.5579... Val Loss: 1.5273
-    Epoch: 16/20... Step: 890... Loss: 1.5665... Val Loss: 1.5213
-    Epoch: 16/20... Step: 900... Loss: 1.5507... Val Loss: 1.5160
-    Epoch: 16/20... Step: 910... Loss: 1.5188... Val Loss: 1.5125
-    Epoch: 17/20... Step: 920... Loss: 1.5140... Val Loss: 1.5072
-    Epoch: 17/20... Step: 930... Loss: 1.5574... Val Loss: 1.5052
-    Epoch: 17/20... Step: 940... Loss: 1.5154... Val Loss: 1.5036
-    Epoch: 17/20... Step: 950... Loss: 1.5106... Val Loss: 1.5016
-    Epoch: 17/20... Step: 960... Loss: 1.5105... Val Loss: 1.4993
-    Epoch: 18/20... Step: 970... Loss: 1.5493... Val Loss: 1.4908
-    Epoch: 18/20... Step: 980... Loss: 1.5417... Val Loss: 1.4888
-    Epoch: 18/20... Step: 990... Loss: 1.5066... Val Loss: 1.4868
+    ...
+    ...
+    ...
     Epoch: 18/20... Step: 1000... Loss: 1.4956... Val Loss: 1.4810
     Epoch: 18/20... Step: 1010... Loss: 1.5043... Val Loss: 1.4802
     Epoch: 18/20... Step: 1020... Loss: 1.5053... Val Loss: 1.4753
@@ -528,12 +457,12 @@ train(net, codificado, epochs=n_epochs, batch_size=batch_size, seq_length=seq_le
 
 ## Obtener el mejor modelo
 
-Para ajustar los híper-parameters para que nos den una mejor performance, debemos mirar las pérdidas en entrenamiento y validación. Si las pérdidas de entrenamiento son mucho menores a las pérdidas de validación-- estamos *overfitting*. Para rectificar, podemos incrementar regularización (dropout) o usar un red mas pequeña. Si las pérdidas de entrenamiento y validación son similares,  estamos *underfitting* entonces podemos incrementar el tamaño de nuestra red.
+Si queremos ajustar los híper-parámetros para que nos den una mejor performance, debemos mirar las pérdidas en entrenamiento y validación. Si las pérdidas de entrenamiento son mucho menores a las pérdidas de validación-- estamos *overfitting*. Para rectificar, podemos incrementar regularización (dropout) o usar un red mas pequeña. Al contrario, si las pérdidas de entrenamiento y validación son similares,  estamos *underfitting* entonces podemos incrementar el tamaño de nuestra red.
 
 
-## Híper-parametros
+## Híper-parámetros
 
-Estos son los híper-parametros de nuestra red.
+Estos son los híper-parámetros de nuestra red.
 
 Cuando definimos  el modelo:
 
@@ -557,7 +486,7 @@ Cuando entrenamos el modelo:
 ## Punto de Control
 
 Después del entrenamiento, es posible guardar el modelo para poder  cargarlo déspues si es necesario. 
-En este ejemplo guardaremos los parámetros necesarios para crear la misma architectura de nuestra red, los híper-parametros, capas, y cáracteres.
+En este ejemplo guardaremos los parámetros necesarios para crear la misma arquitectura de nuestra red, los híper-parámetros, capas, y cáracteres.
 
 
 ```python
@@ -694,22 +623,20 @@ print(sample(loaded, 3000, top_k=5, prime="Y el dijo: "))
     -No se le pesió, por entoreles que el padre 
     Amaranta los humado en que la calle el padie 
     su hurmiero. Pera ella los heranes sin ponos con como dincurar en el 
-    cualtito. Pentra Coter la mierta del calabro, y le procurió en la casa de calle en la marra de liger a la patra de las pruelas con sus maricias de 
+    cualtito. Pentra Coter la mierta del calabro, y le procurió en la casa de calle en la marra de liger 
+    a la patra de las pruelas con sus maricias de 
     los mandolos de la conversión, presondía en la casa de 
     los cuerros de la cuerda y cuando se los pueron, y en 
-    contentrarle a la muerte, y lo decierdo de las cosas de sus pellites y sin embarios, peso a la mano. Sólo, y las pantales, el calor y el día en la pierna. En los desegrados encendado, pero el palor. Los 
+    contentrarle a la muerte, y lo decierdo de las cosas de sus pellites y sin embarios, peso a la mano. 
+    Sólo, y las pantales, el calor y el día en la pierna. En los desegrados encendado, pero el palor. Los 
     alguios de 
     la pendar. Amaranta a los carajos de 
     cama de acabillas. El pueblo decorios en la 
-    aludancia y almanzó en su carta, y llevaba a la premonidad de amaneras de convanel, para si minicas en la muerte y estaba, sientra de cuardo en sus puebros de labre. Aulescon se le dijo, sabieron en la casta, por una mujo que 
-    le había premundo el amor la 
-    partera comersa que había parecido a su misiario, lo 
-    muerte, conseguró las 
-    preseras, y sen entontes en su procosaria. La cina de las cortualles, y la 
-    cinción de la 
-    prameda casa de la mano a cuando el 
-    mienterio de sus procos pesos de los compros desdeles al conterto del albanto, y se escambaba la pullir de su paricientos y los 
-    mismos descuando en las maridas de cuerre. 
+    aludancia y almanzó en su carta, y llevaba a la premonidad de amaneras de convanel, para si minicas 
+    en la muerte y estaba, sientra de cuardo en sus puebros de labre. Aulescon se le dijo, sabieron en la casta, 
+    por una mujo que le había premundo el amor la partera comersa que había parecido a su misiario, lo 
+    muerte, conseguró las preseras, y sen entontes en su procosaria. La cina de las cortualles, y la 
+    cinción de la prameda casa de la mano a cuando el mienterio de sus procos pesos de los compros desdeles al conterto del albanto, y se escambaba la pullir de su paricientos y los mismos descuando en las maridas de cuerre. 
     -Así qui esticira en un poco sin muy concuerdo, y los 
     alimperes a cantarlo a sabal desprevillidos. Es encontraro la ciera de la cuella y estaba encontró el cisto de acordar las 
     pareciados desde que nadie la mujer de 
