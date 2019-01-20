@@ -53,7 +53,7 @@ texto[:100]
 
 
 ```python
-# Codificar el texto y asiganar a cada cáracter un número entero y viceversa
+# Codificar el texto y asignar a cada cáracter un número entero y viceversa
 
 # Crear dos dictionarios
 # 1- int2char, que asigna un número entero a un cáracter
