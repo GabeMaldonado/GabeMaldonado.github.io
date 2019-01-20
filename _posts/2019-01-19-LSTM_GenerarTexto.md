@@ -12,7 +12,7 @@ mathjax: "True"
 
 En este notebook, construiremos un LSTM (Long Short Term Memory) en PyTorch para generar texto de manera automática.  Esta red utilizará un texto para entrenamiento y  procesará este texto cáracter por cáracter, aprederá de él y como resultado generará texto de la misma manera. Para esto usaremos el Premio Nobel de la Literatura *Cien años de Soledad* del gran **Gabriel García Márquez** para entrenar nuestra red. Para ejecutar este notebook, usé Google Colab -- que es básicamente un Jupyter notebook que puede ser ejecutado en el navegador (Chrome). Colab requiere un poco más de trabajo inicial (set-up) pero ofrece el uso gratuito de un GPU. Algo que realmente vale la pena y recomiendo ser usado.
 
-
+![alt]({{ site.url }}{{ site.baseurl }}/images/gabo_100.png)
 
 
 ### Importemos los módulos necesarios para cargar los datos y generar nuestro modelo.
@@ -659,8 +659,3 @@ print(sample(loaded, 3000, top_k=5, prime="Y el dijo: "))
     cuenta de que llevaba los mardes armanos en la mano de los precosos para que le 
     semana en la cuerta, el prando en la cinco de calonas por el coronel Aureliano Buendía en la casa de la casa. El coronel Aureliano Buendia. 
 
-
-
-```python
-
-```
