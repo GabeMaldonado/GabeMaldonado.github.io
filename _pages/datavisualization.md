@@ -1,7 +1,7 @@
 ---
 layout: archive
-permalink: /data-visualizations/
-title: "Data Visualizations"
+permalink: /data-visualization/
+title: "Data Visualization"
 author_profile: true
 header:
 ---
@@ -10,7 +10,7 @@ header:
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
-    {% if tag == "Data Visualizations" %}
+    {% if tag == "Data Visualization" %}
 	  {% assign posts = group_items[forloop.index0] %}
 <!---	  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2> -->
 	  {% for post in posts %}
