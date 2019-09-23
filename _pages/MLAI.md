@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /ML_AI/
-title: "ML & AI"
+title: "Notes on ML & AI"
 author_profile: true
 header:
 ---
