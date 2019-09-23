@@ -1,3 +1,12 @@
+---
+title: "Examples of Visualizations"
+date: 2019-01-19
+tags: [Data Visualizations]
+excerpt: "Data Vis"
+mathjax: "True"
+---
+
+
 ## Jointplots Hex
 
 ```python
