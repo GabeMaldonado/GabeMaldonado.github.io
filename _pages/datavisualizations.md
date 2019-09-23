@@ -6,50 +6,19 @@ author_profile: true
 header:
 ---
 
-<style>
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
+{% include adsense.html %}
+{% include group-by-array collection=site.posts field="tags" %}
 
+{% for tag in group_names %}
+    {% if tag == "Data Visualizations" %}
+	  {% assign posts = group_items[forloop.index0] %}
+<!---	  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2> -->
+	  {% for post in posts %}
+	    {% include archive-single.html %}
+	  {% endfor %}
+	 {% endif %}
+{% endfor %}
 
-## Jointplots Hex
-
-```python
-	sns.jointplot(data1,data2,kind='hex')
-
-```
-
-<img src="/images/jointplot.png" style="width:70%">
-
-## KDE Plots
-
-```python
-	sns.kdeplot(dframe.X,dframe.Y,shade=True)
-```
-
-<img src="/images/kdeplot.png" style="width:70%">
-
-## KDE & Histogram Plot
-
-```python
-	
-	sns.distplot(dataset,bins=25, 
-            kde_kws={'color':'indianred','label':'KDE Plot'},
-            hist_kws={'color':'blue', 'label':'HIST'})
-
-```
-
-<img src="/images/kdehist.png" style="width:70%">
-
-## Distribution Plots
-
-```python
-	sns.distplot(ser1,bins=25)
-```
-<img src="/images/distplot.png" style="width:70%">
 
 
 
