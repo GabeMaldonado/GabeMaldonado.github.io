@@ -161,7 +161,7 @@ The basic reward function operates off of distance from the center lane using 'm
 In the above image, we can see that there are different rewards based on how far the car is from the center line. 
 Here's the code from the AWS console:
 
-```
+```python
 def reward_function(params):
      '''
      Example of rewarding the agent to follow center line
