@@ -43,12 +43,16 @@ Total Loss from Normal Examples ```= 0.3 * 6 = 1.8```
 
 Most of the contribution to the loss comes from normal examples rather than from the mass examples, so the algorithm is optimizing its updates to get the normal examples right and it is not giving much relative weight to the mass examples. This will not produce a very good image classifier. **This is a class imbalance problem.**
 
-The solution to this problem is to modify the loss function to weight the normal and the mass classes differently. We can assign weights to the positive and negative examples. $W_{p}$ for positive and $W_{n}$ for negative. In this case, we want to weight the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight we have on the mass examples and ```2/8``` as the weight for the normal examples. 
+The solution to this problem is to modify the loss function to weight the normal and the mass classes differently. We can assign weights to the positive and negative examples. $$W_{p}$$ for positive and $$W_{n}$$ for negative. In this case, we want to weight the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight we have on the mass examples and ```2/8``` as the weight for the normal examples. 
 
 $$W_{p}$$ or $$W_{n} * $$ $$loss$$
+
 $$W_{n} = 2/8 * 0.3$$ $$= 0.075 $$
+
 $$W_{p} = 6/8 * 0.3$$ $$= 0.225$$
+
 Total Loss from Mass Examples   $$= 0.225 * 2 = 0.45$$
+
 Total Loss from Normal Examples $$= 0.075 * 6 = 0.45$$
 
 As we can see, if we sum up the total loss from the mass example we get 0.45 and this is equal to the total loss of the normal examples. 
