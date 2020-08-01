@@ -45,7 +45,7 @@ Most of the contribution to the loss comes from normal examples rather than from
 
 The solution to this problem is to modify the loss function to weight the normal and the mass classes differently. We can assign weights to the positive and negative examples. $W_{p}$ for positive and $W_{n}$ for negative. In this case, we want to weight the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight we have on the mass examples and ```2/8``` as the weight for the normal examples. 
 
-$W_{p}$ or $W_{n}$ * $loss$
+$$W_{p}$ or $W_{n}$$ * $$loss$$
 
 $W_{n} = 2/8 * 0.3 = 0.075 $
 
