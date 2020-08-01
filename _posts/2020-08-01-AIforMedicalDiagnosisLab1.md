@@ -1,4 +1,3 @@
-
 ---
 title: "AI for Medical Diagnosis - Lab 1"
 date: 2020-08-01
@@ -6,6 +5,7 @@ tags: [AIforMed]
 excerpt: "AI for Medical Diagnosis"
 mathjax: "True"
 ---
+
 
 # Notes on AI for Medical Diagnosis --  Lab 1
 
@@ -38,7 +38,6 @@ train_df.head()
 
 ```
 
-<!DOCTYPE html>
 <html>
 <head>
   <title>Render</title>
