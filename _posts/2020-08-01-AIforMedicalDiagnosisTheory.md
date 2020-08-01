@@ -43,7 +43,7 @@ Total Loss from Normal Examples ```= 0.3 * 6 = 1.8```
 
 Most of the contribution to the loss comes from normal examples rather than from the mass examples, so the algorithm is optimizing its updates to get the normal examples right and it is not giving much relative weight to the mass examples. This will not produce a very good image classifier. **This is a class imbalance problem.**
 
-The solution to this problem is to modify the loss function to weight the normal and the mass classes differently. We can assign weights to the positive and negative examples. $$W_{p}$$ for positive and $$W_{n}$$ for negative. In this case, we want to weight the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight we have on the mass examples and ```2/8``` as the weight for the normal examples. 
+The solution to this problem is to modify the loss function to weigh the normal and the mass classes differently. We can assign weights to the positive and negative examples. $$W_{p}$$ for positive and $$W_{n}$$ for negative. In this case, we want to weigh the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight for the mass examples and ```2/8``` as the weight for the normal examples. 
 
 $$W_{p}$$ or $$W_{n} * $$ $$loss$$
 
@@ -58,18 +58,18 @@ Total Loss from Normal Examples $$= 0.075 * 6 = 0.45$$
 As we can see, if we sum up the total loss from the mass example we get 0.45 and this is equal to the total loss of the normal examples. 
 In general, the weight we would put on the positive class will be the number of negative examples over the total number of examples.
 
-$$W_{p} = num negative / num total  = 6/8$$ 6 normal examples / 8 (total) examples
+$$W_{p} = num negative / num total  = 6/8$$   (6 normal examples / 8 (total) examples)
 
-$$W_{n} = num positive / num total = 2/8$$ 2 positive cases / 8 (total) cases
+$$W_{n} = num positive / num total = 2/8$$    (2 positive cases / 8 (total) cases)
 
 So now, the positive and negative class contributions to the loss are the same. This is the idea of modifying the loss using weights and this method is called the **Weighted Loss** which is used to tackle the class imbalance problem. 
 
 ### Weighted Loss Equation
 
 - The loss is made up of two terms:
-    - $loss_{pos}$: we'll use this to refer to the loss where the actual label is positive (the positive examples).
-    - $loss_{neg}$: we'll use this to refer to the loss where the actual label is negative (the negative examples).  
-- Note that within the $log()$ function, we'll add a tiny positive value, to avoid an error if taking the log of zero.
+    - $$loss_{pos}$$: we'll use this to refer to the loss where the actual label is positive (the positive examples).
+    - $$loss_{neg}$$: we'll use this to refer to the loss where the actual label is negative (the negative examples).  
+- Note that within the $$log()$$ function, we'll add a tiny positive value, to avoid an error if taking the log of zero.
 
 $$ loss^{(i)} = loss_{pos}^{(i)} + los_{neg}^{(i)} $$
 
@@ -203,7 +203,9 @@ When doing Machine Learning, we need to split a dataset into a:
 There are also othe names used to refer to these sets:
 
 Training set => "Development Set"
+
 Validation set => "Tuning set" or "dev set"
+
 Test set => "holdout set" or "validation set"
 
 There are three challenges with building these sets in the context of medicine. 
