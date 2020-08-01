@@ -11,7 +11,7 @@ mathjax: "True"
 
 ## Loading and Cleaning up Data
 
-```
+```python
 
 # Import packages
 
@@ -162,8 +162,7 @@ train_df.head()
 </table>
 </div>
 
-```
-python
+```python
 # Get the info for the dataframe
 
 train_df.info()
@@ -197,7 +196,7 @@ memory usage: 125.1+ KB
 
 "PatientID" has an ID number for each patient. In this dataset we need to determine if each image corresponds to a unique patient. Duplicate IDs would indicate that a single patient might have multiple images. 
 
-```
+```python
 
 print(f"The total number of patients are {train_df['PatientId'].count()}, 
         from those the unique IDs are {train_df['PatientId'].value_counts().shape[0]}")
@@ -206,17 +205,17 @@ print(f"The total number of patients are {train_df['PatientId'].count()},
 As we can see the number of unique patien IDs are 928 out of 1000 which indicates that there must be some overlap. For patients with multiple records, we want to make sure that they don't show up in both, the training and test datasets in order to avoid data leakage. 
 
 ### Explore data labels. 
-```
+```python
 
 columns = train_df.keys()
 columns = list(columns)
 print(columns)
 ```
 
-['Image', 'Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 
-'Infiltration', 'Mass', 'Nodule', 'PatientId', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
+'['Image', 'Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 
+'Infiltration', 'Mass', 'Nodule', 'PatientId', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']'
 
-```
+```python
 
 # Remove unnecessary columns
 
@@ -229,3 +228,84 @@ print(f"There are {len(columns)} columns of labels for these conditions: {column
 ```
 There are 14 columns of labels for these conditions: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 
 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 'Infiltration', 'Mass', 'Nodule', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
+
+```python
+# Print out the number of positives labels (1) for each class
+
+for column in columns:
+  print(f"The class {column} has {train_df[column].sum()} samples")
+```
+`
+The class Atelectasis has 106 samples
+The class Cardiomegaly has 20 samples
+The class Consolidation has 33 samples
+The class Edema has 16 samples
+The class Effusion has 128 samples
+The class Emphysema has 13 samples
+The class Fibrosis has 14 samples
+The class Hernia has 2 samples
+The class Infiltration has 175 samples
+The class Mass has 45 samples
+The class Nodule has 54 samples
+The class Pleural_Thickening has 21 samples
+The class Pneumonia has 10 samples
+The class Pneumothorax has 38 samples
+`
+
+## Data Visualization
+
+Now we are going to visualize some of the images in the dataset
+
+```python
+images = train_df['Image'].head(10).values
+images
+```
+`array(['00008270_015.png', '00029855_001.png', '00001297_000.png',
+       '00012359_002.png', '00017951_001.png', '00001232_002.png',
+       '00017135_000.png', '00027235_000.png', '00014197_007.png',
+       '00011584_002.png'], dtype=object)`
+
+```python
+# Extract numpy values from the 'Image' column of the dataframe
+
+
+
+# This is a very larger dataset and I only uploaded a handful of images to colab
+# so I'm creating a list to iterate through the images
+
+images = ['00001855_037.png', '00005132_000.png', '00009804_001.png', '00011553_006.png',
+          '00012051_001.png', '00012276_018.png', '00013249_033.png', '00013615_007.png',
+          '00015007_006.png', '00019967_011.png', '00028341_002.png', '00030061_000.png']
+
+
+'''
+Run below line if you have the whole dataset
+images = train_df['Image'].head(10).values 
+'''
+
+# Extract 9 random images from df
+
+random_images = [np.random.choice(images) for i in range(9)]
+
+# Define location of the image dir
+
+img_dir = '/content/images-small'
+
+print("Display Random Images")
+
+# Adjust size of the images
+
+plt.figure(figsize=(20, 10))
+
+# Iterate and plot random images
+
+for i in range(9):
+  plt.subplot(3, 3, i +1)
+  img = plt.imread(os.path.join(img_dir, random_images[i]))
+  plt.imshow(img, cmap='gray')
+  plt.axis('off')
+
+# Adjust subplot padding
+
+plt.tight_layout()
+```
