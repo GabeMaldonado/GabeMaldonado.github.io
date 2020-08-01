@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /AI for Medicine/
+permalink: /AIforMedicine/
 title: "Notes on AI for Medicine"
 author_profile: true
 header:
