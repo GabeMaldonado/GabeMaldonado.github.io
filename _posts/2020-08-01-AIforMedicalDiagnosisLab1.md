@@ -39,19 +39,19 @@ train_df.head()
 ```
 
 <html markdown="1">
-<head>
-  <title>Render</title>
-  <meta name="referrer" content="never">
-    <script src="/assets/ipynb/index-d3b2fc278f6ffca84fcdcb4b77e326d5a2a8b5ec6659efbca95dd486c43088fe.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="/assets/ipynb-c595452879a45fd8a1e3577c3900da53d06da195d9570ea394b693875c5e6759.css">
+<head markdown=1>
+  <title markdown=1>Render</title>
+  <meta name="referrer" content="never" >
+    <script src="/assets/ipynb/index-d3b2fc278f6ffca84fcdcb4b77e326d5a2a8b5ec6659efbca95dd486c43088fe.js" type="text/javascript" markdown=1></script><link rel="stylesheet" type="text/css" href="/assets/ipynb-c595452879a45fd8a1e3577c3900da53d06da195d9570ea394b693875c5e6759.css">
 
 
 </head>
-<body
+<body markdown=1
    class="is-embedded "
    data-render-url="https://render.githubusercontent.com"
    data-github-hostname="github.com"
 >
-  <div class="render-shell js-render-shell"    data-document-nwo="GabeMaldonado/AIforMedicine"
+  <div class="render-shell js-render-shell"    data-document-nwo="GabeMaldonado/AIforMedicine" markdown=1
    data-document-commit="40935e6ed189c9d69c85fe4200e4fb70464f5de4"
    data-document-path="AIforMed_1.ipynb"
    data-file="https://github-render.s3.amazonaws.com/prod/8e95081f506ae71ca4ef66a59c6818a6-render.html?X-Amz-Expires=65&amp;X-Amz-Date=20200801T202115Z&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJILR36AMCOMBK3MQ%2F20200801%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=28b7ab00375b84192a3a9a53b7d6487df1216535fdbe447f92226acbd56fd278"
@@ -60,14 +60,14 @@ train_df.head()
 >
     
 
-<div class="render-info">
-  <div class="js-viewer-health render-health">
-    <span class="symbol">&#8854;</span>
+<div class="render-info" markdown=1>
+  <div class="js-viewer-health render-health" markdown=1>
+    <span class="symbol" markdown=1>&#8854;</span>
     <span class="js-message message"></span>
   </div>
 </div>
 
-<div id="notebook" class="js-html"></div>
+<div id="notebook" class="js-html" markdown=1></div>
 
   </div>
 
