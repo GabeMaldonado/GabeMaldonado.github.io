@@ -1,5 +1,5 @@
 ---
-title: "Notes on AI for Medical Diagnosis"
+title: "AI for Medical Diagnosis - Concepts"
 date: 2020-08-01
 tags: [AIforMed]
 excerpt: "AI for Medical Diagnosis"
