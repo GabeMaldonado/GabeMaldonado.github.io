@@ -12,7 +12,7 @@ mathjax: "True"
 ## Loading and Cleaning up Data
 
 ```
-python
+
 # Import packages
 
 import pandas as pd
@@ -198,7 +198,7 @@ memory usage: 125.1+ KB
 "PatientID" has an ID number for each patient. In this dataset we need to determine if each image corresponds to a unique patient. Duplicate IDs would indicate that a single patient might have multiple images. 
 
 ```
-python
+
 print(f"The total number of patients are {train_df['PatientId'].count()}, 
         from those the unique IDs are {train_df['PatientId'].value_counts().shape[0]}")
 ```
@@ -207,7 +207,7 @@ As we can see the number of unique patien IDs are 928 out of 1000 which indicate
 
 ### Explore data labels. 
 ```
-python
+
 columns = train_df.keys()
 columns = list(columns)
 print(columns)
@@ -217,7 +217,7 @@ print(columns)
 'Infiltration', 'Mass', 'Nodule', 'PatientId', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
 
 ```
-python
+
 # Remove unnecessary columns
 
 columns.remove('Image')
