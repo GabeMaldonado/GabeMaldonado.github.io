@@ -8,3 +8,5 @@ main:
     url: /enespanol/
   - title: "ML & AI"
     url: /ML_AI/
+  - title: "AIforMed"
+    url: /AIforMed/  
