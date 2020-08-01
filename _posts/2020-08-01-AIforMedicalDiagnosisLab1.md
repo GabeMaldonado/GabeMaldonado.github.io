@@ -161,3 +161,34 @@ train_df.head()
   </tbody>
 </table>
 </div>
+
+```
+python
+# Get the info for the dataframe
+
+train_df.info()
+```
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 16 columns):
+ #   Column              Non-Null Count  Dtype 
+---  ------              --------------  ----- 
+ 0   Image               1000 non-null   object
+ 1   Atelectasis         1000 non-null   int64 
+ 2   Cardiomegaly        1000 non-null   int64 
+ 3   Consolidation       1000 non-null   int64 
+ 4   Edema               1000 non-null   int64 
+ 5   Effusion            1000 non-null   int64 
+ 6   Emphysema           1000 non-null   int64 
+ 7   Fibrosis            1000 non-null   int64 
+ 8   Hernia              1000 non-null   int64 
+ 9   Infiltration        1000 non-null   int64 
+ 10  Mass                1000 non-null   int64 
+ 11  Nodule              1000 non-null   int64 
+ 12  PatientId           1000 non-null   int64 
+ 13  Pleural_Thickening  1000 non-null   int64 
+ 14  Pneumonia           1000 non-null   int64 
+ 15  Pneumothorax        1000 non-null   int64 
+dtypes: int64(15), object(1)
+memory usage: 125.1+ KB
+</pre>
