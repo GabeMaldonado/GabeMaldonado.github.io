@@ -227,14 +227,14 @@ When split the dataset, images are randomly placed into one of the sets. If a si
 
 ***Refer to Week 1 Lab to see how to solve this issue.***
 
-https://github.com/GabeMaldonado/AIforMedicine/blob/master/AIforMed_1.ipynb
+[GitHub](https://github.com/GabeMaldonado/AIforMedicine/blob/master/AIforMed_1.ipynb)
 
 ### Set Sampling Challenge
 
 Often times the size of the test set is a fraction of the full dataset, let's say ~10%. Some of these sets need to be annotated by human readers. This can create a bottleneck for the test set size as it depends on how many examples can readers be expected to read.
 The challenge with sampling a test set is that when it is being randomly sampled from hundreds of examples, we might not sample any patients that actually have a disease. If images that do not contain a mass are in the test set then there is no way to actually test the performance of the model on positive cases. This is a prevalent problem with medical data where the dataset might be small and with not that many examples of positive cases for each disease. 
 
-One way to address this problem, is to sample a test set so that we have, at least, $x $% of examples of a minority class which in this case would be images containing a mass or positive cases.  One common choice of $x$ is 50% so if we are sampling a test set of 100 examples half of them would be positive and 50 would be negative cases. This would ensure that we have sufficient numbers to test the performance of the model on both cases. 
+One way to address this problem, is to sample a test set so that we have, at least, $$x$$ % of examples of a minority class which in this case would be images containing a mass or positive cases.  One common choice of $$x$$ is 50% so if we are sampling a test set of 100 examples half of them would be positive and 50 would be negative cases. This would ensure that we have sufficient numbers to test the performance of the model on both cases. 
 
 Once the test set is sampled then the validation test should be sampled next and before training occurs. We would want the validation set to reflect the distribution of the data so to sample it-- the same strategy used for the test set should be employed. 
 
