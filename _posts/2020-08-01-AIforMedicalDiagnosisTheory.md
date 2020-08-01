@@ -227,7 +227,7 @@ When split the dataset, images are randomly placed into one of the sets. If a si
 
 ***Refer to Week 1 Lab to see how to solve this issue.***
 
-[GitHub](https://github.com/GabeMaldonado/AIforMedicine/blob/master/AIforMed_1.ipynb)
+[AI for Medical Diagnosis Lab 1 Notebook](https://github.com/GabeMaldonado/AIforMedicine/blob/master/AIforMed_1.ipynb)
 
 ### Set Sampling Challenge
 
