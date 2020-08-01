@@ -192,3 +192,26 @@ Data columns (total 16 columns):
 dtypes: int64(15), object(1)
 memory usage: 125.1+ KB
 </pre>
+
+## Check for unique IDs
+
+"PatientID" has an ID number for each patient. In this dataset we need to determine if each image corresponds to a unique patient. Duplicate IDs would indicate that a single patient might have multiple images. 
+
+```
+python
+print(f"The total number of patients are {train_df['PatientId'].count()}, 
+        from those the unique IDs are {train_df['PatientId'].value_counts().shape[0]}")
+```
+
+As we can see the number of unique patien IDs are 928 out of 1000 which indicates that there must be some overlap. For patients with multiple records, we want to make sure that they don't show up in both, the training and test datasets in order to avoid data leakage. 
+
+### Explore data labels. 
+```
+python
+columns = train_df.keys()
+columns = list(columns)
+print(columns)
+```
+
+['Image', 'Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 
+'Infiltration', 'Mass', 'Nodule', 'PatientId', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
