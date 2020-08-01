@@ -2,11 +2,14 @@
 main:
   - title: "About"
     url: /about/
+  - title: "AIforMed"
+    url: /AIforMed/   
   - title: "Data Visualizations"
     url: /data-visualizations/
   - title: "En Español"
     url: /enespanol/
   - title: "ML & AI"
     url: /ML_AI/
-  - title: "AIforMed"
-    url: /AIforMed/  
+  - title: "SQL"
+    url: /SQL/ 
+   
