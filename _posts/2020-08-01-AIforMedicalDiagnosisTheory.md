@@ -45,22 +45,22 @@ Most of the contribution to the loss comes from normal examples rather than from
 
 The solution to this problem is to modify the loss function to weight the normal and the mass classes differently. We can assign weights to the positive and negative examples. $W_{p}$ for positive and $W_{n}$ for negative. In this case, we want to weight the mass examples more so they can have en equal contribution overall to the loss as the normal examples. Let's select ```6/8``` as the weight we have on the mass examples and ```2/8``` as the weight for the normal examples. 
 
-$$W_{p}$ or $W_{n}$$ * $$loss$$
+$$W_{p}$$ or $$W_{n}$$ * $$loss$$
 
-$W_{n} = 2/8 * 0.3 = 0.075 $
+$$W_{n} = 2/8 * 0.3 = 0.075 $$
 
-$W_{p} = 6/8 * 0.3 = 0.225$
+$$W_{p} = 6/8 * 0.3 = 0.225$$
 
-Total Loss from Mass Examples   $= 0.225 * 2 = 0.45$
+Total Loss from Mass Examples   $$= 0.225 * 2 = 0.45$$
 
-Total Loss from Normal Examples $= 0.075 * 6 = 0.45$
+Total Loss from Normal Examples $$= 0.075 * 6 = 0.45$$
 
 As we can see, if we sum up the total loss from the mass example we get 0.45 and this is equal to the total loss of the normal examples. 
 In general, the weight we would put on the positive class will be the number of negative examples over the total number of examples.
 
-$W_{p} = num negative / num total  = 6/8$ 6 normal examples / 8 (total) examples
+$$W_{p} = num negative / num total  = 6/8$$ 6 normal examples / 8 (total) examples
 
-$W_{n} = num positive / num total = 2/8$ 2 positive cases / 8 (total) cases
+$$W_{n} = num positive / num total = 2/8$$ 2 positive cases / 8 (total) cases
 
 So now, the positive and negative class contributions to the loss are the same. This is the idea of modifying the loss using weights and this method is called the **Weighted Loss** which is used to tackle the class imbalance problem. 
 
