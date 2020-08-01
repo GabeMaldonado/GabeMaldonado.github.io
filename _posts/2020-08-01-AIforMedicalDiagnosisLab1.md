@@ -40,7 +40,7 @@ train_df.head()
 
 <div>
 
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" width=400>
   <thead>
     <tr>
       <th></th>
