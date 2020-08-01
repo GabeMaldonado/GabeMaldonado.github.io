@@ -235,7 +235,7 @@ There are 14 columns of labels for these conditions: ['Atelectasis', 'Cardiomega
 for column in columns:
   print(f"The class {column} has {train_df[column].sum()} samples")
 ```
-`
+```
 The class Atelectasis has 106 samples
 The class Cardiomegaly has 20 samples
 The class Consolidation has 33 samples
@@ -250,7 +250,7 @@ The class Nodule has 54 samples
 The class Pleural_Thickening has 21 samples
 The class Pneumonia has 10 samples
 The class Pneumothorax has 38 samples
-`
+```
 
 ## Data Visualization
 
