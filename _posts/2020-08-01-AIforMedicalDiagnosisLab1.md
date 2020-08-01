@@ -215,3 +215,17 @@ print(columns)
 
 ['Image', 'Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 
 'Infiltration', 'Mass', 'Nodule', 'PatientId', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
+
+```
+python
+# Remove unnecessary columns
+
+columns.remove('Image')
+columns.remove('PatientId')
+
+# Get the total classes
+
+print(f"There are {len(columns)} columns of labels for these conditions: {columns}")
+```
+There are 14 columns of labels for these conditions: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 
+'Effusion', 'Emphysema', 'Fibrosis', 'Hernia', 'Infiltration', 'Mass', 'Nodule', 'Pleural_Thickening', 'Pneumonia', 'Pneumothorax']
