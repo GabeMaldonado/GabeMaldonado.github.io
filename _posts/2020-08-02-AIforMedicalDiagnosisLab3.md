@@ -1,6 +1,6 @@
 ---
-title: "AI for Medical Diagnosis - Concepts"
-date: 2020-08-01
+title: "AI for Medical Diagnosis - Lab 3"
+date: 2020-08-02
 tags: [AIforMed]
 excerpt: "AI for Medical Diagnosis"
 mathjax: "True"
