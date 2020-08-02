@@ -109,7 +109,7 @@ To create a new database:
 
 ```postgres=> CREATE DATABASE database_name:```
 
-Exit the current terminal ```\q```
+Exit the current terminal ````\q```
 
 Access the recently created db by:
 
