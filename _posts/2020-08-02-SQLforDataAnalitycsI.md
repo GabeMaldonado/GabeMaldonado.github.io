@@ -1,7 +1,7 @@
 ---
 title: "SQL for Data Analytics I"
 date: 2020-08-02
-tags: [SQL
+tags: [SQL]
 excerpt: "SQL for Data Analytics I"
 mathjax: "True"
 ---
