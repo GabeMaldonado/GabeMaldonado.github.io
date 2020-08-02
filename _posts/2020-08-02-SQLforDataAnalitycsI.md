@@ -101,7 +101,7 @@ New user has been created, we can now exit the psql terminal so we can login int
 
 ```$ psql postgres -U newuser```
 
-We shoudl now see:
+We should now see:
 
 ```postgres=>```
 
@@ -283,6 +283,7 @@ LIMIT 10;
 When doing an inner join, it only returns rows that are present in **both** tables. 
 ###LEFT JOIN
 When we perform a query, the table we pass to `FROM` is consider the left table and the table we pass to `JOIN` is the right table. To change the `JOIN` into an `LEFT JOIN` we simply add the word `LEFT` to the `JOIN` clause. This query will return the results that match with the right table, just like an inner join but-- it will also any results in the left table that did not match the right table. Its syntax is:
+
 ```
 SELECT
 FROM left table
@@ -311,13 +312,13 @@ A foreign key is a column in one table that is the PK in a different table.
 Join the `sales_rep` and `region` tables together.
 
 
-![alt text](https://video.udacity-data.com/topher/2017/August/598e0b9e_screen-shot-2017-08-10-at-8.10.13-pm/screen-shot-2017-08-10-at-8.10.13-pm.png)
+![ERM1](https://video.udacity-data.com/topher/2017/August/598e0b9e_screen-shot-2017-08-10-at-8.10.13-pm/screen-shot-2017-08-10-at-8.10.13-pm.png)
 
 `ON orders.account_id = accounts.id;`
 
 ###Joining more than two tables:
 
-![alt text](https://video.udacity-data.com/topher/2017/August/598e2e15_screen-shot-2017-08-11-at-3.21.34-pm/screen-shot-2017-08-11-at-3.21.34-pm.png)
+![ERM2](https://video.udacity-data.com/topher/2017/August/598e2e15_screen-shot-2017-08-11-at-3.21.34-pm/screen-shot-2017-08-11-at-3.21.34-pm.png)
 
 We can use the following code to join the 3 columns:
 
