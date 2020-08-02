@@ -39,7 +39,7 @@ train_df.head()
 ```
 `The number of rows: 1000 and number of columns: 16`
 
-z<table border="1" class="dataframe">
+<table border="1" class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -375,6 +375,7 @@ print(f"Indices of the overlapping PatientIDs in the valid_df: \n{valid_overlap_
 Indices of the overlapping PatientIDs in the train_df: 
 [306, 186, 797, 98, 408, 917, 327, 913, 10, 51, 276]
 
+
 Indices of the overlapping PatientIDs in the valid_df: 
 [104, 88, 65, 13, 2, 41, 56, 70, 26, 75, 20, 52, 55]
 ```
@@ -416,7 +417,7 @@ n_overlap_check = len(patient_overlap_check)
 print(f"The number of overlapped PatientIDs in both datasets are: {n_overlap_check}")
 ```
 
-`The number of overlapped PatientIDs in both datasets are: 0'
+`The number of overlapped PatientIDs in both datasets are: 0`
 
 
 
