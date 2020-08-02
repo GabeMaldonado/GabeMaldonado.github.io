@@ -67,7 +67,8 @@ The ```SELECT``` clause tells the query which columns to read from the table. We
 The ```SELECT``` and ```FROM``` clauses are **mandatory**
 
 ``` SELECT *
-       FROM db.table ```
+       FROM db.table 
+```
 
 <a name='2'></a>
 ### Installing PostgreSQL (MAC-OS)
