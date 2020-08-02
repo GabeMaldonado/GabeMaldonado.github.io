@@ -68,7 +68,7 @@ The ```SELECT``` and ```FROM``` clauses are **mandatory**
 
 ``` 
 SELECT *
-       FROM db.table 
+FROM db.table 
 ```
 
 <a name='2'></a>
