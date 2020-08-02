@@ -105,13 +105,13 @@ New user has been created, we can now exit the psql terminal so we can login int
 
 We should now see:
 
-```postgres=>```
+`postgres=>`
 
 To create a new database:
 
 ```postgres=> CREATE DATABASE database_name:```
 
-Exit the current terminal ```'q'```
+Exit the current terminal `q`
 
 Access the recently created db by:
 
