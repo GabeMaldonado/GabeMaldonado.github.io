@@ -329,6 +329,7 @@ ids_valid_set = set(ids_valid)
 print(f"The number of unique IDs in the valid_df are: {len(ids_valid_set)}")
 ```
 `The number of unique IDs in the train_df are: 928. `
+
 `The number of unique IDs in the valid_df are: 97`
 
 ```python
