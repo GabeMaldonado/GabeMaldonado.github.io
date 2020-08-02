@@ -328,7 +328,8 @@ ids_valid_set = set(ids_valid)
 
 print(f"The number of unique IDs in the valid_df are: {len(ids_valid_set)}")
 ```
-`The number of unique IDs in the train_df are: 928. `
+`The number of unique IDs in the train_df are: 928`
+
 
 `The number of unique IDs in the valid_df are: 97`
 
@@ -346,6 +347,8 @@ print(f"These PatientIDs are present in both sets: {patient_overlap}")
 ```
 
 `The number of overlapping records are: 11`
+
+
 `These PatientIDs are present in both sets: [20290, 27618, 9925, 10888, 22764, 19981, 18253, 4461, 28208, 8760, 7482]`
 
 Alright! Now that we identified how many and which records are present in both, the training and validation sets, we can proceed to:
