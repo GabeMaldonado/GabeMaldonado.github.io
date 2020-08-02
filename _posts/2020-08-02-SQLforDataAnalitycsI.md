@@ -300,3 +300,44 @@ This type of join will return the inner join result set as well as any unmatched
 TIP:
 *  If you have two or more columns in a SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns.
 
+<a name='6'></a>
+##Keys
+###Primary Key
+A primary key (**PK**) is a unique column in a particular table. This is the first column in each of our tables. 
+###Foreign Key
+A foreign key is a column in one table that is the PK in a different table. 
+
+### Exercise:
+Join the `sales_rep` and `region` tables together.
+
+
+![alt text](https://video.udacity-data.com/topher/2017/August/598e0b9e_screen-shot-2017-08-10-at-8.10.13-pm/screen-shot-2017-08-10-at-8.10.13-pm.png)
+
+`ON orders.account_id = accounts.id;`
+
+###Joining more than two tables:
+
+![alt text](https://video.udacity-data.com/topher/2017/August/598e2e15_screen-shot-2017-08-11-at-3.21.34-pm/screen-shot-2017-08-11-at-3.21.34-pm.png)
+
+We can use the following code to join the 3 columns:
+
+```
+SELECT *
+FROM web_events
+JOIN accounts
+ON web_events.account_id = accounts.id
+JOIN orders
+ON accounts.id = orders.account_id
+```
+
+We could also `JOIN` specific columns form any of the three tables by using a `SELECT` stament which specifies the table that we want to pull the column from as well as the column name:
+
+```
+SELECT web_events.channel, accounts.name, orders.total
+FROM web_events
+JOIN accounts
+ON web_events.account_id = accounts.id
+JOIN orders
+ON accounts.id = orders.account_id
+```
+
