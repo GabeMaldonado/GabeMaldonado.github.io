@@ -66,7 +66,8 @@ The ```FROM``` clause tells the query which data/table to use.
 The ```SELECT``` clause tells the query which columns to read from the table. We can select multiple columns from a table by passing the table names separated by commas and we can also select **ALL** columns by passing an asterisk ```*```. 
 The ```SELECT``` and ```FROM``` clauses are **mandatory**
 
-``` SELECT *
+``` 
+SELECT *
        FROM db.table 
 ```
 
