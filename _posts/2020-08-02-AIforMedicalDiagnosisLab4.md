@@ -374,8 +374,9 @@ print(f"Indices of the overlapping PatientIDs in the valid_df: \n{valid_overlap_
 ```
 Indices of the overlapping PatientIDs in the train_df: 
 [306, 186, 797, 98, 408, 917, 327, 913, 10, 51, 276]
+```
 
-
+```
 Indices of the overlapping PatientIDs in the valid_df: 
 [104, 88, 65, 13, 2, 41, 56, 70, 26, 75, 20, 52, 55]
 ```
