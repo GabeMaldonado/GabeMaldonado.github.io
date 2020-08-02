@@ -68,3 +68,65 @@ The ```SELECT``` and ```FROM``` clauses are **mandatory**
 
 ``` SELECT *
        FROM db.table ```
+
+<a name='2'></a>
+### Installing PostgreSQL (MAC-OS)
+
+In the shell run:
+
+```brew install postgresql```
+
+### Getting Started
+
+Start PostgreSQL. In the shell run:
+
+```brew services start postgresql```
+
+To stop:
+
+```brew services stop postgresql```
+
+Once PostgreSQL has been started:
+
+```psql postgres```
+
+If executed successfully we are now working inside the psql terminal.
+To create a new user and password:
+
+```CREATE ROLE newuser WITH LOGIN PASSWORD 'password'```
+
+```ALTER ROLE newuser CREATEDB;```
+
+New user has been created, we can now exit the psql terminal so we can login into it again with the new user. 
+
+```$ psql postgres -U newuser```
+
+We shoudl now see:
+
+```postgres=>```
+
+To create a new database:
+
+```postgres=> CREATE DATABASE database_name:```
+
+Exit the current terminal ```\q```
+
+Access the recently created db by:
+
+```psql database_name```
+
+To create a table in that db:
+
+```database_name=# CREATE TABLE table_name (column_1 INTEGER, column_2 VARCHAR);```
+
+I have data in a .csv file that I want to copy to my postgresql database. 
+The csv contains made-up accounts data. It's name is accounts and this is just one table of the database. To copy the csv into the databse first:
+*   Create the table in the database -- think of it as create a spreadsheet.
+*   Create the columns in the table. They have to match what we have in the spreadsheet. 
+*   Once the table is set up type the following commands:
+    *   ```COPY table_name``` # the table we want to copy into
+    *   ```FROM 'absolute_path_to_your_speadsheet'```
+    *   ```DELIMITER ',' CSV HEADER;```
+
+If executed successfully, we will see a message: ```COPY 100``` or whatever number of records that were copied. 
+
