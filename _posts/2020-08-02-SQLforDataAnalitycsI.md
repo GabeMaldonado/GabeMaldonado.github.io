@@ -263,7 +263,6 @@ Example:
 
 In the query above we joined all the columns from both tables. We can join any columns that we want in return by name. Note that the table name always goes on the right side of the '.' and the column name on the left. 
 Let's say we wanted to get just the name of teh customer and the date when the order was placed. We would write:
-
 ```
 SELECT accounts.name, orders.occured_at
 FROM orders
