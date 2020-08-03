@@ -169,10 +169,10 @@ dtypes: datetime64[ns](1), int64(1)
 memory usage: 5.1 KB
 ```
 
-### Create Prophet Model### Create Prophet Model
+### Create Prophet Model
 
 ```python
- create model
+ # create model
 
 m = Prophet()
 
@@ -1471,14 +1471,14 @@ Index(['ds', 'trend', 'yhat_lower', 'yhat_upper', 'trend_lower', 'trend_upper',
 ```
 
 
-We can select the last 12 datapoints from teh forecast to see what the predictions are.
+We can select the last 12 datapoints from the forecast to see what the predictions are.
 
 ```python
 # select variables of interest
 
 forecast[['ds', 'yhat_lower', 'yhat_upper', 'yhat']].tail(12)
-
 ```
+
 <table border="1" class="dataframe">
   <thead>
     <tr>
