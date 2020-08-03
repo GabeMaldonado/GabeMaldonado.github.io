@@ -86,10 +86,49 @@ min	77442.000000
 max	288145.000000
 ```
 
-Change columns names to Prophet specs and change the data column to a timeseries object.
+Change columns names to Prophet's specs and change the data column to a timeseries object.
 
 ```python
 df.columns = ['ds', 'y']
 df['ds'] = pd.to_datetime(df['ds'])
 df.head()
 ```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ds</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1970-01-01</td>
+      <td>80173.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1970-02-01</td>
+      <td>77442.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1970-03-01</td>
+      <td>90223.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1970-04-01</td>
+      <td>89956.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1970-05-01</td>
+      <td>97972.0</td>
+    </tr>
+  </tbody>
+</table>
+
+
