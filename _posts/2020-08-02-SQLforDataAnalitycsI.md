@@ -302,10 +302,11 @@ TIP:
 *  If you have two or more columns in a SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns.
 
 <a name='6'></a>
-##Keys
-###Primary Key
+
+## Keys
+### Primary Key
 A primary key (**PK**) is a unique column in a particular table. This is the first column in each of our tables. 
-###Foreign Key
+### Foreign Key
 A foreign key is a column in one table that is the PK in a different table. 
 
 ### Exercise:
