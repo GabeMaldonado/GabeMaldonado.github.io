@@ -359,5 +359,39 @@ predictions
 Name: yhat, dtype: float64
 ```
 
+```python
+# compare to test set
+test['y']
+```
 
+```
+576    245695.0
+577    226660.0
+578    268480.0
+579    272475.0
+580    286164.0
+581    280877.0
+582    288145.0
+583    286608.0
+584    260595.0
+585    282174.0
+586    258590.0
+587    268413.0
+Name: y, dtype: float64
+```
+
+```python
+# calculate rmse
+
+rmse(predictions, test['y'])
+```
+
+`8618.783155559411`
+
+```python
+test.mean()
+```
+``    268739.666667`
+
+`dtype: float64`
 
