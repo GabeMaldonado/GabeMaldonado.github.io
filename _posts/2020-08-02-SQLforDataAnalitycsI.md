@@ -344,7 +344,7 @@ ON accounts.id = orders.account_id
 <a name='7'></a>
 ### Alias
 
-When joining multipel tables together, it is useful and convinient to give each table an ***alias***. Normally, the alias is just the first letter of the column name so if the column name is `orders` we can alias it as `o`.
+When joining multipel tables together, it is useful and convenient to give each table an ***alias***. Normally, the alias is just the first letter of the column name so if the column name is `orders` we can alias it as `o`.
 
 ```
 FROM orders AS o
