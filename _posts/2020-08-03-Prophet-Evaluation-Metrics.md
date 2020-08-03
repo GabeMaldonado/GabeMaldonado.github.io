@@ -69,3 +69,19 @@ TRFVOLUSM227NFWA    588 non-null float64
 dtypes: float64(1), object(1)
 memory usage: 9.3+ KB
 ```
+
+```python
+df.describe()
+```
+
+```
+TRFVOLUSM227NFWA
+count	588.000000
+mean	190420.380952
+std	57795.538934
+min	77442.000000
+25%	133579.000000
+50%	196797.500000
+75%	243211.500000
+max	288145.000000
+```
