@@ -30,7 +30,6 @@ Prophet requires the data to be in a particular format. It only takes two column
 df = pd.read_csv('BeerWineLiquor.csv')
 df.head()
 ```
-```
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -67,5 +66,4 @@ df.head()
     </tr>
   </tbody>
 </table>
-```
 
