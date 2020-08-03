@@ -395,3 +395,123 @@ test.mean()
 
 `dtype: float64`
 
+## Evaluate Predictions Using Prophet's Evaluation Tools
+
+Prophet has it own evaluations tools that allows us to perform *cross-validation* in different sections of the dataset instead of the last section as we saw above. 
+When performing cross-validation, there are 3 things that need to be defined:
+
+
+*   Initial training period
+*   Period lenght to perform validation
+*   Horizon of prediction
+
+```python
+## import prophet eval tools
+
+from fbprophet.diagnostics import cross_validation, performance_metrics
+from fbprophet.plot import plot_cross_validation_metric
+
+# Define:
+
+# Initial -- period is 5 years
+
+initial = 5 * 365
+initial = str(initial) + ' days'
+initial
+```
+
+`'1825 days'`
+
+```python
+# Define:
+
+# Period
+
+period = 5 * 365
+period = str(period) + ' days'
+period
+```
+
+`'1825 days'`
+
+```python
+# Define:
+
+# Horizon -- one year ahead
+
+horizon = 365
+horizon = str(horizon) + ' days'
+
+# perform cross-validation -- args: model, initial, period, horizon
+
+df_cv = cross_validation(m, initial=initial, period=period, horizon=horizon)
+```
+
+`INFO:fbprophet:Making 9 forecasts with cutoffs between 1976-12-11 00:00:00 and 2016-12-01 00:00:00`
+
+```python
+df_cv.head()
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ds</th>
+      <th>yhat</th>
+      <th>yhat_lower</th>
+      <th>yhat_upper</th>
+      <th>y</th>
+      <th>cutoff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1977-01-01</td>
+      <td>108479.087306</td>
+      <td>106990.603148</td>
+      <td>109837.430105</td>
+      <td>102445.0</td>
+      <td>1976-12-11</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1977-02-01</td>
+      <td>102996.111502</td>
+      <td>101607.192966</td>
+      <td>104416.448231</td>
+      <td>102416.0</td>
+      <td>1976-12-11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1977-03-01</td>
+      <td>118973.317944</td>
+      <td>117460.910009</td>
+      <td>120468.316343</td>
+      <td>119960.0</td>
+      <td>1976-12-11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1977-04-01</td>
+      <td>120612.923539</td>
+      <td>119182.220594</td>
+      <td>122067.307008</td>
+      <td>121513.0</td>
+      <td>1976-12-11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1977-05-01</td>
+      <td>127883.031663</td>
+      <td>126442.196287</td>
+      <td>129351.375440</td>
+      <td>128884.0</td>
+      <td>1976-12-11</td>
+    </tr>
+  </tbody>
+</table>
+
+
