@@ -360,5 +360,140 @@ JOIN accounts a
 
 ![Exer_ERD](https://camo.githubusercontent.com/fcf9a666eb3e45d96ae8331174df435b5154442c/68747470733a2f2f766964656f2e756461636974792d646174612e636f6d2f746f706865722f323031372f4e6f76656d6265722f35613065323637305f73637265656e2d73686f742d323031372d31312d31362d61742d332e35342e30362d706d2f73637265656e2d73686f742d323031372d31312d31362d61742d332e35342e30362d706d2e706e67)
 
+1.   Return a table for all `web_events` where the account name is 'Walmart'. The table should contain data for the `primary_poc`, time of the event (`ocurred_at`), and the channel and a column displaying the account name. 
+```
+SELECT accounts.name, 
+       accounts.primary_poc, 
+       web_events.occurred_at, 
+       web_events.channel
+FROM accounts
+JOIN web_events
+ON web_events.account_id = accounts.id
+WHERE accounts.name = 'Walmart';
+```
+
+2.   Return a table that provides the `region` for each `sales_rep` and their associated accounts. Sort results alphabetically on `account_name`
+```
+SELECT region.name reg_name, 
+       sales_reps.name rep, 
+       accounts.name
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts 
+ON accounts.sales_rep_id = sales_reps.id
+ORDER BY accounts.name;
+```
+
+3.   Return the name of each region for every order as well as the account name and unit price paid (`total_amt_usd` / `total`) be careful not to divide by 0. 
+``` 
+SELECT region.name AS region_name, 
+      accounts.name AS account_name, 
+      (total_amt_usd / (total + 0.01)) AS unit_price
+FROM accounts
+JOIN orders
+ON accounts.id = orders.account_id
+JOIN sales_reps
+ON sales_reps.id = accounts.sales_rep_id
+JOIN region
+ON sales_reps.region_id = region.id;
+```
+
+4.   Return a table that contains the region name, sales rep name and account name for the Midwest region. Sort the accounts names alphabetically.
+```
+SELECT region.name AS region name, 
+       sales_reps.name as rep name, 
+       accounts.name AS accounts,  
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts
+ON accounts.sales_reps_id = sales_reps.id
+WHERE region.name = 'Midwest'
+ORDER BY accounts.name
+```
+
+5.   Return a table that contains the region name, sales rep name and account name for the Midwest region but only return data for sales reps whose first name starts with `S`.
+```
+SELECT region.name AS region_name, 
+       sales_reps.name as rep_name, 
+       accounts.name AS accounts
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts
+ON accounts.sales_rep_id = sales_reps.id
+WHERE region.name = 'Midwest' AND sales_reps.name LIKE 'S%'
+ORDER BY accounts.name
+```
+
+6.   Return a table that contains the region name, sales rep name and account name for the Midwest region but only return data for sales reps whose last name starts with `M`.
+```
+SELECT region.name AS region_name, 
+       sales_reps.name as rep_name, 
+       accounts.name AS accounts
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts
+ON accounts.sales_rep_id = sales_reps.id
+WHERE region.name = 'Midwest' AND sales_reps.name LIKE '% M%'
+ORDER BY accounts.name
+```
+
+7.   Return a table that contains the region name, account name and unit price. However, only return data if the `standard order quantity` is `>` 100.
+```
+SELECT region.name AS region_name, 
+       accounts.name AS accounts,
+       (orders.total_amt_usd / (orders.total + 0.01)) AS unit_price
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts
+ON accounts.sales_rep_id = sales_reps.id
+JOIN orders
+ON orders.account_id = accounts.id
+WHERE orders.standard_qty > 100
+ORDER BY accounts.name
+```
+
+8.   Return a table that contains the region name, account name and unit price. However, only return data if the `standard order quantity` is `>` 100 and if the `poster order quantity` is `>` 50. Order by `unit_price`.
+```
+SELECT region.name AS region_name, 
+       accounts.name AS accounts,
+       (orders.total_amt_usd / (orders.total + 0.01)) AS unit_price
+FROM sales_reps
+JOIN region
+ON sales_reps.region_id = region.id
+JOIN accounts
+ON accounts.sales_rep_id = sales_reps.id
+JOIN orders
+ON orders.account_id = accounts.id
+WHERE orders.standard_qty = 100 AND orders.poster_qty > 50
+ORDER BY unit_price
+```
+
+8.   Return a table that contains the unique channel values for account `1001` Walmart. Hint: using `SELECT DISTINCT` returns unique values. 
+```
+SELECT DISTINCT accounts.name AS name, 
+                web_events.channel AS channel
+FROM accounts
+JOIN web_events
+ON accounts.id = web_events.account_id
+WHERE accounts.id = 1001;
+```
+
+9.   Return a table with that contains data on when the transaction took place, the account name, the order total, the order total amount for all the orders that took place in 2008.
+```
+SELECT orders.occurred_at, 
+       accounts.name, 
+       orders.total,
+       orders.total_amt_usd
+FROM accounts
+JOIN orders
+ON orders.account_id = accounts.id
+WHERE orders.occurred_at BETWEEN '01-01-2015' AND '01-01-2016'
+ORDER BY orders.occurred_at DESC;
+```
 
 
