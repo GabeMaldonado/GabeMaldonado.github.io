@@ -1458,6 +1458,124 @@ forecast = m.predict(future)
 
 When we call `forecast` it returns a lot of information. However, we are mainly interested in the actual prediction `y_hat` as well as the upper and lower bounds/confidence intervals `yhat_lower` and `yhat_upper`
 
+```python
+forecast.columns
+```
+
+```
+Index(['ds', 'trend', 'yhat_lower', 'yhat_upper', 'trend_lower', 'trend_upper',
+       'additive_terms', 'additive_terms_lower', 'additive_terms_upper',
+       'yearly', 'yearly_lower', 'yearly_upper', 'multiplicative_terms',
+       'multiplicative_terms_lower', 'multiplicative_terms_upper', 'yhat'],
+      dtype='object')
+      ```
+
+
+We can select the last 12 datapoints from teh forecast to see what the predictions are.
+
+```python
+# select variables of interest
+
+forecast[['ds', 'yhat_lower', 'yhat_upper', 'yhat']].tail(12)
+```<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ds</th>
+      <th>yhat_lower</th>
+      <th>yhat_upper</th>
+      <th>yhat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>336</th>
+      <td>2020-01-01</td>
+      <td>4459.291007</td>
+      <td>4792.737340</td>
+      <td>4629.426372</td>
+    </tr>
+    <tr>
+      <th>337</th>
+      <td>2020-02-01</td>
+      <td>4511.518627</td>
+      <td>4835.497542</td>
+      <td>4680.226146</td>
+    </tr>
+    <tr>
+      <th>338</th>
+      <td>2020-03-01</td>
+      <td>4772.153906</td>
+      <td>5109.743878</td>
+      <td>4943.299086</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>2020-04-01</td>
+      <td>4769.322567</td>
+      <td>5101.754255</td>
+      <td>4941.866893</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>2020-05-01</td>
+      <td>5032.043549</td>
+      <td>5357.118499</td>
+      <td>5198.382732</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>2020-06-01</td>
+      <td>5014.939445</td>
+      <td>5339.767766</td>
+      <td>5178.976562</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>2020-07-01</td>
+      <td>5153.127728</td>
+      <td>5468.195021</td>
+      <td>5311.178497</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>2020-08-01</td>
+      <td>5075.152631</td>
+      <td>5402.431645</td>
+      <td>5240.705951</td>
+    </tr>
+    <tr>
+      <th>344</th>
+      <td>2020-09-01</td>
+      <td>4921.693533</td>
+      <td>5236.449879</td>
+      <td>5083.568322</td>
+    </tr>
+    <tr>
+      <th>345</th>
+      <td>2020-10-01</td>
+      <td>5023.463492</td>
+      <td>5348.619770</td>
+      <td>5189.273100</td>
+    </tr>
+    <tr>
+      <th>346</th>
+      <td>2020-11-01</td>
+      <td>5175.789029</td>
+      <td>5494.137840</td>
+      <td>5336.429469</td>
+    </tr>
+    <tr>
+      <th>347</th>
+      <td>2020-12-01</td>
+      <td>6178.372861</td>
+      <td>6494.823661</td>
+      <td>6334.992675</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 
