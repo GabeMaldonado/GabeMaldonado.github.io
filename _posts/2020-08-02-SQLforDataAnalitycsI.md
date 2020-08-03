@@ -340,5 +340,19 @@ ON web_events.account_id = accounts.id
 JOIN orders
 ON accounts.id = orders.account_id
 ```
+<a name='7'></a>
+### Alias
 
+When joining multipel tables together, it is useful and convinient to give each table an ***alias***. Normally, the alias is just the first letter of the column name so if the column name is `orders` we can alias it as `o`.
+
+```
+FROM orders AS o
+JOIN accounts AS a
+```
+It is also possible to create an alias without using the `AS`. This would produce the same result as above:
+
+```
+FROM order o
+JOIN accounts a
+```
 
