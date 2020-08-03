@@ -57,3 +57,15 @@ from fbprophet import Prophet
   </tbody>
 </table>
 
+```python
+df.info()
+```
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 588 entries, 0 to 587
+Data columns (total 2 columns):
+DATE                588 non-null object
+TRFVOLUSM227NFWA    588 non-null float64
+dtypes: float64(1), object(1)
+memory usage: 9.3+ KB
+```
