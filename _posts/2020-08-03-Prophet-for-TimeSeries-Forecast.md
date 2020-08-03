@@ -1598,7 +1598,7 @@ plt.xlim('2014-01-01','2021-01-01')
 
 
 # Plot components
-We can also separate and plot the individual components of the grap.
+We can also separate and plot the individual components of the graph.
 
 ```python
 m.plot_components(forecast);
