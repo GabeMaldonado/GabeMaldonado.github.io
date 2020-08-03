@@ -1,14 +1,14 @@
 ---
-title: "Prophet-Changing Seasonality"
+title: "Prophet -- Changing Seasonality"
 date: 2020-08-03
 tags: [ML&AI]
 excerpt: "Changing Seasonality with Prophet"
 mathjax: "True"
 ---
 
-## Changing Seasonality with Prophet
+# Changing Seasonality with Prophet
 
-###Load Data
+### Load Data
 
 Load Airline dataset
 
