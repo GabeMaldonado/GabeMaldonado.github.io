@@ -85,3 +85,11 @@ min	77442.000000
 75%	243211.500000
 max	288145.000000
 ```
+
+Change columns names to Prophet specs and change the data column to a timeseries object.
+
+```python
+df.columns = ['ds', 'y']
+df['ds'] = pd.to_datetime(df['ds'])
+df.head()
+```
