@@ -272,7 +272,7 @@ GROUP BY 1, 2
 ORDER BY 3 DESC
 LIMIT 1;
 ```
-<a name='2'></a>
+<a name='3'></a>
 
 ## CASE Statements
 
