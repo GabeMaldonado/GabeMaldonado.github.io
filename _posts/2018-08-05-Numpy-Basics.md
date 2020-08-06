@@ -79,3 +79,128 @@ arr
        17, 18, 19, 20, 21, 22, 23, 24])
 `
 
+```python
+ranarr = np.random.randint(0, 50, 10)
+ranarr
+```
+
+`array([38, 18, 22, 10, 10, 23, 35, 39, 23,  2])`
+
+```python
+arr.shape
+```
+
+`(25,)`
+
+```python
+# reshape array
+arr.reshape(5,5)
+```
+
+```
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+```
+
+```python
+# return max value
+ranarr.max()
+39
+
+# return min value
+2
+
+# returning the index location
+ranarr.argmax()
+7
+
+ranarr.argmin()
+9
+
+
+```
+
+```python
+# Indexing and selection
+arr1 = np.arange(0,11)
+arr1
+```
+
+`array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])`
+
+```python
+# return the value at index 8
+arr1[8]
+
+8
+
+# select form 1:5
+arr1[1:5]
+array([1, 2, 3, 4])
+
+arr1[:5]
+array([0, 1, 2, 3, 4])
+
+arr1[5:]
+array([ 5,  6,  7,  8,  9, 10])
+```
+
+```python
+
+# Broadcasting -- performing functions and operations across the array
+# adding a number to every single number of the array
+# changes are not permanent
+
+arr1 + 100
+array([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110])
+
+# divide every single number of the array
+arr1 / 2
+array([0. , 0.5, 1. , 1.5, 2. , 2.5, 3. , 3.5, 4. , 4.5, 5. ])
+
+# multiply every single number of the array
+arr1 ** 2
+array([  0,   1,   4,   9,  16,  25,  36,  49,  64,  81, 100])
+
+# create a new array by slicing the original array
+slice_of_array = arr1[0:6]
+slice_of_array
+array([0, 1, 2, 3, 4, 5])
+
+# update array's values
+slice_of_array[:] = 99
+slice_of_array
+array([99, 99, 99, 99, 99, 99])
+
+# since slice_of_array was created by slicing the array when we broadcast to slice_of_array
+# the original array gets affected, too.
+arr1
+array([99, 99, 99, 99, 99, 99,  6,  7,  8,  9, 10])
+
+# To prevent this we have to explicitly create a copy using 'arr.copy'
+arr1_copy = arr1.copy()
+arr1_copy[:] = 10000
+arr1_copy
+
+array([10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000,
+       10000, 10000])
+```
+
+```python
+# Indexing on a 2D array
+# create a 2D array
+arr_2d = np.array([[5, 10, 15],[20, 25, 30],[35, 40, 45]])
+arr_2d
+```
+
+```
+array([[ 5, 10, 15],
+       [20, 25, 30],
+       [35, 40, 45]])
+```
+
+
+
