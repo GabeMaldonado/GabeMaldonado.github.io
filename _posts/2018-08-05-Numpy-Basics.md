@@ -202,5 +202,88 @@ array([[ 5, 10, 15],
        [35, 40, 45]])
 ```
 
+```python
+arr_2d.shape
+(3, 3)
+
+# Slicing a 2D array, index of row & index of column
+# slicing to get row in index 1 [20, 25, 30]
+arr_2d[1]
+array([20, 25, 30])
+
+# to get an element by row and column
+arr_2d[1][1]
+25
+
+# or
+arr_2d[1,1]
+25
+
+# to get the '45'
+arr_2d[2, 2]
+45
+
+# slicing subsets of the array 10 & 15 from the first row
+# and 25, 30 from second row
+arr_2d[:2,1:]
+
+array([[10, 15],
+       [25, 30]])
+
+# Conditional Selection
+# allows us to use conditional operators to grab elements
+arr2 = np.arange(1,11)
+arr2
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+# Return boolean for elements that are greater than 4
+arr2  > 4
+array([False, False, False, False,  True,  True,  True,  True,  True,
+        True])
+
+bool_arr = arr2 > 4
+bool_arr
+array([False, False, False, False,  True,  True,  True,  True,  True,
+        True])
+
+arr2[bool_arr]
+array([ 5,  6,  7,  8,  9, 10])
+
+arr2[arr2<=6]
+array([1, 2, 3, 4, 5, 6])
+```
+
+```python
+# Apply square root to all elements of the array
+np.sqrt(arr2)
+```
+
+```
+array([1.        , 1.41421356, 1.73205081, 2.        , 2.23606798,
+       2.44948974, 2.64575131, 2.82842712, 3.        , 3.16227766])
+```
+
+```python
+# apply the log
+np.log(arr2)
+```
+
+```
+array([0.        , 0.69314718, 1.09861229, 1.38629436, 1.60943791,
+       1.79175947, 1.94591015, 2.07944154, 2.19722458, 2.30258509])
+```
+
+```python
+# getting the sum of the array
+arr2.sum()
+55
+
+# get mean of the array
+# mean
+arr2.mean()
+5.5
+```
+
+
 
 
