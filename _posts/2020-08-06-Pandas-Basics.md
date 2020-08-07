@@ -45,3 +45,118 @@ pd.Series(data=['a','b','c'])
 dtype: object
 ```
 
+```python
+# create a new series
+ser1 = pd.Series([1, 2, 3, 4], index=['USA', 'Germany', 'USSR', 'Japan']) 
+ser1
+
+USA        1
+Germany    2
+USSR       3
+Japan      4
+dtype: int64
+
+# return location index
+ser1['USA']
+
+1
+
+ser2 = pd.Series([1, 4, 5, 6], index=['USA', 'Germany', 'Italy', 'Japan'])
+ser2
+
+USA        1
+Germany    4
+Italy      5
+Japan      6
+dtype: int64
+
+# adding the series
+ser1 + ser2
+
+Germany     6.0
+Italy       NaN
+Japan      10.0
+USA         2.0
+USSR        NaN
+dtype: float64
+```
+
+```python
+
+# Dataframes
+from numpy.random import randn
+np.random.seed(101)
+
+rand_matrix = randn(5,4)
+rand_matrix
+
+array([[ 2.70684984,  0.62813271,  0.90796945,  0.50382575],
+       [ 0.65111795, -0.31931804, -0.84807698,  0.60596535],
+       [-2.01816824,  0.74012206,  0.52881349, -0.58900053],
+       [ 0.18869531, -0.75887206, -0.93323722,  0.95505651],
+       [ 0.19079432,  1.97875732,  2.60596728,  0.68350889]])
+
+# create the dataframe
+df = pd.DataFrame(data=rand_matrix, index='A B C D E'.split(), columns=('W X Y Z').split())
+df
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
