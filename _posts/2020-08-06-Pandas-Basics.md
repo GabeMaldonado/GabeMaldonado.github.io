@@ -305,6 +305,246 @@ df
   </tbody>
 </table>
 
+```python
+# to delete a column- use .drop(axis=1) axis=0 is for rows
+df.drop('NEW', axis=1)
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+df
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      <th>NEW</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+      <td>3.334983</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+      <td>0.331800</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+      <td>-1.278046</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+      <td>-0.570177</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+      <td>2.169552</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+# the drop was not in-place as we can see 'NEW' is still there
+# to delete permanently
+df.drop('NEW', axis=1, inplace=True)
+df
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+# to drop rows simple use drop
+df.drop('A')
+df
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+
+# select rows
+# we can use .loc
+df.loc['A']
+
+W    2.706850
+X    0.628133
+Y    0.907969
+Z    0.503826
+Name: A, dtype: float64
+
+# or we can use index/integer location iloc
+df.iloc[0]
+
+W    2.706850
+X    0.628133
+Y    0.907969
+Z    0.503826
+Name: A, dtype: float64
+
+# selecting multiple rows
+df.loc[['A','B']]
+```
 
 
 
