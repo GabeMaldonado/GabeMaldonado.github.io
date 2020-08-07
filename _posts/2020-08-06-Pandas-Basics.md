@@ -887,6 +887,350 @@ df[(df['W'] > 0) & (df['Y'] > 1)]
   </tbody>
 </table>
 
+```python
+# resetting the index-- turning the index into a new column name index
+df.reset_index()
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>index</th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>D</td>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>E</td>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+# changes are not permanent as inplace is defaulted to false
+df
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+
+# resetting the index
+new_indx = 'CA NY WY OR CO'.split()
+
+new_indx
+['CA', 'NY', 'WY', 'OR', 'CO']
+
+
+#create new column
+df['States'] = new_indx
+df
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      <th>States</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+      <td>CA</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+      <td>NY</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+      <td>WY</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+      <td>OR</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+      <td>CO</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+# set states as index -- inplace is always false
+df.set_index('States')
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+    <tr>
+      <th>States</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CA</th>
+      <td>2.706850</td>
+      <td>0.628133</td>
+      <td>0.907969</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>NY</th>
+      <td>0.651118</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>WY</th>
+      <td>-2.018168</td>
+      <td>0.740122</td>
+      <td>0.528813</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>OR</th>
+      <td>0.188695</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>0.955057</td>
+    </tr>
+    <tr>
+      <th>CO</th>
+      <td>0.190794</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.683509</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+# get df info
+df.info()
+
+<class 'pandas.core.frame.DataFrame'>
+Index: 5 entries, A to E
+Data columns (total 5 columns):
+W         5 non-null float64
+X         5 non-null float64
+Y         5 non-null float64
+Z         5 non-null float64
+States    5 non-null object
+dtypes: float64(4), object(1)
+memory usage: 400.0+ bytes
+
+#get df types
+df.dtypes
+
+W         float64
+X         float64
+Y         float64
+Z         float64
+States     object
+dtype: object
+
+ statistics 
+df.describe()
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5.000000</td>
+      <td>5.000000</td>
+      <td>5.000000</td>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.343858</td>
+      <td>0.453764</td>
+      <td>0.452287</td>
+      <td>0.431871</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.681131</td>
+      <td>1.061385</td>
+      <td>1.454516</td>
+      <td>0.594708</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-2.018168</td>
+      <td>-0.758872</td>
+      <td>-0.933237</td>
+      <td>-0.589001</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.188695</td>
+      <td>-0.319318</td>
+      <td>-0.848077</td>
+      <td>0.503826</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.190794</td>
+      <td>0.628133</td>
+      <td>0.528813</td>
+      <td>0.605965</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.651118</td>
+      <td>0.740122</td>
+      <td>0.907969</td>
+      <td>0.683509</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2.706850</td>
+      <td>1.978757</td>
+      <td>2.605967</td>
+      <td>0.955057</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 
