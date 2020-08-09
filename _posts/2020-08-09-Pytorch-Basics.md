@@ -302,3 +302,59 @@ random_tensor[0, 1]
 
 `tensor(0.6054)`
 
+```python
+# Slice the tensor
+random_tensor[1:, 1:]
+```
+
+```tensor([[0.1374, 0.9261],
+        [0.2100, 0.1969]])
+```
+
+```python
+# Get size of tensor
+
+random_tensor.size()
+```
+
+`torch.Size([3, 3])`
+
+```python
+# View the tensor as a 1-D tensor with 9 elements (3*3)
+
+resized_tensor = random_tensor.view(9)
+resized_tensor
+```
+
+`tensor([0.1804, 0.6054, 0.6588, 0.4810, 0.1374, 0.9261, 0.1096, 0.2100, 0.1969])`
+
+```python
+# note * resized tensor and original tensor have the same memory address so 
+# a change to the original tensor would be reflected in the copy tensor
+
+random_tensor[2,2] = 10.0
+resized_tensor
+```
+
+```
+tensor([ 0.1804,  0.6054,  0.6588,  0.4810,  0.1374,  0.9261,  0.1096,  0.2100,
+        10.0000])
+```
+
+```python
+random_tensor
+```
+
+```
+tensor([[ 0.1804,  0.6054,  0.6588],
+        [ 0.4810,  0.1374,  0.9261],
+        [ 0.1096,  0.2100, 10.0000]])
+
+```
+
+```python
+random_tensor.shape
+```
+
+`torch.Size([3, 3])`
+
