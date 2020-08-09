@@ -43,4 +43,85 @@ We can see that the default d-type is `float32` however, we can change the defau
 
 [Check docs for more info](https://pytorch.org/docs/stable/tensors.html)
 
+```python
+# chage default d-type
+
+torch.set_default_dtype(torch.float32)
+torch.get_default_dtype()
+```
+
+`torch.float32`
+
+```python
+# Create a Pytorch Tensor
+
+tensor_array = torch.Tensor([[1, 2, 3], [4, 5, 6]])
+tensor_array
+```
+
+```
+tensor([[1., 2., 3.],
+        [4., 5., 6.]])
+```
+
+```python
+torch.is_tensor(tensor_array)
+```
+
+`True`
+
+```python
+# Check the number of elements in the tensor
+# numel would print the number of elements regarding of the tensor's shape
+ 
+torch.numel(tensor_array)
+```
+`6`
+
+```python
+tensor_uninitialized = torch.Tensor(2,2)
+tensor_uninitialized
+```
+
+```
+tensor([[3.5377e-35, 0.0000e+00],
+        [8.4078e-45, 0.0000e+00]])
+```
+
+The two lines of code above show that when we run `torch.Tensor(2, 2)` we create a 2X2 tensor that has no initial values. Pytorch creates the tensor and allocates memory for future values that will be passed to the tensor. The numbers we see are memory addresses. 
+However, if we run `torch.rand(2, 2)` we are creating a 2X2 tensor that it is initialized with random values:
+
+```python
+tensor_initialized = torch.rand(2, 2)
+```
+`tensor([[0.5521, 0.3260],
+        [0.2627, 0.0585]])
+`
+
+```python
+# Create a tensor of a particular type (int)
+
+tensor_init = torch.Tensor([5, 3]).type(torch.IntTensor)
+tensor_init
+```
+`tensor([5, 3], dtype=torch.int32)`
+
+```python
+# Create a tensor of int16 d-type
+
+tensor_short = torch.ShortTensor([1, 2, 3])
+tensor_short
+```
+`tensor([1, 2, 3], dtype=torch.int16)`
+
+```python
+# Create a tensor of half float d-type
+
+tensor_float = torch.tensor([1, 2, 3]).type(torch.half)
+tensor_float
+```
+`tensor([1., 2., 3.], dtype=torch.float16)`
+
+
+
 
