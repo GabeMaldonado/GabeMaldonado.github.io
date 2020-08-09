@@ -200,3 +200,105 @@ initial_tensor
 tensor([[0.8851, 0.7137, 0.2390],
         [0.0549, 0.0529, 0.1606]])
 ```
+
+```python
+# Perform an inplace fill (_) operation
+
+initial_tensor.fill_(10)
+initial_tensor
+```
+
+```tensor([[10., 10., 10.],
+        [10., 10., 10.]])
+```
+
+```python
+# Add a value to the tensor
+
+new_tensor = initial_tensor.add(5)
+new_tensor
+```
+
+```tensor([[15., 15., 15.],
+        [15., 15., 15.]])
+```
+
+```python
+# Perform a inplace square root on the new tensor
+
+new_tensor.sqrt_()
+new_tensor
+```
+
+```
+tensor([[3.8730, 3.8730, 3.8730],
+        [3.8730, 3.8730, 3.8730]])
+```
+
+```python
+# Create a torch containing evenly spaced numbers from 1 - 12
+
+x = torch.linspace(start=0.1, end=10.0, steps=15)
+x
+```
+
+```
+tensor([ 0.1000,  0.8071,  1.5143,  2.2214,  2.9286,  3.6357,  4.3429,  5.0500,
+         5.7571,  6.4643,  7.1714,  7.8786,  8.5857,  9.2929, 10.0000])
+```
+
+```python
+x.size()
+```
+
+`torch.Size([15])`
+
+```python
+# Chunk x into 3 separate parts
+
+tensor_chunk = torch.chunk(x, 3, 0)
+tensor_chunk
+```
+
+```
+(tensor([0.1000, 0.8071, 1.5143, 2.2214, 2.9286]),
+ tensor([3.6357, 4.3429, 5.0500, 5.7571, 6.4643]),
+ tensor([ 7.1714,  7.8786,  8.5857,  9.2929, 10.0000]))
+ ```
+
+ ```python
+ # Concatenate tensors
+
+tensor1 = tensor_chunk[0]
+tensor2 = tensor_chunk[1]
+tensor3 = torch.tensor([3.0, 4.0, 5.0])
+
+torch.cat((tensor1, tensor2, tensor3), 0)
+```
+
+```
+tensor([0.1000, 0.8071, 1.5143, 2.2214, 2.9286, 3.6357, 4.3429, 5.0500, 5.7571,
+        6.4643, 3.0000, 4.0000, 5.0000])
+```
+
+```python
+# Create a 3X3 tensor with radon numbers
+
+random_tensor = torch.rand(3,3)
+random_tensor
+```
+
+```
+tensor([[0.1804, 0.6054, 0.6588],
+        [0.4810, 0.1374, 0.9261],
+        [0.1096, 0.2100, 0.1969]])
+```
+
+```python
+# Get values from the tensor by index
+
+random_tensor[0, 1]
+```
+
+`tensor(0.6054)`
+
