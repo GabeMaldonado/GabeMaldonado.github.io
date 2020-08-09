@@ -122,6 +122,60 @@ tensor_float
 ```
 `tensor([1., 2., 3.], dtype=torch.float16)`
 
+```python
+# Create a tensor and fill it with a default value
 
+tensor_fill = torch.full((2, 4), fill_value=10)
+tensor_fill
+```
 
+`
+tensor([[10., 10., 10., 10.],
+        [10., 10., 10., 10.]])
+`
+
+```python
+# Create a tensor filled with ones
+
+tensor_of_ones = torch.ones([2, 4], dtype=torch.int32)
+tensor_of_ones
+```
+`
+tensor([[1, 1, 1, 1],
+        [1, 1, 1, 1]], dtype=torch.int32)
+`
+
+```python
+# Create a tensor of zeros by passing the already created tensor of ones
+
+tensor_of_zeros = torch.zeros_like(tensor_of_ones)
+tensor_of_zeros
+```
+
+`
+tensor([[0, 0, 0, 0],
+        [0, 0, 0, 0]], dtype=torch.int32)
+`        
+
+```python
+# Create a 2-D matrix filled with ones diagonally
+
+tensor_eye = torch.eye(5)
+tensor_eye
+```
+
+`
+tensor([[1., 0., 0., 0., 0.],
+        [0., 1., 0., 0., 0.],
+        [0., 0., 1., 0., 0.],
+        [0., 0., 0., 1., 0.],
+        [0., 0., 0., 0., 1.]])
+`
+
+```python
+# Get the indices of the non-zero values on the tensor above
+
+non_zero = torch.nonzero(tensor_eye)
+non_zero
+```
 
