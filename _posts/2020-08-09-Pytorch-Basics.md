@@ -737,5 +737,39 @@ torch.is_tensor(tensor_from_np)
 
 `True`
 
+```python
+# Change values in the tensor
+
+tensor_from_np[0] = 1
+tensor_from_np
+```
+
+```
+tensor([[  1.,   1.,   1.],
+        [ 10.,  20.,  30.],
+        [100., 200., 300.]], dtype=torch.float64)
+```
+
+```python
+numpy_arr
+```
+
+```
+array([[  1.,   1.,   1.],
+       [ 10.,  20.,  30.],
+       [100., 200., 300.]])
+```
+
+```python
+# Create a new np array
+
+numpy_arr_1 = np.array([4, 8])
+numpy_arr_1
+```
+
+`array([4, 8])`
+
+
+
 
 
