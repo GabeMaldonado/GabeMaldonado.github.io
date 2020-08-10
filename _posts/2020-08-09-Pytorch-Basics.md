@@ -773,7 +773,27 @@ numpy_arr_1
 
 `array([4, 8])`
 
+```python
+# Create a copy using '.as_tensor'
 
+tensor_from_array1 = torch.as_tensor(numpy_arr_1)
+tensor_from_array1
+```
 
+`tensor([4, 8])`
 
+```python
+# change values
+
+numpy_arr_1[1] = 5
+numpy_arr_1
+```
+
+`array([4, 5])`
+
+```python
+tensor_from_array1
+```
+
+`tensor([4, 5])`
 
