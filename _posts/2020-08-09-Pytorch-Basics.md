@@ -797,3 +797,152 @@ tensor_from_array1
 
 `tensor([4, 5])`
 
+### CUDA Semantics
+
+```python
+# check to see if CUDA is available
+
+torch.cuda.is_available()
+```
+
+`True`
+
+```python
+# Initialize CUDA state for Pytorch
+
+torch.cuda.init()
+
+# check for CUDA active device
+# it returns the index of the device
+
+torch.cuda.current_device()
+```
+
+`0`
+
+```python
+# check for number of devices
+
+torch.cuda.device_count()
+```
+
+`1`
+
+```python
+# create a reference to the current cuda device
+# going forward we can use this reference 
+
+cuda = torch.device('cuda')
+cuda
+```
+
+`device(type='cuda')`
+
+By default, tensors are created in the CPU. To create a tensor in the GPU we must explicitly do so by passing `device=cuda` as an argument:
+
+```python
+tensor_gpu = torch.tensor([10., 20.], device=cuda)
+tensor_gpu
+```
+
+`tensor([10., 20.], device='cuda:0')`
+
+```python
+# check memory allocation in cuda
+
+torch.cuda.memory_allocated()
+```
+
+`512`
+
+```python
+# check memory cached
+
+torch.cuda.memory_cached()
+```
+
+`2097152`
+
+```python
+# to free-up the cache
+
+torch.cuda.empty_cache()
+```
+
+```python
+# check cache again although the value would be the same as 
+# we don't have any unused memory in the cache
+
+torch.cuda.memory_cached()
+```
+
+`2097152`
+
+### Working with Gradients
+
+**Weights** and **biases** of individual neurons are determined during the training process. 
+
+Regression-- the simplest neural network. It tries to best-fit a line that passes through the data. 
+  *   `y = Wx + b`
+  *   Minimize the sum of squares of the distance of the points from the regression line.
+
+The actual training of a neural network happens via Gradient Descent Optimization. 
+
+MSE = Mean Square Error of Loss. A metric to be minimized during training of regression model. 
+
+Loss = `ypredicted` - `yactual`
+
+Where `ypredicted` is, given x, model outputs predicted value of y and `yactual` is the actual label, available in the training data. 
+
+There are three ways to calculate gradients: 
+
+1.   Symbolic Differentiation -- Conceptually simple but hard to implement
+
+2.   Numeric Differentiation -- Easy to implement but won't scale
+
+3.   Automatic Differentiation -- Conceptually difficult but easy to implement. 
+
+Pytorch and Tensorflow rely on automatic differentiation. 
+
+In Pytorch, the package used to calculate gradients for bacpropagation is **Autograd**
+
+- Optimizer uses the error function and tweaks the model parameters to minimize error. 
+
+- Backward pass: updates parameter values. 
+
+- Backpropagation is implemented using a technique called reverse auto-differentiation. 
+
+- Gradient -- vector of partial derivatives -- these gradients apply to specific time t. 
+
+- Parameters (t+1) = Parameters (t) - learning_rate X Gradient(t)
+
+- For next time step: update parameter values. Move each parameter value in the direction of reducing gradient.
+
+- **Learning rate** is the size of the step  in the direction of the reducing gradient. If we want to take small steps to converge to what's the min value of loss, keep the LR small and vice versa. Keep in mind that using a small LR the model would take long to train and converge to the lowest loss value. 
+
+## Automatic Differentiation
+
+Reverse-mode auto-differentiation
+
+- Used in Pytorch and TF
+
+- Two passes in each training step
+
+   -   Forward step: Calculate loss
+   -   Backward step: Update parameter values
+
+Automatic Differentiation:
+
+-   Relies on a mathematical trick
+
+-   Based on Taylor's Series Expansion
+
+-   Allows fast approximation of gradients
+
+-   It can be performed in two modes: Reverse and Forward mode
+   
+    - Forward-mode is similar to numeric differentiation. It requires one pass per parameter and will not scale to complex networks. 
+
+
+### Implementing Autograd in Pytorch
+
