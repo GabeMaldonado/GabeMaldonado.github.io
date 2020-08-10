@@ -208,7 +208,8 @@ initial_tensor.fill_(10)
 initial_tensor
 ```
 
-```tensor([[10., 10., 10.],
+```
+tensor([[10., 10., 10.],
         [10., 10., 10.]])
 ```
 
@@ -219,7 +220,8 @@ new_tensor = initial_tensor.add(5)
 new_tensor
 ```
 
-```tensor([[15., 15., 15.],
+```
+tensor([[15., 15., 15.],
         [15., 15., 15.]])
 ```
 
@@ -307,7 +309,8 @@ random_tensor[0, 1]
 random_tensor[1:, 1:]
 ```
 
-```tensor([[0.1374, 0.9261],
+```
+tensor([[0.1374, 0.9261],
         [0.2100, 0.1969]])
 ```
 
@@ -497,7 +500,8 @@ tensor = torch.Tensor([[-1, -2, -3], [1, 2, 3]])
 tensor
 ```
 
-```tensor([[-1., -2., -3.],
+```
+tensor([[-1., -2., -3.],
         [ 1.,  2.,  3.]])
 ```
 
