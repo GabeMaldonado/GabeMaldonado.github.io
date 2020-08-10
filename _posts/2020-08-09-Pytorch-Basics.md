@@ -358,3 +358,124 @@ random_tensor.shape
 
 `torch.Size([3, 3])`
 
+```python
+# Change shape of a tensor by squeezing and unsqueezing
+
+tensor_unsqueeze = torch.unsqueeze(random_tensor, 2)
+tensor_unsqueeze
+```
+
+```
+tensor([[[ 0.1804],
+         [ 0.6054],
+         [ 0.6588]],
+
+        [[ 0.4810],
+         [ 0.1374],
+         [ 0.9261]],
+
+        [[ 0.1096],
+         [ 0.2100],
+         [10.0000]]])
+```
+
+```python
+tensor_unsqueeze.shape
+```
+
+`torch.Size([3, 3, 1])`
+
+```python
+initial_tensor
+```
+
+```
+tensor([[10., 10., 10.],
+        [10., 10., 10.]])
+```
+
+```python
+# Transpose tensor
+
+tensor_transpose = torch.transpose(initial_tensor, 0, 1)
+tensor_transpose
+```
+
+```python
+# Transpose tensor
+
+tensor_transpose = torch.transpose(initial_tensor, 0, 1)
+tensor_transpose
+```
+
+```
+tensor([[10., 10.],
+        [10., 10.],
+        [10., 10.]])
+```
+
+```python
+# Sort values in tensor
+
+sorted_tensor, sorted_indices = torch.sort(random_tensor)
+sorted_tensor
+```
+
+```
+tensor([[ 0.1804,  0.6054,  0.6588],
+        [ 0.1374,  0.4810,  0.9261],
+        [ 0.1096,  0.2100, 10.0000]])
+```
+
+```python
+sorted_indices
+```
+
+```
+tensor([[0, 1, 2],
+        [1, 0, 2],
+        [0, 1, 2]])
+```
+
+```python
+# Create a 1-D float tensor 
+
+tensor_float = torch.FloatTensor([-1.1, -2.2, 3.3])
+tensor_float
+```
+
+`tensor([-1.1000, -2.2000,  3.3000])`
+
+```python
+# Get the absolute values of the tensor
+
+tensor_abs = torch.abs(tensor_float)
+tensor_abs
+```
+
+`tensor([1.1000, 2.2000, 3.3000])`
+
+```python
+# Create two tensors with random positivw values
+
+rand1 = torch.abs(torch.rand(2, 3))
+rand2 = torch.abs(torch.rand(2, 3))
+
+rand1
+```
+
+```
+tensor([[0.6688, 0.2732, 0.6260],
+        [0.7696, 0.1880, 0.3173]])
+```
+
+```python
+rand2
+```
+
+tensor([[0.1969, 0.4801, 0.5976],
+        [0.5697, 0.6583, 0.8709]])
+
+
+
+
