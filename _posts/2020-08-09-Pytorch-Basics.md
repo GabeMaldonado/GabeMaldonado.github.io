@@ -473,9 +473,269 @@ tensor([[0.6688, 0.2732, 0.6260],
 rand2
 ```
 
+```
 tensor([[0.1969, 0.4801, 0.5976],
         [0.5697, 0.6583, 0.8709]])
+```
 
+```
+# Add the two tensors
+
+add1 = rand1 + rand2
+add1
+```
+
+```
+tensor([[0.8656, 0.7533, 1.2237],
+        [1.3393, 0.8463, 1.1881]])
+```
+
+```python
+# Create another tensor with + and - values
+
+tensor = torch.Tensor([[-1, -2, -3], [1, 2, 3]])
+tensor
+```
+
+```tensor([[-1., -2., -3.],
+        [ 1.,  2.,  3.]])
+```
+
+```python
+# Perform tensor-wise division
+tensor_div = torch.div(tensor, tensor + 0.3)
+tensor_div
+```
+
+```
+tensor([[1.4286, 1.1765, 1.1111],
+        [0.7692, 0.8696, 0.9091]])
+```
+
+```python
+# Clamp tensor to certain min and max values
+
+tensor_clamp = torch.clamp(tensor, min=-0.2, max=2)
+tensor_clamp
+```
+
+```
+tensor([[-0.2000, -0.2000, -0.2000],
+        [ 1.0000,  2.0000,  2.0000]])
+```
+
+```python
+# Create two new tensors
+
+t1 = torch.Tensor([1, 2])
+t2 = torch.Tensor([10, 20])
+```
+
+```python
+# Perform matrix multiplication on the two tensors above
+# using dot product
+
+dot_product = torch.dot(t1, t2)
+dot_product
+```
+
+`tensor(50.)`
+
+```python
+# Create a matrix and a vector
+
+matrix = torch.Tensor([[1, 2, 3],
+                       [4, 5, 6]])
+
+vector = torch.Tensor([0, 1, 2])
+```
+
+```python
+# In Pytorch we can also multiply a matrix and a vector
+
+matrix_vector = torch.mv(matrix, vector)
+matrix_vector
+```
+
+`tensor([ 8., 17.])`
+
+```python
+# Create another matrix
+
+matrix_2 = torch.Tensor([[10, 30],
+                         [20, 0],
+                         [0, 50]])
+
+# Perform matrix multiuplication (mm)
+
+matrix_mul = torch.mm(matrix, matrix_2)
+matrix_mul                         
+```       
+
+```
+tensor([[ 50., 180.],
+        [140., 420.]])
+```
+
+```python
+# Get the index of the max value across a particular dimension
+
+torch.argmax(matrix_mul, dim=1)
+```
+
+`tensor([1, 1])`
+
+```python
+matrix_mul[1,1]
+```
+
+`tensor(420.)`
+
+```python
+# Get the index of the min value
+
+torch.argmin(matrix_mul, dim=1)
+```
+
+`tensor([0, 0])`
+
+```python
+matrix_mul[0,0]
+```
+
+`tensor(50.)`
+
+## Conversions between Pytorch and Numpy 
+
+```python
+import numpy as np
+
+# Create a new tensor with random values
+
+tensor = torch.rand(4, 3)
+tensor
+```
+
+```
+tensor([[0.4104, 0.4827, 0.5824],
+        [0.5948, 0.8272, 0.8067],
+        [0.2073, 0.0654, 0.7156],
+        [0.2299, 0.3968, 0.7596]])
+```
+
+```python
+# check type
+
+type(tensor)
+```
+
+`torch.Tensor`
+
+```python
+# Convert tensor to a numpy array
+
+numpy_from_tensor = tensor.numpy()
+numpy_from_tensor
+```
+
+```
+array([[0.4104271 , 0.48272985, 0.58242667],
+       [0.59482265, 0.82721066, 0.80672765],
+       [0.2073437 , 0.06537104, 0.71558857],
+       [0.22989696, 0.3968014 , 0.7596284 ]], dtype=float32)
+```
+
+```python
+# check type
+
+type(numpy_from_tensor)
+```
+
+`numpy.ndarray`
+
+```python
+# check if it is a tensor
+
+torch.is_tensor(tensor)
+```
+
+`True`
+
+```python
+# try same but with the np array
+
+torch.is_tensor(numpy_from_tensor)
+```
+
+`False`
+
+**The Pytorch tensor and the numpy array share the same memory address so the changes made to one would be reflected on the other.**
+
+```python
+numpy_from_tensor[0, 0] = 100.0
+
+numpy_from_tensor
+```
+
+```
+array([[1.0000000e+02, 4.8272985e-01, 5.8242667e-01],
+       [5.9482265e-01, 8.2721066e-01, 8.0672765e-01],
+       [2.0734370e-01, 6.5371037e-02, 7.1558857e-01],
+       [2.2989696e-01, 3.9680141e-01, 7.5962842e-01]], dtype=float32)
+```
+
+```python
+tensor
+```
+
+```
+tensor([[1.0000e+02, 4.8273e-01, 5.8243e-01],
+        [5.9482e-01, 8.2721e-01, 8.0673e-01],
+        [2.0734e-01, 6.5371e-02, 7.1559e-01],
+        [2.2990e-01, 3.9680e-01, 7.5963e-01]])
+```
+
+```python
+# Instantiate a numpy array
+
+numpy_arr = np.array([[1.0, 2.0, 3.0],
+                      [10.0, 20.0, 30.0,],
+                      [100.0, 200.0, 300.0]])
+numpy_arr
+```
+
+```
+array([[  1.,   2.,   3.],
+       [ 10.,  20.,  30.],
+       [100., 200., 300.]])
+```
+
+```python
+# Convert the np array to a tensor
+
+tensor_from_np = torch.from_numpy(numpy_arr)
+tensor_from_np
+```
+
+```
+tensor([[  1.,   2.,   3.],
+        [ 10.,  20.,  30.],
+        [100., 200., 300.]], dtype=torch.float64)
+```
+
+```python
+# Check type
+
+type(tensor_from_np)
+```
+
+`torch.Tensor`
+
+```python
+torch.is_tensor(tensor_from_np)
+```
+
+`True`
 
 
 
