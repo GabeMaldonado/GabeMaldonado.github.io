@@ -7,9 +7,16 @@ mathjax: "True"
 ---
 
 
+# Bokeh Basics - I
+
+Bokeh is a python library that enables users to create beautiful, dynamic and interactive visualizations. 
+
+To [learn more about Bokeh visit its website](https://docs.bokeh.org/en/latest/index.html)
+
+Want to create visualizations? Let's get started!
 
 
-<!DOCTYPE html>
+
 <html lang="en">
   
   <head>
