@@ -125,7 +125,8 @@ Bokeh uses the ColumnDataSource as its main data structure. The ColumnDataSource
  ```
  `{'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1], 'C': [1, 3, 5, 1, 2]}`
 
- ## Create a Line Plot
+ 
+## Create a Line Plot
 
 We can create some random data to pass as our x and y values.
 
