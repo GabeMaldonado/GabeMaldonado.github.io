@@ -15,6 +15,87 @@ To [learn more about Bokeh visit its website](https://docs.bokeh.org/en/latest/i
 
 Want to create visualizations? Let's get started!
 
+```python
+# import required libraries
+
+from bokeh.io import output_notebook, show, reset_output, output_file
+
+import bokeh
+from bokeh.plotting import figure
+
+import numpy as np
+import pandas as pd
+
+# import library for toy datasets
+from vega_datasets import data as vds
+```
+
+## Load Data
+We need data to plot! Bokeh provides example datsets we can use.
+
+```python
+from bokeh.sampledata import iris
+# load iris dataset
+df_iris = iris.flowers
+# display first five rows in the df
+df_iris.head()
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 <html lang="en">
