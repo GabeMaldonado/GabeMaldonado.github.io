@@ -548,6 +548,42 @@ show(stacked_bar_chart)
 
 ## Creating a Bar Chart Grouping Data
 
+```python
+
+from bokeh.transform import dodge
+
+# create some random data
+
+categories = ['category1', 'category2', 'category3']
+
+df_grouped = pd.DataFrame({'categories' : categories,
+                           '2018' : [2, 1, 4],
+                           '2019' : [5, 3, 3],
+                           '2020' : [3, 2, 4]})
+
+# create instance of a figure
+bar_grouped = figure(x_range=categories, y_range = (0, 10), plot_height = 350)
+
+# define position of bars on chart
+dodge1 = dodge('categories', -0.25, range=bar_grouped.x_range)
+dodge2 = dodge('categories', 0.0, range=bar_grouped.x_range)
+dodge3 = dodge('categories', 0.25, range=bar_grouped.x_range)
+
+bar_grouped.vbar(x=dodge1, top='2018', width=0.2, source=df_grouped, color='blue', legend_label='2018')
+bar_grouped.vbar(x=dodge2, top='2019', width=0.2, source=df_grouped, color='green', legend_label='2019')
+bar_grouped.vbar(x=dodge3, top='2020', width=0.2, source=df_grouped, color='red', legend_label='2020')
+
+# configure legend
+
+bar_grouped.legend.location = 'top_left'
+bar_grouped.legend.orientation = 'horizontal'
+
+
+bar_grouped.add_tools(HoverTool())
+output_file('/grouped_bar_chart.html')
+show(bar_grouped)
+```
+
 <head>
     
       <meta charset="utf-8">
