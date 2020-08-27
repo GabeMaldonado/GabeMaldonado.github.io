@@ -921,11 +921,13 @@ df_cars.head()
     
   </body>
 
-  ## Scatter Plot for Categorical Data
+## Scatter Plot for Categorical Data
+We can use the famous *iris* dataset to plot categorical data. This dataset contains attributes about three different flower species: setosa, versicolor, virginica. 
 
-  We can the famous *iris* dataset to plot categorical data. This dataset contains attributes about three different flower species: setosa, versicolor, virginica. # load iris df from vega
+
 
 ```python
+# load iris df from vega
 df_iris = vds.iris()
 df_iris.head()
 ```
@@ -1088,6 +1090,6 @@ show(sub_scatter)
         </script>
     
   </body>
-  
+
 
 
