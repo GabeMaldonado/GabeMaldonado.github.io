@@ -110,7 +110,9 @@ To create plots we must follow this workflow:
 *   show plot
 
 ## Bokeh's Data Structure
-Bokeh uses the ColumnDataSource as its main data structure. The ColumnDataSource is created automatically most of the time but it can also be created explicitly. This data structure is a dictionary which maps the column names to sequences of values. 
+Bokeh uses the ColumnDataSource as its main data structure. The ColumnDataSource is a table-like data structure that maps string column names to sequences of data (columns). The ColumnDataSource is created automatically most of the time but it can also be created explicitly by passing a pandas dataframe to the class initializer:
+
+`data = ColumnDataSource(df)`
 
 ```python
 # to create the ColumnDataSource
