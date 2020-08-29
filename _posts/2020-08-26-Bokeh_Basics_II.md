@@ -319,7 +319,7 @@ df_weather.head()
 
 ```python
 
-from bokeh.transform import factor_cmap, factor_mark
+#from bokeh.transform import factor_cmap, factor_mark
 
 #TOOLS = 'box_select, lasso_select, reset, wheel_zoom, pan' 
 
