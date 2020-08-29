@@ -317,7 +317,7 @@ df_weather.head()
   </tbody>
 </table>
 
-```python
+
 from bokeh.transform import factor_cmap, factor_mark
 
 TOOLS = 'box_select, lasso_select, reset, wheel_zoom, pan' 
@@ -359,5 +359,3 @@ weather_detail.legend.orientation='horizontal'
 weather_grid = gridplot([[weather_plot], [weather_detail]])
 show(weather_grid)
 output_file('/linked_lasso_box_grid_plot.html')
-
-```
