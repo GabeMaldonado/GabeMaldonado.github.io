@@ -321,19 +321,19 @@ df_weather.head()
 
 from bokeh.transform import factor_cmap, factor_mark
 
-TOOLS = 'box_select, lasso_select, reset, wheel_zoom, pan' 
+#TOOLS = 'box_select, lasso_select, reset, wheel_zoom, pan' 
 
-weather_conditions = ['drizzle', 'rain', 'sun', 'snow', 'fog']
-weather_markers = ['hex', 'cross', 'triangle', 'square', 'circle_x']
+#weather_conditions = ['drizzle', 'rain', 'sun', 'snow', 'fog']
+#weather_markers = ['hex', 'cross', 'triangle', 'square', 'circle_x']
 
 # create a ColumnDataSource
 
-cds_weather = ColumnDataSource(df_weather)
+#cds_weather = ColumnDataSource(df_weather)
 
 # create 1st scatter plot
-weather_plot = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
+#weather_plot = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
                       y_axis_label='Temperature', tools=TOOLS)
-weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather)
+#weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather)
 
 # create 2nd scatter plot for the detailed weather data
 # uncomment code below
@@ -353,12 +353,12 @@ weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weat
 
 # configure legend
 
-weather_detail.legend.location='top_left'
-weather_detail.legend.orientation='horizontal'
+#weather_detail.legend.location='top_left'
+#weather_detail.legend.orientation='horizontal'
 
 
 #create grid
-weather_grid = gridplot([[weather_plot], [weather_detail]])
-show(weather_grid)
-output_file('/linked_lasso_box_grid_plot.html')
+#weather_grid = gridplot([[weather_plot], [weather_detail]])
+#show(weather_grid)
+#output_file('/linked_lasso_box_grid_plot.html')
 ```
