@@ -317,7 +317,7 @@ df_weather.head()
   </tbody>
 </table>
 
-```python
+```
 
 from bokeh.transform import factor_cmap, factor_mark
 
