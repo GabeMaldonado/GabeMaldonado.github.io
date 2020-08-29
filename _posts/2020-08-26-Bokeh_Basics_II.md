@@ -345,3 +345,5 @@ weather_detail.scatter('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_w
                      marker=factor_mark('weather', weather_markers, weather_conditions),
                      legend_group='weather')
 ```
+`weather_plot.add_tools(HoverTool(tooltips=[('date', '@date{%Y-%m-%d}'), ('temp', '@temp_max')],`
+                      `formatters={'@date': 'datetime'}))`
