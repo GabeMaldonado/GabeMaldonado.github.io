@@ -335,8 +335,8 @@ weather_plot = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
 weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather)
 
 # create 2nd scatter plot for the detailed weather data
-weather_detail = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
-                     y_axis_label='Weather Conditions', tools=TOOLS)%}
+weather_detail = figure(plot_width=900, plot_height=400, x_axis_type="datetime",
+                     y_axis_label="Weather Conditions", tools=TOOLS)
 weather_detail.scatter('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather,
                      color=factor_cmap(field_name='weather', palette='Dark2_5',
                      factors=weather_conditions),
