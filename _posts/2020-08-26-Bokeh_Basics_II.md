@@ -333,7 +333,9 @@ cds_weather = ColumnDataSource(df_weather)
 weather_plot = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
                       y_axis_label='Temperature', tools=TOOLS)
 weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather)
+```
 
+```python
 # create 2nd scatter plot for the detailed weather data
 weather_detail = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
                       y_axis_label='Weather Conditions', tools=TOOLS)
