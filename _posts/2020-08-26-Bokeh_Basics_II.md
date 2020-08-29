@@ -335,30 +335,3 @@ weather_plot = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
 weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather)
 ```
 
-```python
-# create 2nd scatter plot for the detailed weather data
-weather_detail = figure(plot_width=900, plot_height=400, x_axis_type='datetime',
-                      y_axis_label='Weather Conditions', tools=TOOLS)
-weather_detail.scatter('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weather,
-                     color=factor_cmap(field_name='weather', palette='Dark2_5',
-                     factors=weather_conditions),
-                     marker=factor_mark('weather', weather_markers, weather_conditions),
-                     legend_group='weather')
-
-
-weather_plot.add_tools(HoverTool(tooltips=[('date', '@date{%Y-%m-%d}'), ('temp', '@temp_max')],
-                      formatters={'@date': 'datetime'}))
-weather_detail.add_tools(HoverTool(tooltips=[('date', '@date{%Y-%m-%d}'), ('condition', '@weather')],
-                                   formatters={'@date': 'datetime'}))
-
-# configure legend
-
-weather_detail.legend.location='top_left'
-weather_detail.legend.orientation='horizontal'
-
-
-#create grid
-weather_grid = gridplot([[weather_plot], [weather_detail]])
-show(weather_grid)
-output_file('/linked_lasso_box_grid_plot.html')
-```
