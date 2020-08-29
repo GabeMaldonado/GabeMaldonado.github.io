@@ -349,7 +349,7 @@ weather_plot.circle('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_weat
 #weather_plot.add_tools(HoverTool(tooltips=[('date', '@date'), ('temp', '@temp_max')],
 #                      formatters={'@date': 'datetime'}))
 #weather_detail.add_tools(HoverTool(tooltips=[('date', '@date'), ('condition', '@weather')],
-                                   formatters={'@date': 'datetime'}))
+#                                   formatters={'@date': 'datetime'}))
 
 # configure legend
 
