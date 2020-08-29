@@ -345,5 +345,20 @@ weather_detail.scatter('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_w
                      marker=factor_mark('weather', weather_markers, weather_conditions),
                      legend_group='weather')
 ```
-`weather_plot.add_tools(HoverTool(tooltips=[('date', '@date'), ('temp', '@temp_max')],`
-                      `formatters={'@date': 'datetime'}))`
+```python
+weather_plot.add_tools(HoverTool(tooltips=[('date', '@date{\%Y-%m-%d%}'), ('temp', '@temp_max')],
+                      formatters={'@date': 'datetime'}))
+weather_detail.add_tools(HoverTool(tooltips=[('date', '@date{\%Y-%m-%d%}'), ('condition', '@weather')],
+                                   formatters={'@date': 'datetime'}))
+
+# configure legend
+
+weather_detail.legend.location='top_left'
+weather_detail.legend.orientation='horizontal'
+
+
+#create grid
+weather_grid = gridplot([[weather_plot], [weather_detail]])
+show(weather_grid)
+output_file('/linked_lasso_box_grid_plot.html')                                   
+```
