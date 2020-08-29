@@ -344,10 +344,10 @@ weather_detail.scatter('date', 'temp_max', size=10, fill_alpha=0.2, source=cds_w
                      marker=factor_mark('weather', weather_markers, weather_conditions),
                      legend_group='weather')
 
-
-weather_plot.add_tools(HoverTool(tooltips=[('date', '@date{%Y-%m-%d}'), ('temp', '@temp_max')],
+# tooltips=[('date', '@date{%Y-%m-%d}')
+weather_plot.add_tools(HoverTool(tooltips=[('date', '@date'), ('temp', '@temp_max')],
                       formatters={'@date': 'datetime'}))
-weather_detail.add_tools(HoverTool(tooltips=[('date', '@date{%Y-%m-%d}'), ('condition', '@weather')],
+weather_detail.add_tools(HoverTool(tooltips=[('date', '@date'), ('condition', '@weather')],
                                    formatters={'@date': 'datetime'}))
 
 # configure legend
