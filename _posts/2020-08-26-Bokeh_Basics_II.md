@@ -441,9 +441,9 @@ output_file('/linked_lasso_box_grid_plot.html')
     
   </body>
 
-  ## Creating a Color Bar Graph
+## Creating a Color Bar Graph
 
-Color Bars can quick help us understand our data as the color palette changes based on the magnitude/intensity of the values. 
+Color Bars can quickly help us understand our data as the color palette changes based on the magnitude/intensity of the values. 
 We can reuse the car dataset to illustrate this concept by graphing the relationship between MPG/Horsepoer and the car's weight.
 
 ```python
@@ -639,4 +639,3 @@ output_file('/color_bar_plot.html')
         </script>
     
   </body>
-  
