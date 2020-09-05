@@ -163,3 +163,20 @@ df.head(10)
 2019-09-30	0.167757	0.773513
 2019-10-31	0.631097	0.583592
 ```
+
+```python
+df.info()
+```
+
+```
+<class 'pandas.core.frame.DataFrame'>
+DatetimeIndex: 12 entries, 2019-01-31 to 2019-12-31
+Freq: M
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   0       12 non-null     float64
+ 1   1       12 non-null     float64
+dtypes: float64(2)
+memory usage: 608.0 bytes
+```
