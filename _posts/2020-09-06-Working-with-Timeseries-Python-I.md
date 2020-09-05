@@ -119,3 +119,47 @@ DatetimeIndex(['2019-01-31', '2019-02-28', '2019-03-31', '2019-04-30',
                '2019-09-30', '2019-10-31', '2019-11-30', '2019-12-31'],
               dtype='datetime64[ns]', freq='M')
 ```              
+
+`DatetimeIndex` is a sequence of Timestamp objects with frequency info. 
+We can convert a `DatatimeIndex` to a `Periodindex`
+
+```python
+index[0]
+```
+
+`Timestamp('2019-01-31 00:00:00', freq='M')`
+
+```python
+index.to_period()
+```
+
+```
+PeriodIndex(['2019-01', '2019-02', '2019-03', '2019-04', '2019-05', '2019-06',
+             '2019-07', '2019-08', '2019-09', '2019-10', '2019-11', '2019-12'],
+            dtype='period[M]', freq='M')
+```
+
+Now that we have an `DatetimeIndex` we can use it to create a time-series dataframe. 
+
+```python
+data = np.random.random(size=(12,2))
+
+df = pd.DataFrame(data=data, index=index)
+
+df.head(10)
+```
+
+```
+
+                   0	1
+2019-01-31	0.685220	0.456167
+2019-02-28	0.809490	0.905552
+2019-03-31	0.454890	0.683387
+2019-04-30	0.860495	0.341041
+2019-05-31	0.156462	0.030216
+2019-06-30	0.885845	0.085404
+2019-07-31	0.995309	0.719039
+2019-08-31	0.417888	0.032380
+2019-09-30	0.167757	0.773513
+2019-10-31	0.631097	0.583592
+```
