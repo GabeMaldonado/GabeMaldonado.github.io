@@ -1,5 +1,5 @@
 ---
-title: "Wprking with Timeseries Data -- Python"
+title: "Working with Timeseries Data -- Python"
 date: 2020-09-04
 tags: [ML&AI]
 excerpt: "Working with timeseries data using python"
@@ -151,7 +151,7 @@ df.head(10)
 
 ```
 
-                   0	1
+                   0	       1
 2019-01-31	0.685220	0.456167
 2019-02-28	0.809490	0.905552
 2019-03-31	0.454890	0.683387
