@@ -58,12 +58,12 @@ Ciencia de Datos e Inteligencia Artificial.
 
 He completado algunas certificaciones en Ciencia de Datos, Apredizaje Automatizado e Intelligencia Artificial para Medicina.
 
-También he obtenido la certificacion CORe de HArvard Business Schools que inlcuye cursos en Análisis de Negocios, Economía para Gerentes y
+También he obtenido la certificación CORe de Harvard Business School que incluye cursos en Análisis de Negocios, Economía para Gerentes y
 Contabilidad Financiera y también complete el programa Liderando con Financias.
 
 Actualmente trabajo para el grupo Messer como Analista de Sistemas.
 
-Tengo muchos areas que me gustan pero me he estado concentrado en el area de ML & AI ya que son areas que me apasionan. 
+Hay muchas areas en la tecnología que encuentro interesantes pero me he estado concentrado en el area de ML & AI ya que son areas que me apasionan. 
 Comencé este website como un proyecto de vacaciones para poder bloggear cosas que me interesan y para referencia si en caso me olvido pero
 veo que muchas personas lo estan encontrando útil.
 
