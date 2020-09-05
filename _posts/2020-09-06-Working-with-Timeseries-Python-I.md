@@ -315,7 +315,7 @@ plt.show();
 
 ## Partial String Indexing
 
-We can pass a string representing a period of time (year) to retrieve all the values for that particulay year:
+We can pass a string representing a period of time (year) to retrieve all the values for that particular year:
 
 ```python
 df['2015'].info()
