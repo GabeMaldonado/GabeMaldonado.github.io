@@ -1,5 +1,5 @@
 ---
-title: "Working with Timeseries Data -- Python"
+title: "Working with Timeseries Data"
 date: 2020-09-04
 tags: [ML&AI]
 excerpt: "Working with timeseries data using python"
