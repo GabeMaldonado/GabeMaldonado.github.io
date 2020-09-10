@@ -1,12 +1,13 @@
 ---
 title: "Working with Timeseries Data"
-date: 2020-09-04
+date: 2020-09-06
 tags: [ML&AI]
 excerpt: "Working with timeseries data using python"
 mathjax: "True"
 ---
 
-## Python/pandas for TimeSeries Data
+## Notes on Python/pandas for TimeSeries Data from Datacamp's Manipulating Time Series course
+
 
 ### Date & time series functionality
 
