@@ -822,10 +822,10 @@ df
 
 ## How to calculate a running return
 
-*   Single period return $r_t$ : current price over last price minus 1
+*   Single period return $$r_t$$ : current price over last price minus 1
 $$r_t = \frac{P_t}{P_{t-1}} - 1$$
 
-*   Multi=period return: product of $(1 + r_t)$ for all periods minus 1
+*   Multi=period return: product of $$(1 + r_t)$$ for all periods minus 1
 $$ R_t= (1+r_1)(1 + r_2)...(1+r_T)-1$$
 
 ```python
