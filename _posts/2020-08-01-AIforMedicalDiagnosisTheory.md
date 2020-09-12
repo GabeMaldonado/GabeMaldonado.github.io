@@ -249,3 +249,50 @@ Evaluating a chest X-ray can be a complex task. One expert can identify pneumoni
 The second method would be to use a more definitive test which provides additional information to set the ground truth. For instance, to determine whether a patient has a mass using a chest X-ray, a more definitve test that can be performed is a CT scan. A CT scan would show a 3D image of the abnormality thus giving the radiologist more information to reach a determination. If the mass is confirmed by the CT then we can assign the ground thruth to the chest X-ray. In dermatology, the ground truth for the test set was determined by a skin lesion biopsy. 
 
 The issue with this method is that we might not have more definitive tests available as not everyone gets a chest X-ray and a CT scan. 
+
+## Calculating the PPV in terms of Sensitivity, Specificity and Prevalence
+
+### Rewriting PPV
+
+$$ PPV = P(pos|\hat{pos})$$
+*pos* is actually "positive" and pos hat is "predicted positive"
+
+By Bayes rule, this is:
+
+$$PPV = \dfrac {P(\hat{pos}|pos * P(pos)}{P(\hat{pos})}$$
+
+### For the numerator:
+
+$$Sensitivity = P(\hat{pos}|pos)$$
+Keep in mind that *sensitivity* is how well the model predicts actual positive cases as positive.
+
+$$Prevalence = P(pos)$$
+*Prevalence* is how many actual positives there are in the population. 
+
+### For the denominator:
+
+$$P(\hat{pos})= TruePos+FalsePos$$
+The model's positive prediction are the sum of it when it correctly predicts positive and incorrectly predicts positive. 
+
+The true positives can be written in terms of sensitivity and prevalence.
+$$TruePos = P(\hat{pos}|pos) * P(pos)$$
+We can use substitution to get:
+$$TruePos = Sensitivity * Prevalance$$
+
+The false positives can also be written in terms of specificity and prevalence:
+
+$$FalsePos = P(\hat{pos}|neg)*P(neg)$$
+$$1 - Specificity = P(\hat{pos}|neg$$
+$$1 - Prevalence = P(neg)$$
+
+### PPV Rewritten:
+If substituting these into the equation we get:
+
+$$PPV = \dfrac{Sensitivity * Prevalence}{Sensitivity * Prevalence+(1-Specificity)*(1-Prevalence)}$$
+
+## ROC Curve
+
+The ROC curve is one of the most useful tools when evaluating medical models. The ROC curve allows us to plot the sensitivity of a model against the specificity of the model at different decision thresholds. 
+When we evaluate a chest X-ray image using a model, the model provides an output which is the probability of disease of such image. This output can be transformed into a ***diagnosis*** using a threshold or operating point. When the probability is above the threshold then we interpret this as positive -- the patient has a disease -- but if the probability is below the threshold we interpret this as negative -- the patient does not have a disease.  For instance, if the probability is 0.7 and the threshold is 0.5 then we would interpret the image as positive. If the probability is 0.3 and the threshold is 0.5 then we would interpret the image as negative. 
+Please note that the threshold affects the metrics we use to evaluate the model. Let's say the threshold is 0 then every image would be interpret as postive so the Sensitivity would be 1 whereas the Specificity would be 0. Now let's say the threshold is 1 then every image would be classified as negative. The Sensitivity would be 0 and the specificity would be 1. 
+
