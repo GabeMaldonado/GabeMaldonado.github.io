@@ -296,3 +296,34 @@ The ROC curve is one of the most useful tools when evaluating medical models. Th
 When we evaluate a chest X-ray image using a model, the model provides an output which is the probability of disease of such image. This output can be transformed into a ***diagnosis*** using a threshold or operating point. When the probability is above the threshold then we interpret this as positive -- the patient has a disease -- but if the probability is below the threshold we interpret this as negative -- the patient does not have a disease.  For instance, if the probability is 0.7 and the threshold is 0.5 then we would interpret the image as positive. If the probability is 0.3 and the threshold is 0.5 then we would interpret the image as negative. 
 Please note that the threshold affects the metrics we use to evaluate the model. Let's say the threshold is 0 then every image would be interpret as postive so the Sensitivity would be 1 whereas the Specificity would be 0. Now let's say the threshold is 1 then every image would be classified as negative. The Sensitivity would be 0 and the specificity would be 1. 
 
+# Notes on AI for Medicine -- Week 3
+
+## MRI Images
+
+MRI images are not 2D images like X-rays, an MRI sequence is a 3D image that consists of multiple 3D volumes. We can think of these volumes/sequences as channels similar to RGB channels in a regular image. However, an MRI image can contain more than 3 channels. These channels get stacked in the depth dimension to create an MRI image. One challenge when combining sequences is that the images can be misaligned due to patients moving or tilting their heads when the scan is being performed.  If the images are not aligned with each other when we combine them-- the brain region at one location in  one channel would not correspond to the same region of the brain in the other channels. To fix this problem we use a technique called ***image registration*** 
+The idea behind **Image Registration** is to transform the images so that they are aligned or registered with each other. Once the images have been registered we are able to combine the different sequences. This technique can be applied to all the slices of the brain. Now that these data have been combined then we can turn to the task of ***segmentation***
+
+## Brain Tumor Segmentation
+
+Segmentation is the process of defining the boundaries of various tissues. In this case we are trying to define the boundaries of tumors. We can also think of segmentation as the task of determining the class of every point in the 3D volume. These points-- in a 2D space are called *pixels* and in a 3D space are called ***voxels*** 
+There are two approaches to segmentation with MRI data: 
+1.  2D Segmentation. In this approach we break the 3D MRI volume into many 2D slices. Each one of these slices is passed to the segmentation model which outputs the segmentation for that slice. One by one, each slice is passed to the segmentation model to generate the segmentation for each slice. These 2D slices can then again be combined to form a 3D output volume of the segmentation. 
+   * The drawback with this approach is that we can lose important 3D context. For instance, if there is a tumor in one slice, there is likely to be a tumor in the slices adjacent to it. Since we are passing in slices one at a time to the network, the network is not able to learn this useful context. 
+2.  3D Segmentation. In this approach, we would want to, ideally, pass the entire MRI volume into the segmentation model and get a 3D segmentation map of the whole MRI as output. However, due to the size of the entire MRI volume it makes it nearly impossible to pass it in all at once into the model. It would be too expensive computationally and memory-wise. To solve this issue we can break up the 3D MRI volume into many 3D sub volumes. Each of these sub volumes would have some width, height, and depth context. Like in the 2D approach, we can now feed these sub volumes one at the time to the model and then aggregate them at the end to form a segmentation map of the whole volume. 
+   *   The disadvantage with this 3D approach is that we might still lose some spatial context. For instance, if there is a tumor in one sub volume, there is likely to be a tumor in the surrounding volumes too. Since we are passing sub volumes one at the time into the network, the network might not be able to learn from possibly useful context. 
+   *   The advantage with this approach is that we are capturing some context in all of the width, height, and depth dimensions.  
+
+
+## Segmentation Architectures
+
+One of the most popular architectures for segmentation is **U-Net** which was first designed for biomedical image segmentation and has performed well in the task and cell tracking. U-Net can achieve good results even with only hundreds of examples. The U-Net architecture consists of two paths (starting at the top left side of the U):
+1.   Contracting path. This is a typical Convolutional Neural Network like the ones used in image classification. It consists of repeating applications of convolution and pooling operations. The convolution operation here is called *down convolution*. The key here is that in the contracting path the feature maps get spatially smaller which is why it is called a ***contraction*** 
+2.   Expanding path. This path is doing the opposite of the contracting path as it takes the small feature maps through a series of up-sampling and up-convolution steps to get back to the original size of the image. It also concatenates the up-sample representations at each step with the corresponding feature maps at the contraction pathway. 
+At the last step, the architecture outputs the probability of tumor for every pixel in the image. 
+The U-Net architecture can be trained on input/output pairs of 2D slice if using the 2D approach. We can also use the 3D approach by replacing the 2D operations with their 3D counterparts. This is exactly what the **3D U-Net** architecture does. The 2D convolutions become 3D convolutions and the 2D pooling layers become 3D pooling layers. 3D U-Net allows us to pass in 3D sub volumes and get an output for every voxel in the volume  specifying the probability of a tumor. 
+
+
+
+[For more info visit the U-Net creators' site](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png)
+
+![U-Net](https://camo.githubusercontent.com/d01c3c1d4442e2d48e13e85172f0e5743a6ad096/68747470733a2f2f6c6d622e696e666f726d6174696b2e756e692d66726569627572672e64652f70656f706c652f726f6e6e656265722f752d6e65742f752d6e65742d6172636869746563747572652e706e67)
