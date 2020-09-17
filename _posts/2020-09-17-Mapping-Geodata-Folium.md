@@ -1,6 +1,6 @@
 ---
 title: "Mapping Geodata with Folium"
-date: 2020-09-07
+date: 2020-09-17
 tags: [ML&AI]
 excerpt: "Using python's Folium to create maps"
 mathjax: "True"
@@ -176,10 +176,9 @@ folium.Marker(
 m.get_root().html.add_child(folium.Element(title_html))
 
 m.save('emblematic_football_stadiums.html')
-
 ```
 
-<!DOCTYPE html>
+
 <head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
@@ -1027,7 +1026,6 @@ m.save('emblematic_football_stadiums.html')
             ;
 
             
-        
 </script>
 
 
