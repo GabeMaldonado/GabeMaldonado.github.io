@@ -8,7 +8,7 @@ mathjax: "True"
 
 ## Mapping Geographical data with Folium 
 
-Folium is a python librarie used to create maps and to work with geo location data.
+Folium is a python library used to create maps and to work with geo location data.
 For this post I compiled a non-inclusive list of the most emblematic footbal/soccer stadiums around the world and plot them on the map to show their location. 
 
 ```python
