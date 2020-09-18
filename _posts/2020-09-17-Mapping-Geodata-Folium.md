@@ -179,7 +179,6 @@ m.save('emblematic_football_stadiums.html')
 ```
 
 
-<!DOCTYPE html>
 <head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
@@ -198,7 +197,7 @@ m.save('emblematic_football_stadiums.html')
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_214cb8bbbf7547989381ecd3ab665230 {
+    <style>#map_53165c7458c04fedadc55de78ba83742 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -209,10 +208,7 @@ m.save('emblematic_football_stadiums.html')
 </head>
 <body>    
     
-             <h3 align="center" style="font-size:16px"><b>Emblematic Footbal Stadiums Around the World</b></h3>
-             
-    
-    <div class="folium-map" id="map_214cb8bbbf7547989381ecd3ab665230" ></div>
+    <div class="folium-map" id="map_53165c7458c04fedadc55de78ba83742" ></div>
 </body>
 <script>    
     
@@ -220,8 +216,8 @@ m.save('emblematic_football_stadiums.html')
         var bounds = null;
     
 
-    var map_214cb8bbbf7547989381ecd3ab665230 = L.map(
-        'map_214cb8bbbf7547989381ecd3ab665230', {
+    var map_53165c7458c04fedadc55de78ba83742 = L.map(
+        'map_53165c7458c04fedadc55de78ba83742', {
         center: [30.8082, -118.2474],
         zoom: 3,
         maxBounds: bounds,
@@ -233,7 +229,7 @@ m.save('emblematic_football_stadiums.html')
 
 
     
-    var tile_layer_89a7a5ee1b09480a937752c262196de2 = L.tileLayer(
+    var tile_layer_d545b2878ff3485d8f27e5549c17f997 = L.tileLayer(
         'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
         {
         "attribution": null,
@@ -245,785 +241,785 @@ m.save('emblematic_football_stadiums.html')
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+}).addTo(map_53165c7458c04fedadc55de78ba83742);
     
-        var marker_7c83297af10148cdb2d9c31bd5a1902d = L.marker(
+        var marker_cacd3a90d2c5450596af4e5550b4a0c2 = L.marker(
             [-34.63565, -58.36465],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_14feaba4f73b48b4b4f473a194592cc8 = L.AwesomeMarkers.icon({
+                var icon_0d2f6e9b18cf4cd4bcfd6c740a6623fa = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'lightgreen',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_7c83297af10148cdb2d9c31bd5a1902d.setIcon(icon_14feaba4f73b48b4b4f473a194592cc8);
+                marker_cacd3a90d2c5450596af4e5550b4a0c2.setIcon(icon_0d2f6e9b18cf4cd4bcfd6c740a6623fa);
             
     
-            var popup_2baf7ad0cfc74d68b774234d763ca7a0 = L.popup({maxWidth: '100%'
+            var popup_a743c917f11d41a390dbb9273139b125 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_37252790d9a6422a99cb05fece9a1696 = $(`<div id="html_37252790d9a6422a99cb05fece9a1696" style="width: 100.0%; height: 100.0%;">Estadio 'La Bombonera',  Boca Juniors</div>`)[0];
-                popup_2baf7ad0cfc74d68b774234d763ca7a0.setContent(html_37252790d9a6422a99cb05fece9a1696);
+                var html_438ce8ff36d746b2843227d2ef8f9fef = $(`<div id="html_438ce8ff36d746b2843227d2ef8f9fef" style="width: 100.0%; height: 100.0%;">Estadio 'La Bombonera',  Boca Juniors</div>`)[0];
+                popup_a743c917f11d41a390dbb9273139b125.setContent(html_438ce8ff36d746b2843227d2ef8f9fef);
             
 
-            marker_7c83297af10148cdb2d9c31bd5a1902d.bindPopup(popup_2baf7ad0cfc74d68b774234d763ca7a0)
+            marker_cacd3a90d2c5450596af4e5550b4a0c2.bindPopup(popup_a743c917f11d41a390dbb9273139b125)
             ;
 
             
         
     
-        var marker_032c952e82184ad1828f64ce9f6edee8 = L.marker(
+        var marker_7edbbb8ab85840fd954bfca1d318bcd5 = L.marker(
             [-34.545319, -58.449736],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_b2610f4e43b04edbb84a500e3ea2ffe8 = L.AwesomeMarkers.icon({
+                var icon_17006acc3146491da5e0f59b18351af5 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_032c952e82184ad1828f64ce9f6edee8.setIcon(icon_b2610f4e43b04edbb84a500e3ea2ffe8);
+                marker_7edbbb8ab85840fd954bfca1d318bcd5.setIcon(icon_17006acc3146491da5e0f59b18351af5);
             
     
-            var popup_ba16d520d5a84ab595f769d89ad7d6c9 = L.popup({maxWidth: '100%'
+            var popup_213a37bce3ef4bb9b4d35b054922d54c = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_6d0d89e4293244639ca7aac630d45980 = $(`<div id="html_6d0d89e4293244639ca7aac630d45980" style="width: 100.0%; height: 100.0%;">Estadio Monumental Americo Vespucio, River Plate</div>`)[0];
-                popup_ba16d520d5a84ab595f769d89ad7d6c9.setContent(html_6d0d89e4293244639ca7aac630d45980);
+                var html_af11190789f64e5eb0375f5b114df3ac = $(`<div id="html_af11190789f64e5eb0375f5b114df3ac" style="width: 100.0%; height: 100.0%;">Estadio Monumental Americo Vespucio, River Plate</div>`)[0];
+                popup_213a37bce3ef4bb9b4d35b054922d54c.setContent(html_af11190789f64e5eb0375f5b114df3ac);
             
 
-            marker_032c952e82184ad1828f64ce9f6edee8.bindPopup(popup_ba16d520d5a84ab595f769d89ad7d6c9)
+            marker_7edbbb8ab85840fd954bfca1d318bcd5.bindPopup(popup_213a37bce3ef4bb9b4d35b054922d54c)
             ;
 
             
         
     
-        var marker_8b2c7d12f3534e50b6f50669a64fcccf = L.marker(
+        var marker_603db52584ab4791ae77804af014979f = L.marker(
             [-34.670267, -58.370969],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_1e7902b47cf74e7c94d15792e3a13f06 = L.AwesomeMarkers.icon({
+                var icon_a553c4edf4b646e1852c1b8f54bf4cb5 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_8b2c7d12f3534e50b6f50669a64fcccf.setIcon(icon_1e7902b47cf74e7c94d15792e3a13f06);
+                marker_603db52584ab4791ae77804af014979f.setIcon(icon_a553c4edf4b646e1852c1b8f54bf4cb5);
             
     
-            var popup_05745c56cb1647b98ccf08732c90f637 = L.popup({maxWidth: '100%'
+            var popup_832ed34a45a14ab6be93270a37d8bde6 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_ec99e6870a0447289d4d5e46bb272b9f = $(`<div id="html_ec99e6870a0447289d4d5e46bb272b9f" style="width: 100.0%; height: 100.0%;">Estadio Libertadores De América, Club Atlético Independiente</div>`)[0];
-                popup_05745c56cb1647b98ccf08732c90f637.setContent(html_ec99e6870a0447289d4d5e46bb272b9f);
+                var html_c8ab902b51c34d199f1d4aeb240799a3 = $(`<div id="html_c8ab902b51c34d199f1d4aeb240799a3" style="width: 100.0%; height: 100.0%;">Estadio Libertadores De América, Club Atlético Independiente</div>`)[0];
+                popup_832ed34a45a14ab6be93270a37d8bde6.setContent(html_c8ab902b51c34d199f1d4aeb240799a3);
             
 
-            marker_8b2c7d12f3534e50b6f50669a64fcccf.bindPopup(popup_05745c56cb1647b98ccf08732c90f637)
+            marker_603db52584ab4791ae77804af014979f.bindPopup(popup_832ed34a45a14ab6be93270a37d8bde6)
             ;
 
             
         
     
-        var marker_c6a982a10ad740e584a4450a9b8cdfb8 = L.marker(
+        var marker_41a986316741427c86fa52d2462cc4cd = L.marker(
             [-25.292072, -57.657381],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_42c3158c2f0b43b28a0df3d2d0e5aba1 = L.AwesomeMarkers.icon({
+                var icon_50d5c0479a9c4905bad041f231c781d8 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_c6a982a10ad740e584a4450a9b8cdfb8.setIcon(icon_42c3158c2f0b43b28a0df3d2d0e5aba1);
+                marker_41a986316741427c86fa52d2462cc4cd.setIcon(icon_50d5c0479a9c4905bad041f231c781d8);
             
     
-            var popup_6fbfb38003754d4196050a6e402f0d18 = L.popup({maxWidth: '100%'
+            var popup_e1796df7bc7547418f0453118d134152 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_e28f6ecd9a564773b69a7182aeaf63de = $(`<div id="html_e28f6ecd9a564773b69a7182aeaf63de" style="width: 100.0%; height: 100.0%;">Estadio Defensores del Chaco</div>`)[0];
-                popup_6fbfb38003754d4196050a6e402f0d18.setContent(html_e28f6ecd9a564773b69a7182aeaf63de);
+                var html_d9ecca1b66cd4098891cb06e4def9847 = $(`<div id="html_d9ecca1b66cd4098891cb06e4def9847" style="width: 100.0%; height: 100.0%;">Estadio Defensores del Chaco</div>`)[0];
+                popup_e1796df7bc7547418f0453118d134152.setContent(html_d9ecca1b66cd4098891cb06e4def9847);
             
 
-            marker_c6a982a10ad740e584a4450a9b8cdfb8.bindPopup(popup_6fbfb38003754d4196050a6e402f0d18)
+            marker_41a986316741427c86fa52d2462cc4cd.bindPopup(popup_e1796df7bc7547418f0453118d134152)
             ;
 
             
         
     
-        var marker_e7ae9448ba914ff6ae2d99362c5229e0 = L.marker(
+        var marker_060f5f563614499f9c46c2f24b3c1101 = L.marker(
             [-34.796917, -56.067167],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_022f6b920e5c41f78436119f75b68e77 = L.AwesomeMarkers.icon({
+                var icon_f3c4da950b974cd3a22e3c3718a5a0d3 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_e7ae9448ba914ff6ae2d99362c5229e0.setIcon(icon_022f6b920e5c41f78436119f75b68e77);
+                marker_060f5f563614499f9c46c2f24b3c1101.setIcon(icon_f3c4da950b974cd3a22e3c3718a5a0d3);
             
     
-            var popup_7de83ca45d3b4c3f9d89a28cab5f3454 = L.popup({maxWidth: '100%'
+            var popup_31dd51db9e4d4a7a96b8518bea74df32 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_23b9a77ba73542ec9b9a248bb75fa805 = $(`<div id="html_23b9a77ba73542ec9b9a248bb75fa805" style="width: 100.0%; height: 100.0%;">Estadio Campeón del Siglo, Peñarol</div>`)[0];
-                popup_7de83ca45d3b4c3f9d89a28cab5f3454.setContent(html_23b9a77ba73542ec9b9a248bb75fa805);
+                var html_458d1ea8af934c2a98a7d53060f450f5 = $(`<div id="html_458d1ea8af934c2a98a7d53060f450f5" style="width: 100.0%; height: 100.0%;">Estadio Campeón del Siglo, Peñarol</div>`)[0];
+                popup_31dd51db9e4d4a7a96b8518bea74df32.setContent(html_458d1ea8af934c2a98a7d53060f450f5);
             
 
-            marker_e7ae9448ba914ff6ae2d99362c5229e0.bindPopup(popup_7de83ca45d3b4c3f9d89a28cab5f3454)
+            marker_060f5f563614499f9c46c2f24b3c1101.bindPopup(popup_31dd51db9e4d4a7a96b8518bea74df32)
             ;
 
             
         
     
-        var marker_3eb0e2f49d2d4a71859439d2b83fd290 = L.marker(
+        var marker_eb4cf046aeae44a6aaea6b0f25b8026d = L.marker(
             [-34.884373, -56.1588],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_5909565a96194903bc980d7af902d644 = L.AwesomeMarkers.icon({
+                var icon_339277660a5d4b47a667120343c20a77 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_3eb0e2f49d2d4a71859439d2b83fd290.setIcon(icon_5909565a96194903bc980d7af902d644);
+                marker_eb4cf046aeae44a6aaea6b0f25b8026d.setIcon(icon_339277660a5d4b47a667120343c20a77);
             
     
-            var popup_1b32ecfb012f4ef9bdd09ce9f3d69280 = L.popup({maxWidth: '100%'
+            var popup_af2b7a69e49c4ef987615256e3abd8d3 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_707df571bfc74accb5e8d5618a50e462 = $(`<div id="html_707df571bfc74accb5e8d5618a50e462" style="width: 100.0%; height: 100.0%;">Estadio Gran Parque Central, Nacional</div>`)[0];
-                popup_1b32ecfb012f4ef9bdd09ce9f3d69280.setContent(html_707df571bfc74accb5e8d5618a50e462);
+                var html_c85b2db0d6dc402b835c58aac82f54db = $(`<div id="html_c85b2db0d6dc402b835c58aac82f54db" style="width: 100.0%; height: 100.0%;">Estadio Gran Parque Central, Nacional</div>`)[0];
+                popup_af2b7a69e49c4ef987615256e3abd8d3.setContent(html_c85b2db0d6dc402b835c58aac82f54db);
             
 
-            marker_3eb0e2f49d2d4a71859439d2b83fd290.bindPopup(popup_1b32ecfb012f4ef9bdd09ce9f3d69280)
+            marker_eb4cf046aeae44a6aaea6b0f25b8026d.bindPopup(popup_af2b7a69e49c4ef987615256e3abd8d3)
             ;
 
             
         
     
-        var marker_6794c26d5aa241869060da2474cac258 = L.marker(
+        var marker_680325430c6b49c680695c25641c59e4 = L.marker(
             [-33.506611, -70.605944],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_074d3a2a8680444a8059060217033eb0 = L.AwesomeMarkers.icon({
+                var icon_018202a00812436aba50d2152bf75c74 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_6794c26d5aa241869060da2474cac258.setIcon(icon_074d3a2a8680444a8059060217033eb0);
+                marker_680325430c6b49c680695c25641c59e4.setIcon(icon_018202a00812436aba50d2152bf75c74);
             
     
-            var popup_f72bef8150fd4aec85ce596ccc2ffd52 = L.popup({maxWidth: '100%'
+            var popup_d5306fb420324a5c91da585c4d513de2 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_455e65c972ae41ae94e202aab81200e8 = $(`<div id="html_455e65c972ae41ae94e202aab81200e8" style="width: 100.0%; height: 100.0%;">Estadio Monumental David Arellano, Colo-Colo</div>`)[0];
-                popup_f72bef8150fd4aec85ce596ccc2ffd52.setContent(html_455e65c972ae41ae94e202aab81200e8);
+                var html_e04ca9810ca24e88a1f50e665c6f123a = $(`<div id="html_e04ca9810ca24e88a1f50e665c6f123a" style="width: 100.0%; height: 100.0%;">Estadio Monumental David Arellano, Colo-Colo</div>`)[0];
+                popup_d5306fb420324a5c91da585c4d513de2.setContent(html_e04ca9810ca24e88a1f50e665c6f123a);
             
 
-            marker_6794c26d5aa241869060da2474cac258.bindPopup(popup_f72bef8150fd4aec85ce596ccc2ffd52)
+            marker_680325430c6b49c680695c25641c59e4.bindPopup(popup_d5306fb420324a5c91da585c4d513de2)
             ;
 
             
         
     
-        var marker_3df23473762848cca8bc2365aba3f8c0 = L.marker(
+        var marker_14fb9f0f155a41988036e154af0dbdb1 = L.marker(
             [-12.055694, -76.935972],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_f6530307d8c34ecea88ce108563290d3 = L.AwesomeMarkers.icon({
+                var icon_dbb97bdc6585455d80461d10443de127 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_3df23473762848cca8bc2365aba3f8c0.setIcon(icon_f6530307d8c34ecea88ce108563290d3);
+                marker_14fb9f0f155a41988036e154af0dbdb1.setIcon(icon_dbb97bdc6585455d80461d10443de127);
             
     
-            var popup_1d6202af4339498e8df748bbac61e487 = L.popup({maxWidth: '100%'
+            var popup_010f877a275443b49dc3d55e9310ad4c = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_679d6a894ee644e4a5074eb2a467fbc8 = $(`<div id="html_679d6a894ee644e4a5074eb2a467fbc8" style="width: 100.0%; height: 100.0%;">Estadio Monumental "U", Club Universitario de Deportes</div>`)[0];
-                popup_1d6202af4339498e8df748bbac61e487.setContent(html_679d6a894ee644e4a5074eb2a467fbc8);
+                var html_6a2b4b133a7c4c8e8dc485ac2fab5ad9 = $(`<div id="html_6a2b4b133a7c4c8e8dc485ac2fab5ad9" style="width: 100.0%; height: 100.0%;">Estadio Monumental "U", Club Universitario de Deportes</div>`)[0];
+                popup_010f877a275443b49dc3d55e9310ad4c.setContent(html_6a2b4b133a7c4c8e8dc485ac2fab5ad9);
             
 
-            marker_3df23473762848cca8bc2365aba3f8c0.bindPopup(popup_1d6202af4339498e8df748bbac61e487)
+            marker_14fb9f0f155a41988036e154af0dbdb1.bindPopup(popup_010f877a275443b49dc3d55e9310ad4c)
             ;
 
             
         
     
-        var marker_f131eef77490429a8bbb48bec1c64016 = L.marker(
+        var marker_9f74b69b09e145a29ba35b6fd36924e4 = L.marker(
             [0.107717, -78.489103],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_709a7c6081544aacaed43deb53ec61f2 = L.AwesomeMarkers.icon({
+                var icon_90fdfd34d6714418a0a88c273e3876db = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_f131eef77490429a8bbb48bec1c64016.setIcon(icon_709a7c6081544aacaed43deb53ec61f2);
+                marker_9f74b69b09e145a29ba35b6fd36924e4.setIcon(icon_90fdfd34d6714418a0a88c273e3876db);
             
     
-            var popup_1f7bc8cde3024ea69d77edcf706309cb = L.popup({maxWidth: '100%'
+            var popup_e5f8057af4444049a09726bddcffc88a = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_046a043c75b0414488a58f37d5295fb0 = $(`<div id="html_046a043c75b0414488a58f37d5295fb0" style="width: 100.0%; height: 100.0%;">Estadio Rodrigo Paz Delgado, Liga Deportiva Universitaria</div>`)[0];
-                popup_1f7bc8cde3024ea69d77edcf706309cb.setContent(html_046a043c75b0414488a58f37d5295fb0);
+                var html_5213db134fb64ed28311bf86d44f603d = $(`<div id="html_5213db134fb64ed28311bf86d44f603d" style="width: 100.0%; height: 100.0%;">Estadio Rodrigo Paz Delgado, Liga Deportiva Universitaria</div>`)[0];
+                popup_e5f8057af4444049a09726bddcffc88a.setContent(html_5213db134fb64ed28311bf86d44f603d);
             
 
-            marker_f131eef77490429a8bbb48bec1c64016.bindPopup(popup_1f7bc8cde3024ea69d77edcf706309cb)
+            marker_9f74b69b09e145a29ba35b6fd36924e4.bindPopup(popup_e5f8057af4444049a09726bddcffc88a)
             ;
 
             
         
     
-        var marker_cbde37c1743445ffb27d5a65497c351a = L.marker(
+        var marker_89b37e67bb4b4887a839cdc4a4ee2f92 = L.marker(
             [-0.177528, -78.476583],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_fa4775f4d56e459091d31c7d9b1e4072 = L.AwesomeMarkers.icon({
+                var icon_4a766d1cd823484da119a6021542aaa2 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_cbde37c1743445ffb27d5a65497c351a.setIcon(icon_fa4775f4d56e459091d31c7d9b1e4072);
+                marker_89b37e67bb4b4887a839cdc4a4ee2f92.setIcon(icon_4a766d1cd823484da119a6021542aaa2);
             
     
-            var popup_a582dde559214dbab9065775fec1d8dd = L.popup({maxWidth: '100%'
+            var popup_66b0898319884342a39f5029944369d9 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_c80220df55344c12b05fb5ceb38120f4 = $(`<div id="html_c80220df55344c12b05fb5ceb38120f4" style="width: 100.0%; height: 100.0%;">Estadio Olímpico Atahualpa</div>`)[0];
-                popup_a582dde559214dbab9065775fec1d8dd.setContent(html_c80220df55344c12b05fb5ceb38120f4);
+                var html_0e83087778244d04bc382360c1b20e10 = $(`<div id="html_0e83087778244d04bc382360c1b20e10" style="width: 100.0%; height: 100.0%;">Estadio Olímpico Atahualpa</div>`)[0];
+                popup_66b0898319884342a39f5029944369d9.setContent(html_0e83087778244d04bc382360c1b20e10);
             
 
-            marker_cbde37c1743445ffb27d5a65497c351a.bindPopup(popup_a582dde559214dbab9065775fec1d8dd)
+            marker_89b37e67bb4b4887a839cdc4a4ee2f92.bindPopup(popup_66b0898319884342a39f5029944369d9)
             ;
 
             
         
     
-        var marker_52fe7037b3c54862b1335b7e2601576b = L.marker(
+        var marker_8cb0d5a5c07448d79d56d529a0a72460 = L.marker(
             [-2.185869, -79.924931],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_c5ce581679524f5997b1466db8634314 = L.AwesomeMarkers.icon({
+                var icon_3102867abdfc4258a714a8be7afcefea = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_52fe7037b3c54862b1335b7e2601576b.setIcon(icon_c5ce581679524f5997b1466db8634314);
+                marker_8cb0d5a5c07448d79d56d529a0a72460.setIcon(icon_3102867abdfc4258a714a8be7afcefea);
             
     
-            var popup_86fb9858c3f64326a22abdd8744a59cf = L.popup({maxWidth: '100%'
+            var popup_8cff4cb42c2e4b20979427918b6533d7 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_248e41b353e046d0a98d06ce1579105f = $(`<div id="html_248e41b353e046d0a98d06ce1579105f" style="width: 100.0%; height: 100.0%;">Estadio Isidro Romero Carbo, Barcelona Sporting Club</div>`)[0];
-                popup_86fb9858c3f64326a22abdd8744a59cf.setContent(html_248e41b353e046d0a98d06ce1579105f);
+                var html_d4e38d4f5f89488aa35993aa7ea00b24 = $(`<div id="html_d4e38d4f5f89488aa35993aa7ea00b24" style="width: 100.0%; height: 100.0%;">Estadio Isidro Romero Carbo, Barcelona Sporting Club</div>`)[0];
+                popup_8cff4cb42c2e4b20979427918b6533d7.setContent(html_d4e38d4f5f89488aa35993aa7ea00b24);
             
 
-            marker_52fe7037b3c54862b1335b7e2601576b.bindPopup(popup_86fb9858c3f64326a22abdd8744a59cf)
+            marker_8cb0d5a5c07448d79d56d529a0a72460.bindPopup(popup_8cff4cb42c2e4b20979427918b6533d7)
             ;
 
             
         
     
-        var marker_443c7efad0e2443b927e6f02b828257c = L.marker(
+        var marker_50b07011746341f8a7951481642c788b = L.marker(
             [40.736667, -74.15027],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_4b79bf50369a45efa8e4ca5cd861a0c7 = L.AwesomeMarkers.icon({
+                var icon_fab8d9ae9c22406d8a478efb2bf155fa = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_443c7efad0e2443b927e6f02b828257c.setIcon(icon_4b79bf50369a45efa8e4ca5cd861a0c7);
+                marker_50b07011746341f8a7951481642c788b.setIcon(icon_fab8d9ae9c22406d8a478efb2bf155fa);
             
     
-            var popup_83961ad87850403a85ba4bc4cb214f92 = L.popup({maxWidth: '100%'
+            var popup_e443aa96b2eb49e2bc174d47a6337f01 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_22138188bb704092bfe46c68998366c8 = $(`<div id="html_22138188bb704092bfe46c68998366c8" style="width: 100.0%; height: 100.0%;">Red Bull Arena, New York Red Bulls</div>`)[0];
-                popup_83961ad87850403a85ba4bc4cb214f92.setContent(html_22138188bb704092bfe46c68998366c8);
+                var html_97e72cb13df24f04a2887d76a184122d = $(`<div id="html_97e72cb13df24f04a2887d76a184122d" style="width: 100.0%; height: 100.0%;">Red Bull Arena, New York Red Bulls</div>`)[0];
+                popup_e443aa96b2eb49e2bc174d47a6337f01.setContent(html_97e72cb13df24f04a2887d76a184122d);
             
 
-            marker_443c7efad0e2443b927e6f02b828257c.bindPopup(popup_83961ad87850403a85ba4bc4cb214f92)
+            marker_50b07011746341f8a7951481642c788b.bindPopup(popup_e443aa96b2eb49e2bc174d47a6337f01)
             ;
 
             
         
     
-        var marker_0e872677c2694856a352ae46fe261d04 = L.marker(
+        var marker_79d19840445e4f4bbdb3fabcb05818f4 = L.marker(
             [33.755556, -84.4],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_e582278ffc8042339035b1b32caf101d = L.AwesomeMarkers.icon({
+                var icon_6d2815c3d3854268af9956eacc117215 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_0e872677c2694856a352ae46fe261d04.setIcon(icon_e582278ffc8042339035b1b32caf101d);
+                marker_79d19840445e4f4bbdb3fabcb05818f4.setIcon(icon_6d2815c3d3854268af9956eacc117215);
             
     
-            var popup_08c1f2490f6e44a093f81a6e49877c6d = L.popup({maxWidth: '100%'
+            var popup_001480b2167f477e9b68221b137980d0 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_25fe0b9999f44b879595f40987b34b68 = $(`<div id="html_25fe0b9999f44b879595f40987b34b68" style="width: 100.0%; height: 100.0%;">Estadio Mercedes Benz, Atlanta United</div>`)[0];
-                popup_08c1f2490f6e44a093f81a6e49877c6d.setContent(html_25fe0b9999f44b879595f40987b34b68);
+                var html_52b8893664ce407698203e1935198821 = $(`<div id="html_52b8893664ce407698203e1935198821" style="width: 100.0%; height: 100.0%;">Estadio Mercedes Benz, Atlanta United</div>`)[0];
+                popup_001480b2167f477e9b68221b137980d0.setContent(html_52b8893664ce407698203e1935198821);
             
 
-            marker_0e872677c2694856a352ae46fe261d04.bindPopup(popup_08c1f2490f6e44a093f81a6e49877c6d)
+            marker_79d19840445e4f4bbdb3fabcb05818f4.bindPopup(popup_001480b2167f477e9b68221b137980d0)
             ;
 
             
         
     
-        var marker_7e72724857184ef8b1985a9c406d42d6 = L.marker(
+        var marker_9b1cbc733c214d5a8db3dc221b8cb2e5 = L.marker(
             [33.864, -118.261],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_d578883b89f34edca8b63a44749778c8 = L.AwesomeMarkers.icon({
+                var icon_75454670832f4d11bf3d22601842e64c = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_7e72724857184ef8b1985a9c406d42d6.setIcon(icon_d578883b89f34edca8b63a44749778c8);
+                marker_9b1cbc733c214d5a8db3dc221b8cb2e5.setIcon(icon_75454670832f4d11bf3d22601842e64c);
             
     
-            var popup_835afd6b53b04cca9e6c9b10d24ff2b6 = L.popup({maxWidth: '100%'
+            var popup_9e67e3fb794744e79bdfc6fad8ca3d5a = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_8e7992809d4344348553d69e186458f3 = $(`<div id="html_8e7992809d4344348553d69e186458f3" style="width: 100.0%; height: 100.0%;">Dignity Health Sports Park, LA Galaxy</div>`)[0];
-                popup_835afd6b53b04cca9e6c9b10d24ff2b6.setContent(html_8e7992809d4344348553d69e186458f3);
+                var html_c187e8609bc247da904d948f9316d003 = $(`<div id="html_c187e8609bc247da904d948f9316d003" style="width: 100.0%; height: 100.0%;">Dignity Health Sports Park, LA Galaxy</div>`)[0];
+                popup_9e67e3fb794744e79bdfc6fad8ca3d5a.setContent(html_c187e8609bc247da904d948f9316d003);
             
 
-            marker_7e72724857184ef8b1985a9c406d42d6.bindPopup(popup_835afd6b53b04cca9e6c9b10d24ff2b6)
+            marker_9b1cbc733c214d5a8db3dc221b8cb2e5.bindPopup(popup_9e67e3fb794744e79bdfc6fad8ca3d5a)
             ;
 
             
         
     
-        var marker_f93243f6c0284684aa5a070ff70ee14c = L.marker(
+        var marker_cc7b2c35501e4993859c64ca7e2403d9 = L.marker(
             [40.45301, -3.68829],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_1c6178d5f8c84d39a3c8ce65e26c4896 = L.AwesomeMarkers.icon({
+                var icon_f514151bfd8442058b1c803ef5e1795e = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_f93243f6c0284684aa5a070ff70ee14c.setIcon(icon_1c6178d5f8c84d39a3c8ce65e26c4896);
+                marker_cc7b2c35501e4993859c64ca7e2403d9.setIcon(icon_f514151bfd8442058b1c803ef5e1795e);
             
     
-            var popup_9c649a0058954b20b7bd00a2e736b9f0 = L.popup({maxWidth: '100%'
+            var popup_85b55106c1bf44debce25ebce871597b = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_7c3d13fa912748659834ad6e5dc91c39 = $(`<div id="html_7c3d13fa912748659834ad6e5dc91c39" style="width: 100.0%; height: 100.0%;">Estadio Santiago Bernabeu, Real Madrid</div>`)[0];
-                popup_9c649a0058954b20b7bd00a2e736b9f0.setContent(html_7c3d13fa912748659834ad6e5dc91c39);
+                var html_4e7aa9ab06d2450bad8be3b8915e976b = $(`<div id="html_4e7aa9ab06d2450bad8be3b8915e976b" style="width: 100.0%; height: 100.0%;">Estadio Santiago Bernabeu, Real Madrid</div>`)[0];
+                popup_85b55106c1bf44debce25ebce871597b.setContent(html_4e7aa9ab06d2450bad8be3b8915e976b);
             
 
-            marker_f93243f6c0284684aa5a070ff70ee14c.bindPopup(popup_9c649a0058954b20b7bd00a2e736b9f0)
+            marker_cc7b2c35501e4993859c64ca7e2403d9.bindPopup(popup_85b55106c1bf44debce25ebce871597b)
             ;
 
             
         
     
-        var marker_34ee54a3209741e09406f614d2334d0a = L.marker(
+        var marker_f9e53b6298bc4fea86d1031d80f86d07 = L.marker(
             [41.3808, 2.12311],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_3d8f04a490174a8881f20783edf08156 = L.AwesomeMarkers.icon({
+                var icon_b35697f51ff94f5cac3a60c64e727e1d = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_34ee54a3209741e09406f614d2334d0a.setIcon(icon_3d8f04a490174a8881f20783edf08156);
+                marker_f9e53b6298bc4fea86d1031d80f86d07.setIcon(icon_b35697f51ff94f5cac3a60c64e727e1d);
             
     
-            var popup_2ec2682d4e094e2fb851807723735b9a = L.popup({maxWidth: '100%'
+            var popup_24e2e72e7f2848ba8c4dc5c36811f99c = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_8db508af4dc1429da791466dd9764cd3 = $(`<div id="html_8db508af4dc1429da791466dd9764cd3" style="width: 100.0%; height: 100.0%;">Estadio Camp Nou, FC Barcelona</div>`)[0];
-                popup_2ec2682d4e094e2fb851807723735b9a.setContent(html_8db508af4dc1429da791466dd9764cd3);
+                var html_c2c23791d2de462da36b6294163031ad = $(`<div id="html_c2c23791d2de462da36b6294163031ad" style="width: 100.0%; height: 100.0%;">Estadio Camp Nou, FC Barcelona</div>`)[0];
+                popup_24e2e72e7f2848ba8c4dc5c36811f99c.setContent(html_c2c23791d2de462da36b6294163031ad);
             
 
-            marker_34ee54a3209741e09406f614d2334d0a.bindPopup(popup_2ec2682d4e094e2fb851807723735b9a)
+            marker_f9e53b6298bc4fea86d1031d80f86d07.bindPopup(popup_24e2e72e7f2848ba8c4dc5c36811f99c)
             ;
 
             
         
     
-        var marker_e06e0846bd23477383f1e34a2a4ac19b = L.marker(
+        var marker_4a19295b40844a3fa4e5c6c3b38a2261 = L.marker(
             [38.752648359600805, -9.184699058532715],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_f30dd81e77da49b9a3c444ff6263bcbb = L.AwesomeMarkers.icon({
+                var icon_ee633be6350f45d2a73b41803cb9514b = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_e06e0846bd23477383f1e34a2a4ac19b.setIcon(icon_f30dd81e77da49b9a3c444ff6263bcbb);
+                marker_4a19295b40844a3fa4e5c6c3b38a2261.setIcon(icon_ee633be6350f45d2a73b41803cb9514b);
             
     
-            var popup_9a06c81c97074546b8a7de416c76effa = L.popup({maxWidth: '100%'
+            var popup_a259201816204d9a99a232bc87a4d5c2 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_e6caae6806c6454cbf1bc227aea04988 = $(`<div id="html_e6caae6806c6454cbf1bc227aea04988" style="width: 100.0%; height: 100.0%;">Estadio do Sport Lisboa e Benfica</div>`)[0];
-                popup_9a06c81c97074546b8a7de416c76effa.setContent(html_e6caae6806c6454cbf1bc227aea04988);
+                var html_e9cc84031db449dbac6be165da4a51b6 = $(`<div id="html_e9cc84031db449dbac6be165da4a51b6" style="width: 100.0%; height: 100.0%;">Estadio do Sport Lisboa e Benfica</div>`)[0];
+                popup_a259201816204d9a99a232bc87a4d5c2.setContent(html_e9cc84031db449dbac6be165da4a51b6);
             
 
-            marker_e06e0846bd23477383f1e34a2a4ac19b.bindPopup(popup_9a06c81c97074546b8a7de416c76effa)
+            marker_4a19295b40844a3fa4e5c6c3b38a2261.bindPopup(popup_a259201816204d9a99a232bc87a4d5c2)
             ;
 
             
         
     
-        var marker_d9fb3876f19540af83a782a5643e4781 = L.marker(
+        var marker_90ef3a9a2f87464daf85123ee2fd0ece = L.marker(
             [-22.912167, -43.230164],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_63896540b26e4b569a602ddeb8ef47e8 = L.AwesomeMarkers.icon({
+                var icon_69e4649c3f494725a459e01b6531bc82 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_d9fb3876f19540af83a782a5643e4781.setIcon(icon_63896540b26e4b569a602ddeb8ef47e8);
+                marker_90ef3a9a2f87464daf85123ee2fd0ece.setIcon(icon_69e4649c3f494725a459e01b6531bc82);
             
     
-            var popup_418ba9f4b57b42f5b576ad2cd79e5732 = L.popup({maxWidth: '100%'
+            var popup_f061a051901842968530c9e6533d4c9c = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_8e2d7dd6fa974c89a41700214f9c5f19 = $(`<div id="html_8e2d7dd6fa974c89a41700214f9c5f19" style="width: 100.0%; height: 100.0%;">Estadio Maracana</div>`)[0];
-                popup_418ba9f4b57b42f5b576ad2cd79e5732.setContent(html_8e2d7dd6fa974c89a41700214f9c5f19);
+                var html_fbaae938b8ed42bc88f91e03a38d9367 = $(`<div id="html_fbaae938b8ed42bc88f91e03a38d9367" style="width: 100.0%; height: 100.0%;">Estadio Maracana</div>`)[0];
+                popup_f061a051901842968530c9e6533d4c9c.setContent(html_fbaae938b8ed42bc88f91e03a38d9367);
             
 
-            marker_d9fb3876f19540af83a782a5643e4781.bindPopup(popup_418ba9f4b57b42f5b576ad2cd79e5732)
+            marker_90ef3a9a2f87464daf85123ee2fd0ece.bindPopup(popup_f061a051901842968530c9e6533d4c9c)
             ;
 
             
         
     
-        var marker_c579a2b52d524646b1a3c51f6f46f2a8 = L.marker(
+        var marker_f06200d8f04a417d8ed0f036ce400337 = L.marker(
             [19.303056, -99.150556],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_3fea1f48e80040b3ad8c252fff2b987c = L.AwesomeMarkers.icon({
+                var icon_b5ea611c71774d40b296aec75a89c166 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_c579a2b52d524646b1a3c51f6f46f2a8.setIcon(icon_3fea1f48e80040b3ad8c252fff2b987c);
+                marker_f06200d8f04a417d8ed0f036ce400337.setIcon(icon_b5ea611c71774d40b296aec75a89c166);
             
     
-            var popup_92f2462693ea499ea79a950003586b5d = L.popup({maxWidth: '100%'
+            var popup_28ba9d5711ee419792c9f01cf579897f = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_ebd4497b4c9c48338ff70a756979d5b2 = $(`<div id="html_ebd4497b4c9c48338ff70a756979d5b2" style="width: 100.0%; height: 100.0%;">Estadio Azteca, Club America</div>`)[0];
-                popup_92f2462693ea499ea79a950003586b5d.setContent(html_ebd4497b4c9c48338ff70a756979d5b2);
+                var html_2a311f5d46d143b983a49bc96314e18a = $(`<div id="html_2a311f5d46d143b983a49bc96314e18a" style="width: 100.0%; height: 100.0%;">Estadio Azteca, Club America</div>`)[0];
+                popup_28ba9d5711ee419792c9f01cf579897f.setContent(html_2a311f5d46d143b983a49bc96314e18a);
             
 
-            marker_c579a2b52d524646b1a3c51f6f46f2a8.bindPopup(popup_92f2462693ea499ea79a950003586b5d)
+            marker_f06200d8f04a417d8ed0f036ce400337.bindPopup(popup_28ba9d5711ee419792c9f01cf579897f)
             ;
 
             
         
     
-        var marker_b4d1af8363e64cd0b35dcfcb59ab65ab = L.marker(
+        var marker_ce9a826165f5416780784c88547cd83c = L.marker(
             [45.109444, 7.641111],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_529e350347754d579fd869957ffdd9d8 = L.AwesomeMarkers.icon({
+                var icon_564c50333a6648a99581d6343032697e = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_b4d1af8363e64cd0b35dcfcb59ab65ab.setIcon(icon_529e350347754d579fd869957ffdd9d8);
+                marker_ce9a826165f5416780784c88547cd83c.setIcon(icon_564c50333a6648a99581d6343032697e);
             
     
-            var popup_ec89f6dbcbfe41958f343d3b2d5e31b9 = L.popup({maxWidth: '100%'
+            var popup_3ee7b3f819994f5585fc25cd4e137b72 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_45200cf4cf2d461cbc3d9aedb1a71dc4 = $(`<div id="html_45200cf4cf2d461cbc3d9aedb1a71dc4" style="width: 100.0%; height: 100.0%;">Estadio Juventus, Juventus </div>`)[0];
-                popup_ec89f6dbcbfe41958f343d3b2d5e31b9.setContent(html_45200cf4cf2d461cbc3d9aedb1a71dc4);
+                var html_2f1f1e98c01d474f98fa4308481dd2ec = $(`<div id="html_2f1f1e98c01d474f98fa4308481dd2ec" style="width: 100.0%; height: 100.0%;">Estadio Juventus, Juventus </div>`)[0];
+                popup_3ee7b3f819994f5585fc25cd4e137b72.setContent(html_2f1f1e98c01d474f98fa4308481dd2ec);
             
 
-            marker_b4d1af8363e64cd0b35dcfcb59ab65ab.bindPopup(popup_ec89f6dbcbfe41958f343d3b2d5e31b9)
+            marker_ce9a826165f5416780784c88547cd83c.bindPopup(popup_3ee7b3f819994f5585fc25cd4e137b72)
             ;
 
             
         
     
-        var marker_fb6f0ea7952642149a7166446a1c9c77 = L.marker(
+        var marker_83cdaedd787e4f6ca045b6e57ec03b5a = L.marker(
             [41.102869, 28.990419],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_4be201d05eb84dbf9471c44c0de7ff9d = L.AwesomeMarkers.icon({
+                var icon_9398366db4604ea1b4bd1d56f2186b31 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_fb6f0ea7952642149a7166446a1c9c77.setIcon(icon_4be201d05eb84dbf9471c44c0de7ff9d);
+                marker_83cdaedd787e4f6ca045b6e57ec03b5a.setIcon(icon_9398366db4604ea1b4bd1d56f2186b31);
             
     
-            var popup_38a49c709cbb4309b07ea939f6fd6f43 = L.popup({maxWidth: '100%'
+            var popup_7018e340d65b4dcbb8a9430e686c3e70 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_e1d8234c73be4c4caba4917565327ad3 = $(`<div id="html_e1d8234c73be4c4caba4917565327ad3" style="width: 100.0%; height: 100.0%;">Estadio Türk Telekom, Galatasaray</div>`)[0];
-                popup_38a49c709cbb4309b07ea939f6fd6f43.setContent(html_e1d8234c73be4c4caba4917565327ad3);
+                var html_07caf072456a40a298a81db388ded4a1 = $(`<div id="html_07caf072456a40a298a81db388ded4a1" style="width: 100.0%; height: 100.0%;">Estadio Türk Telekom, Galatasaray</div>`)[0];
+                popup_7018e340d65b4dcbb8a9430e686c3e70.setContent(html_07caf072456a40a298a81db388ded4a1);
             
 
-            marker_fb6f0ea7952642149a7166446a1c9c77.bindPopup(popup_38a49c709cbb4309b07ea939f6fd6f43)
+            marker_83cdaedd787e4f6ca045b6e57ec03b5a.bindPopup(popup_7018e340d65b4dcbb8a9430e686c3e70)
             ;
 
             
         
     
-        var marker_ea59570812614908b41ac6e8d84c32e4 = L.marker(
+        var marker_bc666bfa11594bbfb83a9ac51f43ae39 = L.marker(
             [48.841389, 2.253056],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_3c22efc246d04ef999ec0867b259f014 = L.AwesomeMarkers.icon({
+                var icon_3f744d9c3bae468d9924add6c5204463 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_ea59570812614908b41ac6e8d84c32e4.setIcon(icon_3c22efc246d04ef999ec0867b259f014);
+                marker_bc666bfa11594bbfb83a9ac51f43ae39.setIcon(icon_3f744d9c3bae468d9924add6c5204463);
             
     
-            var popup_5982d6026dbe40789eff519a43a3c1ba = L.popup({maxWidth: '100%'
+            var popup_422cfa0068794e7bbb30c7e0173b0c52 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_0025eb053fc24a45a9902810fafa7156 = $(`<div id="html_0025eb053fc24a45a9902810fafa7156" style="width: 100.0%; height: 100.0%;">Estadio Parc des Princes, Paris Saint-Germain </div>`)[0];
-                popup_5982d6026dbe40789eff519a43a3c1ba.setContent(html_0025eb053fc24a45a9902810fafa7156);
+                var html_ca24aea9868341fdbafe79bc76453c17 = $(`<div id="html_ca24aea9868341fdbafe79bc76453c17" style="width: 100.0%; height: 100.0%;">Estadio Parc des Princes, Paris Saint-Germain </div>`)[0];
+                popup_422cfa0068794e7bbb30c7e0173b0c52.setContent(html_ca24aea9868341fdbafe79bc76453c17);
             
 
-            marker_ea59570812614908b41ac6e8d84c32e4.bindPopup(popup_5982d6026dbe40789eff519a43a3c1ba)
+            marker_bc666bfa11594bbfb83a9ac51f43ae39.bindPopup(popup_422cfa0068794e7bbb30c7e0173b0c52)
             ;
 
             
         
     
-        var marker_63683318ec254bbc9c890196e743b955 = L.marker(
+        var marker_fb1e9488e9654fc4bb31a9f90ed19fef = L.marker(
             [48.218775, 11.624753],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(map_214cb8bbbf7547989381ecd3ab665230);
+            ).addTo(map_53165c7458c04fedadc55de78ba83742);
         
     
 
-                var icon_3740c7b1b6b64c8988c1facde40f6e6f = L.AwesomeMarkers.icon({
+                var icon_cd7b6de8b1d1470cbe3cb1568f45c9f1 = L.AwesomeMarkers.icon({
                     icon: 'info-sign',
                     iconColor: 'white',
                     markerColor: 'green',
                     prefix: 'glyphicon',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_63683318ec254bbc9c890196e743b955.setIcon(icon_3740c7b1b6b64c8988c1facde40f6e6f);
+                marker_fb1e9488e9654fc4bb31a9f90ed19fef.setIcon(icon_cd7b6de8b1d1470cbe3cb1568f45c9f1);
             
     
-            var popup_73871e77527b42ec9a65719c180f9753 = L.popup({maxWidth: '100%'
+            var popup_8e2cd18d129842f5b6b0a4672bd964c5 = L.popup({maxWidth: '100%'
             
             });
 
             
-                var html_06b4213e5b034f8a8a13224d06b12074 = $(`<div id="html_06b4213e5b034f8a8a13224d06b12074" style="width: 100.0%; height: 100.0%;">Allianz Arena, Paris Saint-Germain </div>`)[0];
-                popup_73871e77527b42ec9a65719c180f9753.setContent(html_06b4213e5b034f8a8a13224d06b12074);
+                var html_e550089c95c647458dca77d019cc4f4c = $(`<div id="html_e550089c95c647458dca77d019cc4f4c" style="width: 100.0%; height: 100.0%;">Allianz Arena, Paris Saint-Germain </div>`)[0];
+                popup_8e2cd18d129842f5b6b0a4672bd964c5.setContent(html_e550089c95c647458dca77d019cc4f4c);
             
 
-            marker_63683318ec254bbc9c890196e743b955.bindPopup(popup_73871e77527b42ec9a65719c180f9753)
+            marker_fb1e9488e9654fc4bb31a9f90ed19fef.bindPopup(popup_8e2cd18d129842f5b6b0a4672bd964c5)
             ;
 
             
