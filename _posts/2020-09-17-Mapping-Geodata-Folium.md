@@ -178,5 +178,5 @@ m.get_root().html.add_child(folium.Element(title_html))
 m.save('emblematic_football_stadiums.html')
 ```
 
-Link to the Folium Map
-https://colab.research.google.com/drive/1nCnVa-h9RgJzJl2JIcqcZjSC2iotM8qV#scrollTo=6v6OUFoiJBeb
+[Link to the Folium Map](
+https://colab.research.google.com/drive/1nCnVa-h9RgJzJl2JIcqcZjSC2iotM8qV#scrollTo=6v6OUFoiJBeb)
