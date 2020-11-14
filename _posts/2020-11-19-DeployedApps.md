@@ -14,16 +14,16 @@ It might take a few seconds to boot up when accessing for the very first time bu
 
 ## Data Exploration and Correlation Finder
 
-This app takes a timeseries dataset from the user and does teh following:
+This app takes a timeseries dataset from the user and does the following:
 *   Provides descriptive statistics about a variable from the dataset, plots data using a line chart and a distribution chart.
 *   Uses statsmodels to decompose the timeseries. We can select a variabe to decompose, and it will return the trend, seasonality and error which are underlying components of timeseries data.
-*   Calculates the correlation between variables in the entire dataset and it plots a distribution matrix heatmap. 
+*   Calculates the correlation between variables in the entire dataset and it plots a correlation matrix heatmap. 
 
 
 ## Mushroom Classifier
 Are mushrooms edible or poisonous?
 This app uses a dataset which contains certain mushroom characteristics and classify them using one of the following classifiers that can be selected by the user:
-*   Support Vector MAchines SVM
+*   Support Vector Machine SVM
 *   Logistic Regression
 *   Random Forest
 
@@ -31,7 +31,7 @@ This app uses a dataset which contains certain mushroom characteristics and clas
 
 
 ## Uber Pickups in NYC
-This apps analyzes Uber pickups in New York City, groups pickups hourly and plots the location of the picups in a map.
+This apps analyzes Uber pickups in New York City, groups pickups hourly and plots the location of the pikcups in a map.
 [Uber Pickups NYC App link](https://dataexplorerlit.herokuapp.com/)
 
 ## TaskMaster
@@ -48,6 +48,6 @@ Proof of Concept App to test Streamlit and deployment using Heroku.
 ## Bokeh Dashboard
 
 Proof of Concept App to test deployment of bokeh graphs to the web which enables the creation of dashboards that can be deployed, distributed and access in the open web.
-The interactive graphs show fiancial data, closing prices of a certain stocks-- to be specific. 
+The interactive graphs show financial data, closing prices of a certain stocks-- to be specific, which had been programmatically obtained from the web.
 
 [Bokeh Graphs/Dashboard Proof of Concept](https://staticbokehplot.herokuapp.com/)
